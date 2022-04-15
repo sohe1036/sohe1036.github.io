@@ -4,84 +4,246 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./img/gnb-ktlogo.png">
+    <link rel="apple-touch-icon" href="./img/gnb-ktlogo.png">
+    <!-- 검색(메타)정보 -->
+    <meta name="url" content="https://sohe1036.github.io/web1/index.html">
+    <meta name="title" content="KT">
+    <meta name="description" content="KT 회사소개, 제품안내, 요금제, 혜택, 품질확인, 커뮤니티">
+    <meta name="keywords" content="KT, 요금제, 갤럭시, 아이폰, 유심, 자급제, 멤버십, 인터넷, TV, 결합, 할인">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:title" content="KT">
+    <meta property="og:description" content="KT 회사소개, 제품안내, 요금제, 혜택, 품질확인, 커뮤니티">
+    <meta property="og:image" href="./img/gnb-ktlogo.png">
+     <!-- 기본 플러그인 연결 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 스타일 초기화 모듈연결 -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    
+   <style>
+        @font-face {
+        font-family: 'EliceDigitalBaeum-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    *{margin: 0%; padding: 0%;}
+    body{font-family: 'EliceDigitalBaeum-Bd'; width: 100%;}
+    ul {list-style: none;}
+    a {text-decoration: none; color: #333;}
+    .wrap {clear: both; width: 100%;}
+    #hd {clear: both; width: 100%;}
+    .hd_wrap {clear: both; width: 1280px; margin: 0 auto;}
+    .logo {display: block; width: 32px; float: left;}
+    .logo img {display: block; width: 100%;}
+    #gnb {float: left;}
+    #tnb {float: right;}
+    #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20px;}
+    #gnb > ul > li > span {display: block; line-height: 36px; cursor: pointer;}
+
+
+    #content {clear: both; width: 100%;}
+    #ft {clear: both; width: 100%;}
+   </style>
+  
+    <title>KT</title>
 </head>
 <body>
     <div class="wrap">
         <header id="hd">
             <div class="hd_wrap">
-                <a href="" class="logo">
-                    <img src="" alt="">
+                <a href="index.html" class="logo">
+                    <img src="./img/gnb-ktlogo.png" alt="ktlogo">
                 </a>
                 <nav id="gnb">
                     <ul>
                         <li>
-                            <span>메뉴1</span>
+                            <span>마이</span>
                             <ul class="sub">
-                                <li><a href="">메뉴1</a></li>
-                                <li><a href="">메뉴2</a></li>
-                                <li><a href="">메뉴3</a></li>
-                                <li><a href="">메뉴4</a></li>
+                                <li><a href="myinfo.html">가입/이용</a></li>
+                                <li><a href="billcharge.html">요금/서비스</a></li>
+                                <li><a href="mymembership.html">멤버십/헤택</a></li>
+                                <li><a href="myorder.html">마이샵</a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul>
                         <li>
-                            <span>메뉴2</span>
+                            <span>상품</span>
                             <ul class="sub">
-                                <li><a href="">메뉴1</a></li>
-                                <li><a href="">메뉴2</a></li>
-                                <li><a href="">메뉴3</a></li>
-                                <li><a href="">메뉴4</a></li>
+                                <li><a href="mobile.html">모바일</a></li>
+                                <li><a href="internet.html">인터넷</a></li>
+                                <li><a href="tv.html">TV</a></li>
+                                <li><a href="package.html">결합</a></li>
+                            </ul>
+                        </li>                                    
+                        <li>
+                            <span>혜택</span>
+                            <ul class="sub">
+                                <li><a href="membership.html">멤버십혜택</a></li>
+                                <li><a href="usebenefit.html">이용혜택</a></li>
+                                <li><a href="purchasebenefit.html">구매해택</a></li>
+                                <li><a href="event.html">이벤트</a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul>
                         <li>
-                            <span>메뉴3</span>
+                            <span>고객지원</span>
                             <ul class="sub">
-                                <li><a href="">메뉴1</a></li>
-                                <li><a href="">메뉴2</a></li>
-                                <li><a href="">메뉴3</a></li>
-                                <li><a href="">메뉴4</a></li>
+                                <li><a href="inquire.html">문의하기</a></li>
+                                <li><a href="quality.html">품질확인 및 A/S신청</a></li>
+                                <li><a href="serviceguide.html">이용안내 및 가이드</a></li>
+                                <li><a href="noticelist.html">소식/공지</a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul>
                         <li>
-                            <span>메뉴4</span>
+                            <span>Shop</span>
                             <ul class="sub">
-                                <li><a href="">메뉴1</a></li>
-                                <li><a href="">메뉴2</a></li>
-                                <li><a href="">메뉴3</a></li>
-                                <li><a href="">메뉴4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <span>메뉴5</span>
-                            <ul class="sub">
-                                <li><a href="">메뉴1</a></li>
-                                <li><a href="">메뉴2</a></li>
-                                <li><a href="">메뉴3</a></li>
-                                <li><a href="">메뉴4</a></li>
+                                <li><a href="mobilepurchse.html">핸드폰구매</a></li>
+                                <li><a href="internettvpurchse.html">인터넷/tv</a></li>
+                                <li><a href="usimpurchse.html">유심/자급제</a></li>
+                                <li><a href="theme">테마관</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
                 <p id="tnb">
-                    <a href="">상단1</a>
-                    <a href="">상단2</a>
-                    <a href="">상단3</a>
+                    <a href="">로그인 <i class="xi"></i></a>
+                    <a href="">검색 <i class="xi"></i></a>
+                    <a href="">장바구니 <i class="xi"></i></a>
+                    <a href="">전체메뉴 <i class="xi"></i></a>
                 </p>
             </div>
         </header>
         <div id="content">
-
+            <fiaure id="vs">
+                <ul class="img_box">
+                    <il>
+                        <a href="internettvevent.html">
+                            <img src="./img/C000007888v2089.png" alt="">
+                            <div class="tit_box">
+                                <h2 class="vs_tit"></h2>
+                                <p class="vs_com"></p>
+                            </div>
+                        </a>
+                    </il>
+                    <il>
+                        <a href="weddingevent.html">
+                            <img src="./img/C000007866v2089.jpg" alt="">
+                            <div class="tit_box">
+                                <h2 class="vs_tit"></h2>
+                                <p class="vs_com"></p>
+                            </div>
+                        </a>
+                    </il>
+                    <il>
+                        <a href="mobileiphonese.html">
+                            <img src="./img/C000007841v2089.png" alt="">
+                            <div class="tit_box">
+                                <h2 class="vs_tit"></h2>
+                                <p class="vs_com"></p>
+                            </div>
+                        </a>
+                    </il>
+                    <il>
+                        <a href="package.html">
+                            <img src="./img/C000007726v2089.png" alt="">
+                            <div class="tit_box">
+                                <h2 class="vs_tit"></h2>
+                                <p class="vs_com"></p>
+                            </div>
+                        </a>
+                    </il>
+                    <il>
+                        <a href="mobileiphone13.html">
+                            <img src="./img/C000007842v2089.png" alt="">
+                            <div class="tit_box">
+                                <h2 class="vs_tit"></h2>
+                                <p class="vs_com"></p>
+                            </div>
+                        </a>
+                    </il>
+                </ul>
+                <div class="btn_group">
+                    <button class="prev_btn">이전</button>
+                    <button class="next_btn">다음</button>
+                </div>
+                <div class="grid_box">
+                    <ul>
+                        <li class="col2">
+                            <a href=>                               
+                                <h3 class="col_tit">인기급상승</h3>
+                                <p class="col_com">KT 다이렉트 요금제</p>
+                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                        <li class="col2">
+                            <a href=>
+                                <h3 class="col_tit">인기급상승</h3>
+                                <p class="col_com">갤럭시 자급제폰</p>
+                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                        <li class="col2">
+                            <a href=>
+                                <h3 class="col_tit">인기급상승</h3>
+                                <p class="col_com">S급중고폰</p>
+                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                        <li class="col2">
+                            <a href=>
+                                <img src="./img/C000007872v90h29097.jpg" alt="">
+                                <h3 class="col_w_tit">KT Shop</h3>
+                                <p class="col_w_com">KT Shop 테마관</p>
+                            </a>    
+                        </li>
+                        <li class="col2">
+                            <a href=>
+                                <img src="./img/C000007872v90h29098.png" alt="">
+                                <h3 class="col_w_tit">이벤트</h3>
+                                <p class="col_w_com">갤럭시A53 5G </p>
+                            </a>
+                        </li>
+                        <li class="col2">
+                            <a href=>
+                                <img src="./img/C000006721v1h21834.png" alt="">
+                                <h3 class="col_w_tit">서비스</h3>
+                                <p class="col_w_com">사용중인 인터넷 속도특정으로 해결</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </fiaure>
         </div>
         <footer id="ft">
+            <div class="ft_wrap">
+                <nav class="fnb">
+                    <a href="">회사소개</a>
+                    <a href="">이용약관</a>
+                    <a href="">멤버십 회원약관</a>
+                    <a href="">법적고지</a>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">이메일 무단수집 거부</a>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li class="sns1">
+                            <a href="">페이스북 <i class="xi-facebook"></i></a>
+                        </li>
+                        <li class="sns2">
+                            <a href="">유튜브 <i class="xi-youtube-play"></i></a>
+                        </li>
+                        <li class="sns3">
+                            <a href="">네이버 포스트 <i class="xi-naver-square"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright">
 
+                </p>
+            </div>
         </footer>
     </div>
 </body>
