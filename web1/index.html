@@ -38,23 +38,37 @@
     .wrap {clear: both; width: 100%;}
     #hd {clear: both; width: 100%; }
     .hd_wrap {clear: both; width: 1280px; margin: 0 auto;}
-    .logo {display: block; width: 32px; float: left; padding-top: 10px;}
+    .logo {display: block; width: 32px; float: left; margin-top: 18px; }
     .logo img {display: block; width: 100%;}
-    #gnb {float: left; padding-top: 10px;}
-    #tnb {float: right; padding-top: 10px;}
+    #gnb {float: left; margin-top: 15px; }
+    #tnb {float: right; margin-top: 15px; }
     #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20px; position: relative;}
     #gnb > ul > li > span {display: block; line-height: 36px; cursor: pointer; font-size: 20px;}
     #gnb ul li .sub {display: none; position: absolute; left: 20px; top:30px; z-index: 999;
     padding-left: 25px; width: 150px; height: 160px; background-color: #fff;}
     #gnb ul li:hover .sub{display: block;}
+    #gnb ul li:hover span{color:#119891;}
+    #gnb ul li .sub li:hover a {text-decoration: underline; color:rgba(44, 69, 207, 0.534)}
+    #tnb a:hover{color:#119891;}
+    p.sub a:hover{text-decoration: underline; color:#119891; }
     #gnb ul li .sub li {line-height: 35px;}
+    .xi-user-o, .xi-search, .xi-cart-o {font-size: 30px; padding-left: 25px; }
+    .xi-search {padding-right: 2px;}
+    .xi-cart-o {padding-right: 7px;}
+    p.sub{font-size: 12px; float: right; clear: both;}
+    p.sub a {padding-left: 29px; float: right;}
 
     #content {clear: both; width: 100%;}
+    #vs {width:100%; overflow:hidden;}
+    .img_box {width: 500%;  }
+    .img_box li {float:left; width: 20%; position: relative;}
+    .img_box li a {display: block;}
+    .img_box li a img {display: block;  width: 100%; height: auto;}
+ 
+
     #ft {clear: both; width: 100%;}
-    .xi-user-o, .xi-search, .xi-cart-o {font-size: 30px; padding-left: 24px; }
-    .xi-cart-o {padding-right: 5px;}
-    p.sub{font-size: 12px; float: right; clear: both;}
-    p.sub span {padding-left: 25px; float: right;}
+
+
    </style>
   
     <title>KT</title>
@@ -121,62 +135,58 @@
                     <a href=""> <i class="xi-cart-o"></i></a>
                 </p>
                 <p class="sub">
-                    <span>장바구니</span><span>검색</span><span>로그인</span>
+                    <a href="">장바구니</a><a href="">검색</a><a href="">로그인</a>
                 </p>
             </div>
         </header>
         <div id="content">
-            <fiaure id="vs">
+            <figure id="vs">
                 <ul class="img_box">
-                    <il>
+                    <li>
                         <a href="internettvevent.html">
                             <img src="./img/C000007888v2089.png" alt="">
-                            <div class="tit_box">
-                                <h2 class="vs_tit"></h2>
-                                <p class="vs_com"></p>
-                            </div>
                         </a>
-                    </il>
-                    <il>
+                    </li>
+                    <li>
                         <a href="weddingevent.html">
                             <img src="./img/C000007866v2089.jpg" alt="">
-                            <div class="tit_box">
-                                <h2 class="vs_tit"></h2>
-                                <p class="vs_com"></p>
-                            </div>
                         </a>
-                    </il>
-                    <il>
+                    </li>
+                    <li>
                         <a href="mobileiphonese.html">
                             <img src="./img/C000007841v2089.png" alt="">
-                            <div class="tit_box">
-                                <h2 class="vs_tit"></h2>
-                                <p class="vs_com"></p>
-                            </div>
                         </a>
-                    </il>
-                    <il>
+                    </li>
+                    <li>
                         <a href="package.html">
                             <img src="./img/C000007726v2089.png" alt="">
-                            <div class="tit_box">
-                                <h2 class="vs_tit"></h2>
-                                <p class="vs_com"></p>
-                            </div>
                         </a>
-                    </il>
-                    <il>
-                        <a href="mobileiphone13.html">
+                    </li>
+                    <li>
+                        <a href="mobeiiphone13.html">
                             <img src="./img/C000007842v2089.png" alt="">
-                            <div class="tit_box">
-                                <h2 class="vs_tit"></h2>
-                                <p class="vs_com"></p>
-                            </div>
                         </a>
-                    </il>
+                    </li>
                 </ul>
                 <div class="btn_group">
                     <button class="prev_btn">이전</button>
                     <button class="next_btn">다음</button>
+
+                    <script>
+                        $(document).ready(function(){
+                            wd = $(window).width();
+                            var intv = setInterval(function(){
+                                ani1();
+                            }, 3500);
+                            function ani1(){
+                                $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                                    $(".img_box li").eq(0).appendTo($(".img_box"));
+                                    $(".img_box").css("margin-left","0px");
+                                });
+                            }
+                        });    
+                        </script>
+        
                 </div>
                 <div class="grid_box">
                     <ul>
