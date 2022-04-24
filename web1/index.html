@@ -66,16 +66,29 @@
     .img_box li a img {display: block;  width: 100%; height: auto;}
  
     .grid_box {clear: both; width: 100%;}
-    .grid_box ul {clear: both; width: 100%;}
-    .grid_box ul li {float: left; height: 16.666667vw;}
+    .grid_wrap {clear: both; width: 100%;}
+    .grid_wrap li {float: left; height: 16.66667vw; background-position:center center; }
     .col1 {width: 8.33333%;}
     .col2 {width: 16.66667%;}
     .col3 {width: 25%;}
     .col4 {width: 33.33333%;}
     .col5 {width: 41.66667%;}
     .col6 {width: 50%;}
-    .grid_box ul li a {display: block; padding: 30px;}
-    
+    .grid_wrap ul li a {display: block; padding: 30px;}
+    .grid_wrap li.item1 {background-image: url(./img/C000007007v1h27273.png); background-size: 265px;}
+    .grid_wrap li.item2 {background-image: url(./img/C000007822v1h28471.png); background-size: 290px;}
+    .grid_wrap li.item3 {background-image: url(./img/C000007677v1h27287.png); background-size: 290px;}
+    .grid_wrap li.item4 {background-color: #d0dee8;}
+    .grid_wrap li.item5 {background-color: #e5edf3;}
+    .grid_wrap li.item6 {background-color: #f2f6f9;}
+    .grid_wrap li a { display:block; padding: 28px; }
+    .col_tit.w1 {padding-top: 5; font-size: 24px;}
+    .col_tit.w3 {padding-top: 7PX; font-size: 24px;}
+    .col_tit.w2 {padding-top: 7PX; font-size: 24px;}
+    .col_com.w1 {font-size: 13px; padding-top: 20PX; font-weight:80PX; }
+    .col_com.w2 {font-size: 13px; padding-top: 7PX; font-weight:80PX;}
+    .arrow {float: left; display: block; margin-top: 50px; background-image: url(./img/arrow_black.png); position: absolute; 
+        width: 60px; height: 5px;background-size: 60px;}
     #ft {clear: both; width: 100%;}
 
 
@@ -199,47 +212,42 @@
         
                 </div>
                 <div class="grid_box">    
-                    <ul>
+                    <ul class="grid_wrap">
                         <li class="col2 item1" >
                             <a href=>                               
-                                <h3 class="col_tit">인기급상승</h3>
-                                <p class="col_com">KT 다이렉트 요금제</p>
                             </a>
                         </li>
                         <li class="col2 item2">
                             <a href=>
-                                <h3 class="col_tit">인기급상승</h3>
-                                <p class="col_com">갤럭시 자급제폰</p>
                             </a>
                         </li>
                         <li class="col2 item3">
                             <a href=>
-                                <h3 class="col_tit">인기급상승</h3>
-                                <p class="col_com">S급중고폰</p>
                             </a>
                         </li>
                         <li class="col2 item4">
                             <a href=>
-                                <h3 class="col_w_tit">KT Shop</h3>
-                                <p class="col_w_com">KT Shop 테마관</p>
+                                <h3 class="col_tit w1">갤럭시 a53 5g</h3>
+                                <h3 class="col_tit w2">출시!</h3> 
+                                <p class="col_com w1">뛰어난 성능에 합리적인 가격</p>
                                 <span class="arrow"></span>
                             </a>    
                         </li>
                         <li class="col2 item5">
                             <a href=>
-                                <h3 class="col_w_tit">나와 딱 맞는</h3>
-                                <h3 class="col_w_tit">혜택과 서비스</h3>                           
-                                <h3 class="col_w_tit">KT Shop 테마관</h3>
-                                <p class="col_w_com">#소상공인 #키즈가구 등</p>
+                                <h3 class="col_tit w1">나와 딱 맞는</h3>
+                                <h3 class="col_tit w2">혜택과 서비스</h3>                           
+                                <h3 class="col_tit w3">KT Shop 테마관</h3>
+                                <p class="col_com w1">#소상공인 #키즈가구 등</p>
                                 <span class="arrow"></span>
                             </a>
                         </li>
                         <li class="col2 item6">
                             <a href=>
-                                <h3 class="col_w_tit">느려진 인터넷 속도! </h3>
-                                <h3 class="col_w_tit">속도가 궁금하다면? </h3>
-                                <p class="col_w_com">사용중인 인터넷</p>
-                                <p class="col_w_com">속도측정으로 해결</p>
+                                <h3 class="col_tit w1">느려진 인터넷 속도! </h3>
+                                <h3 class="col_tit w2">속도가 궁금하다면? </h3>
+                                <p class="col_com w1">사용중인 인터넷</p>
+                                <p class="col_com w2">속도측정으로 해결</p>
                                 <span class="arrow"></span>
                             </a>
                         </li>
