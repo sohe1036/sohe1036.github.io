@@ -67,7 +67,8 @@
  
     .grid_box {clear: both; width: 100%;}
     .grid_wrap {clear: both; width: 100%;}
-    .grid_wrap li {float: left; height: 16.66667vw; background-position:center center; }
+    .grid_wrap li {float: left; height: 16.66667vw; background-position:center center; background-repeat: no-repeat;
+                    background-size: 360px;}
     .col1 {width: 8.33333%;}
     .col2 {width: 16.66667%;}
     .col3 {width: 25%;}
@@ -75,9 +76,9 @@
     .col5 {width: 41.66667%;}
     .col6 {width: 50%;}
     .grid_wrap ul li a {display: block; padding: 30px;}
-    .grid_wrap li.item1 {background-image: url(./img/C000007007v1h27273.png); background-size: 265px;}
-    .grid_wrap li.item2 {background-image: url(./img/C000007822v1h28471.png); background-size: 290px;}
-    .grid_wrap li.item3 {background-image: url(./img/C000007677v1h27287.png); background-size: 290px;}
+    .grid_wrap li.item1 {background-image: url(./img/C000007007v1h27273.png);}
+    .grid_wrap li.item2 {background-image: url(./img/C000007822v1h28471.png);}
+    .grid_wrap li.item3 {background-image: url(./img/C000007677v1h27287.png);}
     .grid_wrap li.item4 {background-color: #d0dee8;}
     .grid_wrap li.item5 {background-color: #e5edf3;}
     .grid_wrap li.item6 {background-color: #f2f6f9;}
@@ -89,7 +90,19 @@
     .col_com.w2 {font-size: 13px; padding-top: 7PX; font-weight:80PX;}
     .arrow {float: left; display: block; margin-top: 50px; background-image: url(./img/arrow_black.png); position: absolute; 
         width: 60px; height: 5px;background-size: 60px;}
+    .btn_group {position: absolute; bottom:0px; left:90px;}    
+
     #ft {clear: both; width: 100%;}
+    .ft_wrap {clear: both; width: 1280px; margin: 0 auto;}
+    .fnb {float: left;}
+    .fnb a {display: block; float: left; padding-top: 28px; font-size: 12px;
+        margin-right: 20px;}
+    .fnb a:after {content:"|"; padding-left: 20px;}
+    .fnb a:last-child::after {content:"";}
+    .snb {float: right;}
+    .snb ul li {float: left; margin-left: 20px; padding-top: 28px; }
+    .copyright {clear: both; font-size: 12px; padding-bottom: 15px;}
+    .xi-facebook, .xi-youtube-play, .xi-naver-square {font-size: 20px;}
 
 
    </style>
@@ -206,9 +219,24 @@
                                     $(".img_box li").eq(0).appendTo($(".img_box"));
                                     $(".img_box").css("margin-left","0px");
                                 });
-                            }
-                        });    
-                        </script>
+                    }
+                    function ani2(){
+                        $(".img_box").css("margin-left",-wd+"px");
+                        $(".img_box li:last-child").prependTo($(".img_box"));
+                        $(".img_box").not(":animated").animate({"margin-left":"0px"}, 600);
+                    }
+                    $(".btn_group .next_btn").click(function(){
+                        clearInterval(intv);
+                        ani1();
+                        intv = setInterval(function(){ ani1(); }, 3000);
+                    });
+                    $(".btn_group .prev_btn").click(function(){
+                        clearInterval(intv);
+                        ani2();
+                        intv = setInterval(function(){ ani1(); }, 3000);
+                    });
+                });    
+                </script>
         
                 </div>
                 <div class="grid_box">    
@@ -268,18 +296,18 @@
                 <nav class="snb">
                     <ul>
                         <li class="sns1">
-                            <a href="">페이스북 <i class="xi-facebook"></i></a>
+                            <a href="" title="페이스북"> <i class="xi-facebook"></i></a>
                         </li>
                         <li class="sns2">
-                            <a href="">유튜브 <i class="xi-youtube-play"></i></a>
+                            <a href="" title="유튜브"> <i class="xi-youtube-play"></i></a>
                         </li>
                         <li class="sns3">
-                            <a href="">네이버 포스트 <i class="xi-naver-square"></i></a>
+                            <a href="" title="네이버"> <i class="xi-naver-square"></i></a>
                         </li>
                     </ul>
                 </nav>
                 <p class="copyright">
-
+                    Copyright© 2022 KT Corp. All rights reserved.
                 </p>
             </div>
         </footer>
