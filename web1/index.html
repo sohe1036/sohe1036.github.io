@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="common.css">
 
     
    <style>
@@ -58,8 +59,8 @@
     p.sub{font-size: 12px; float: right; clear: both;}
     p.sub a {padding-left: 29px; float: right;}
 
-    #content {clear: both; width: 100%;}
-    #vs {width:100%; overflow:hidden;}
+    #content {clear: both; width: 100%; position: relative;}
+    #vs {width:100%; overflow:hidden; }
     .img_box {width: 500%;  }
     .img_box li {float:left; width: 20%; position: relative;}
     .img_box li a {display: block;}
@@ -90,7 +91,11 @@
     .col_com.w2 {font-size: 13px; padding-top: 7PX; font-weight:80PX;}
     .arrow {float: left; display: block; margin-top: 50px; background-image: url(./img/arrow_black.png); position: absolute; 
         width: 60px; height: 5px;background-size: 60px;}
-    .btn_group {position: absolute; bottom:0px; left:90px;}    
+    .btn_group {position: absolute; bottom:0px; left:90px;}
+    .btn_group button { display:block; width: 60px; height: 60px; float:left; 
+     background-color:rgba(0,0,0,0.6); border:none; outline: none; color:#fff; }
+
+        
 
     #ft {clear: both; width: 100%;}
     .ft_wrap {clear: both; width: 1280px; margin: 0 auto;}
@@ -121,46 +126,46 @@
                         <li>
                             <span>마이</span>
                             <ul class="sub">
-                                <li><a href="myinfo.html">가입/이용</a></li>
-                                <li><a href="billcharge.html">요금/서비스</a></li>
-                                <li><a href="mymembership.html">멤버십/헤택</a></li>
-                                <li><a href="myorder.html">마이샵</a></li>
+                                <li><a href="myinfo.html#page1">가입/이용</a></li>
+                                <li><a href="myinfo.html#page2">요금/서비스</a></li>
+                                <li><a href="myinfo.html#page3">멤버십/헤택</a></li>
+                                <li><a href="myinfo.html#page4">마이샵</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>상품</span>
                             <ul class="sub">
-                                <li><a href="mobile.html">모바일</a></li>
-                                <li><a href="internet.html">인터넷</a></li>
-                                <li><a href="tv.html">TV</a></li>
-                                <li><a href="package.html">결합</a></li>
+                                <li><a href="mobile.html#page1">모바일</a></li>
+                                <li><a href="mobile.html#page2">인터넷</a></li>
+                                <li><a href="mobile.html#page3">TV</a></li>
+                                <li><a href="mobile.html#page4">결합</a></li>
                             </ul>
                         </li>                                    
                         <li>
                             <span>혜택</span>
                             <ul class="sub">
-                                <li><a href="membership.html">멤버십혜택</a></li>
-                                <li><a href="usebenefit.html">이용혜택</a></li>
-                                <li><a href="purchasebenefit.html">구매해택</a></li>
-                                <li><a href="event.html">이벤트</a></li>
+                                <li><a href="membership.html#page1">멤버십혜택</a></li>
+                                <li><a href="membership.html#page2">이용혜택</a></li>
+                                <li><a href="membership.html#page3">구매해택</a></li>
+                                <li><a href="membership.html#page4">이벤트</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>고객지원</span>
                             <ul class="sub">
-                                <li><a href="inquire.html">문의하기</a></li>
-                                <li><a href="quality.html">품질확인 및 A/S신청</a></li>
-                                <li><a href="serviceguide.html">이용안내 및 가이드</a></li>
-                                <li><a href="noticelist.html">소식/공지</a></li>
+                                <li><a href="service.html#page1">문의하기</a></li>
+                                <li><a href="service.html#page2">품질확인 및 A/S신청</a></li>
+                                <li><a href="service.html#page3">이용안내 및 가이드</a></li>
+                                <li><a href="service.html#page4">소식/공지</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>Shop</span>
                             <ul class="sub">
-                                <li><a href="mobilepurchse.html">핸드폰구매</a></li>
-                                <li><a href="internettvpurchse.html">인터넷/tv</a></li>
-                                <li><a href="usimpurchse.html">유심/자급제</a></li>
-                                <li><a href="theme">테마관</a></li>
+                                <li><a href="buy.html#page1">핸드폰구매</a></li>
+                                <li><a href="buy.html#page2">인터넷/tv</a></li>
+                                <li><a href="buy.html#page3">유심/자급제</a></li>
+                                <li><a href="buy.html#page4">테마관</a></li>
                             </ul>
                         </li>
                     </ul>
