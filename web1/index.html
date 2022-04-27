@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,10 +18,10 @@
     <meta property="og:image" href="./img/gnb-ktlogo.png">
      <!-- 기본 플러그인 연결 -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 웹 아이콘 XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 스타일 초기화 모듈연결 -->
     <link rel="stylesheet" href="./css/normalize.css">
-    <!-- XEIcon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="common.css">
 
     
@@ -33,16 +33,21 @@
         font-style: normal;
     }
     *{margin: 0%; padding: 0%;}
-    body{font-family: 'EliceDigitalBaeum-Bd'; width: 100%;}
+    body, html{font-family: 'EliceDigitalBaeum-Bd'; width: 100%;}
     ul {list-style: none;}
     a {text-decoration: none; color: #333;}
     .wrap {clear: both; width: 100%;}
+
+       /* header 스타일 */
     #hd {clear: both; width: 100%; height: 90px;}
     .hd_wrap {clear: both; width: 1280px; margin: 0 auto; }
     .logo {display: block; width: 32px; float: left; margin-top: 28px; }
     .logo img {display: block; width: 100%;}
     #gnb {float: left; margin-top: 25px; }
-    #tnb {float: right; margin-top: 25px; }
+    #tnb  {float: right; margin-top: 25px; }
+    #tnb a {padding-left: 15px;}
+    #tnb img {width: 28px; height: 28px; padding-left: 15px; padding-right: 10px;}
+    #tnb .snb {text-align: center; }
     #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20px; position: relative;}
     #gnb > ul > li > span {display: block; line-height: 36px; cursor: pointer; font-size: 20px;}
     #gnb ul li .sub {display: none; position: absolute; left: 20px; top:30px; z-index: 999;
@@ -50,24 +55,19 @@
     #gnb ul li:hover .sub{display: block;}
     #gnb ul li:hover span{color:#119891;}
     #gnb ul li .sub li:hover a {text-decoration: underline; color:rgba(44, 69, 207, 0.534)}
-    #tnb a:hover{color:#119891;}
-    p.sub a:hover{text-decoration: underline; color:#119891; }
+    #tnb a em:hover{color:#119891; text-decoration: underline;}
     #gnb ul li .sub li {line-height: 35px;}
-    .xi-user-o, .xi-search, .xi-cart-o {font-size: 30px; padding-left: 25px; }
-    .xi-search {padding-right: 2px;}
-    .xi-cart-o {padding-right: 7px;}
-    p.sub{font-size: 12px; float: right; clear: both;}
-    p.sub a {padding-left: 29px; float: right;}
 
-    #content {clear: both; width: 100%; position: relative;}
-    #vs {width:100%; overflow:hidden; }
+    /* content 스타일 -슬라이더, 그리드박스*/
+    #content {clear: both; width: 100%; }
+    #vs {width:100%; overflow:hidden; position: relative;}
     .img_box {width: 500%;  }
-    .img_box li {float:left; width: 20%; position: relative;}
+    .img_box li {float:left; width: 20%; position: relative; z-index:30;}
     .img_box li a {display: block;}
-    .img_box li a img {display: block;  width: 100%; height: auto;}
+    .img_box li a img {display: block;  width: 100%; height: 420px;}
  
     .grid_box {clear: both; width: 100%;}
-    .grid_wrap {clear: both; width: 100%;}
+    .grid_wrap {clear: both; width: 100%; }
     .grid_wrap li {float: left; height: 16.66667vw; background-position:center center; background-repeat: no-repeat;
                     background-size: 360px;}
     .col1 {width: 8.33333%;}
@@ -76,10 +76,10 @@
     .col4 {width: 33.33333%;}
     .col5 {width: 41.66667%;}
     .col6 {width: 50%;}
-    .grid_wrap ul li a {display: block; padding: 30px;}
-    .grid_wrap li.item1 {background-image: url(./img/C000007007v1h27273.png);}
-    .grid_wrap li.item2 {background-image: url(./img/C000007822v1h28471.png);}
-    .grid_wrap li.item3 {background-image: url(./img/C000007677v1h27287.png);}
+    .grid_wrap ul li a {display: block; padding: 30px; }
+    .grid_wrap li.item1 {background-image: url(./img/C000007007v1h27273.png); background-size: 300px;}
+    .grid_wrap li.item2 {background-image: url(./img/C000007822v1h28471.png); background-size: 300px;}
+    .grid_wrap li.item3 {background-image: url(./img/C000007677v1h27287.png); background-size: 300px;}
     .grid_wrap li.item4 {background-color: #d0dee8;}
     .grid_wrap li.item5 {background-color: #e5edf3;}
     .grid_wrap li.item6 {background-color: #f2f6f9;}
@@ -88,15 +88,18 @@
     .col_tit.w3 {padding-top: 7PX; font-size: 24px;}
     .col_tit.w2 {padding-top: 7PX; font-size: 24px;}
     .col_com.w1 {font-size: 13px; padding-top: 20PX; font-weight:80PX; }
-    .col_com.w2 {font-size: 13px; padding-top: 7PX; font-weight:80PX;}
-    .arrow {float: left; display: block; margin-top: 50px; background-image: url(./img/arrow_black.png); position: absolute; 
-        width: 60px; height: 5px;background-size: 60px;}
-    .btn_group {position: absolute; bottom:0px; left:90px;}
-    .btn_group button { display:block; width: 60px; height: 60px; float:left; 
-     background-color:rgba(0,0,0,0.6); border:none; outline: none; color:#fff; }
+    .col_com.w2 {font-size: 13px; padding-top: 7PX; font-weight:80PX; }
+    .arrow img { padding: 10px; width: 40px; height: 5.6px; transition: .3s;}
+    .arrow img:hover {width: 70px; height: 5.6px;}
+    .arrow {display: block; position: absolute; bottom:20px;}
+
+    .btn_group {position: absolute; bottom:0px; left:90px; z-index:40;}
+    .btn_group button { display:block; width: 55px; height: 55px; float:left; 
+    background-color:transparent; border:none; outline: none; }
+    .btn_group img {display: block; width: 45px; height: 45px;}
 
         
-
+        /* footer 스타일 */
     #ft {clear: both; width: 100%;}
     .ft_wrap {clear: both; width: 1280px; margin: 0 auto;}
     .fnb {float: left;}
@@ -124,12 +127,12 @@
                 <nav id="gnb">
                     <ul>
                         <li>
-                            <span>마이</span>
+                            <span>회사소개</span>
                             <ul class="sub">
-                                <li><a href="myinfo.html#page1">가입/이용</a></li>
-                                <li><a href="myinfo.html#page2">요금/서비스</a></li>
-                                <li><a href="myinfo.html#page3">멤버십/헤택</a></li>
-                                <li><a href="myinfo.html#page4">마이샵</a></li>
+                                <li><a href="ktinfo.html#page1">KT소개</a></li>
+                                <li><a href="ktinfo.html#page2">사업소개</a></li>
+                                <li><a href="ktinfo.html#page3">ESG경영</a></li>
+                                <li><a href="ktinfo.html#page4">홍보센터</a></li>
                             </ul>
                         </li>
                         <li>
@@ -171,26 +174,23 @@
                     </ul>
                 </nav>
                 <p id="tnb">
-                    <a href=""> <i class="xi-user-o"></i></a>
-                    <a href=""> <i class="xi-search"></i></a>
-                    <a href=""> <i class="xi-cart-o"></i></a>
-                </p>
-                <p class="sub">
-                    <a href="">장바구니</a><a href="">검색</a><a href="">로그인</a>
+                    <a class="snb img1" href="" onclick=""><img src="./img/tnb-cart.png"><br><em>장바구니</em></a>
+                    <a class="snb img2" href="" onclick=""><img src="./img/tnb-search.png"><br><em>검색</em></a>
+                    <a class="snb img3" href="" onclick=""><img src="./img/tnb-login.png"><br><em>로그인</em></a>
                 </p>
             </div>
         </header>
         <div id="content">
-            <figure id="vs">
+            <div id="vs">
                 <ul class="img_box">
                     <li>
                         <a href="internettvevent.html">
-                            <img src="./img/C000007888v2089.png" alt="">
+                            <img src="./img/C000007939v2099.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="weddingevent.html">
-                            <img src="./img/C000007866v2089.jpg" alt="">
+                            <img src="./img/C000007947v2099.png" alt="">
                         </a>
                     </li>
                     <li>
@@ -210,20 +210,21 @@
                     </li>
                 </ul>
                 <div class="btn_group">
-                    <button class="prev_btn">이전</button>
-                    <button class="next_btn">다음</button>
+                    <button class="prev_btn"><img src="./img/btn_prev_black.png"></button>
+                    <button class="next_btn"><img src="./img/btn_next_black.png"></button>
+                </div>
 
                     <script>
                         $(document).ready(function(){
-                            wd = $(window).width();
-                            var intv = setInterval(function(){
-                                ani1();
-                            }, 3500);
-                            function ani1(){
-                                $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
-                                    $(".img_box li").eq(0).appendTo($(".img_box"));
-                                    $(".img_box").css("margin-left","0px");
-                                });
+                          wd = $(window).width();
+                          var intv = setInterval(function(){
+                            ani1();
+                           }, 3500);
+                     function ani1(){
+                        $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                            $(".img_box li").eq(0).appendTo($(".img_box"));
+                            $(".img_box").css("margin-left","0px");
+                    });
                     }
                     function ani2(){
                         $(".img_box").css("margin-left",-wd+"px");
@@ -241,9 +242,8 @@
                         intv = setInterval(function(){ ani1(); }, 3000);
                     });
                 });    
-                </script>
-        
-                </div>
+                </script>    
+        </div>       
                 <div class="grid_box">    
                     <ul class="grid_wrap">
                         <li class="col2 item1" >
@@ -259,35 +259,35 @@
                             </a>
                         </li>
                         <li class="col2 item4">
-                            <a href=>
+                            <a href="" >
                                 <h3 class="col_tit w1">갤럭시 a53 5g</h3>
                                 <h3 class="col_tit w2">출시!</h3> 
                                 <p class="col_com w1">뛰어난 성능에 합리적인 가격</p>
-                                <span class="arrow"></span>
+                                <span class="arrow"><img src="./img/arrow.png"></span>
                             </a>    
                         </li>
                         <li class="col2 item5">
-                            <a href=>
+                            <a href="">
                                 <h3 class="col_tit w1">나와 딱 맞는</h3>
                                 <h3 class="col_tit w2">혜택과 서비스</h3>                           
                                 <h3 class="col_tit w3">KT Shop 테마관</h3>
                                 <p class="col_com w1">#소상공인 #키즈가구 등</p>
-                                <span class="arrow"></span>
+                                <span class="arrow"><img src="./img/arrow.png"></span>
                             </a>
                         </li>
                         <li class="col2 item6">
-                            <a href=>
+                            <a href="">
                                 <h3 class="col_tit w1">느려진 인터넷 속도! </h3>
                                 <h3 class="col_tit w2">속도가 궁금하다면? </h3>
                                 <p class="col_com w1">사용중인 인터넷</p>
                                 <p class="col_com w2">속도측정으로 해결</p>
-                                <span class="arrow"></span>
+                                <span class="arrow"><img src="./img/arrow.png"></span>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </fiaure>
-        </div>
+            </div>
+        
         <footer id="ft">
             <div class="ft_wrap">
                 <nav class="fnb">
