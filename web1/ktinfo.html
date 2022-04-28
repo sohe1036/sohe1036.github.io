@@ -28,9 +28,14 @@
    <style>
     .page { clear:both; min-height:100vh; display:none; }
     .page:target { display:block; }
-    #hd {  clear:both; position: fixed; }
-    .img_box { clear: both; width: 100%;}
-    .column {clear: both; margin: 0 auto; position: relative;}
+    #hd {  clear:both; position: fixed; background-color: rgba(255,255,255,0.5); z-index: 40; }
+    .content_wrop {clear: both; width: 100%; margin: 0 auto;}
+    .img_box { clear: both; padding-top: 90px; position: relative;}
+    .img_box .column {clear: both; width: 100%; position: absolute; top: 250px; text-align: center;}
+     p.col_tit {font-size: 60px; color: #fff;}
+     p.col_tit::after {display:block; width:42px; height:2px; margin:39px auto 0; content:""; background-color:#fff; }
+     p.col_com { display: block; font-size: 18px; margin-top: 38px; color: #fff; letter-spacing: 1px; font-weight: 200;}
+    
  
    </style>
   
@@ -102,18 +107,19 @@
            <div class="content_wrap">
                <section class="page" id="page1">
                    <div class="img_box">
+                    <img src="./img/visual-kt1.jpg" alt="">
                        <div class="column">
-                           <h1>KT소개<br>ㅡ
-                           </h1>
-                           <p>1981년 창립 이후, 대한민국 정보통신을 이끌어온 KT
+                           <p class="col_tit">KT소개<br></p>
+                           <p class="col_com">1981년 창립 이후, 대한민국 정보통신을 이끌어온 KT <br>
                             디지털 플랫폼 기업(DIGICO)으로서 고객 삶의 변화와 타 산업 혁신을 이끌어 가겠습니다.</p>
-                            <img src="./img/visual-kt1.jpg" alt="">
                        </div>
+                    </div>   
                        <div class="kt_vission">
                            <div class="column">
                                <h3>VISION</h3>
                                <img src="./img/kt1-2-vision_img.png" alt="">
                            </div>
+                        </div>   
                         <div class="kt_area">
                             <div class="column">
                                 <h3>KT 핵심가치</h3>
@@ -125,8 +131,6 @@
                                 </ul>
                             </div>
                         </div>  
-                       </div>
-                   </div>
                    <div class="bread_box">
                        <div class="bread_wrap">
                            <ul class="bread">
@@ -160,9 +164,11 @@
                        </div>
                     </div>
                     <div class="platform_area">
-                       <div class="column">
+                        <div class="column">
                            <h3>5대 플랫폼</h3>
                            <p>인텔리전트 네트워크 역량에 기반한 KT의 미래 핵심 사업입니다.</p>
+                        </div>  
+                    </div>     
                            <div class="media_img">
                                <div class="media">
                                    <p>미디어
@@ -173,8 +179,6 @@
                                     차세대 미디어를 선도하는 플랫폼 사업</p>
                                </div>
                             </div>
-                       </div>
-                    </div>
                     <div class="service_area">
                         <div class="column">
                             <h3>5G 서비스</h3>
