@@ -29,14 +29,57 @@
     .page { clear:both; min-height:100vh; display:none; }
     .page:target { display:block; }
     #hd {  clear:both; position: fixed; background-color: rgba(255,255,255,0.5); z-index: 40; }
-    .content_wrop {clear: both; width: 100%; margin: 0 auto;}
-    .img_box { clear: both; padding-top: 90px; position: relative;}
-    .img_box .column {clear: both; width: 100%; position: absolute; top: 250px; text-align: center;}
+
+    .content_wrop {clear: both; width: 100%;}
+    .img_box { clear: both; padding-top: 90px; position: relative; overflow: hidden; }
+    .img_box img {display: block; width: 115%; margin: 0 auto;}
+    .img_box .column {clear: both; width: 100vw; position: absolute; top: 250px; text-align: center;}
      p.col_tit {font-size: 60px; color: #fff;}
      p.col_tit::after {display:block; width:42px; height:2px; margin:39px auto 0; content:""; background-color:#fff; }
-     p.col_com { display: block; font-size: 18px; margin-top: 38px; color: #fff; letter-spacing: 1px; font-weight: 200;}
+     p.col_com { display: block; font-size: 18px; margin-top: 38px; color: #fff; letter-spacing: 2px; font-weight: 200;}
+
+    .kt_vission { clear: both; width: 100%;}
+    .kt_vission .column h3 {text-align: center; font-size: 45px; padding: 70px 0 35px;}
+    .kt_vission .column img {display: block; margin: 0 auto;}
+    .kt_area {display: block; width: 100%;}
+    .kt_area .column h3 {text-align: center; font-size: 45px; padding: 80px 0 35px;}
+    .inner {clear: both; height: 350px; margin: 0 13.5vw 0;}
+    li.box1 {float: left; border: 1px solid #e2e2e2; width: 440px; background-image: url(./img/vision-ico_1.png); 
+         background-repeat: no-repeat; background-position: right; padding: 50px; margin-right: 10px; margin-bottom: 20px;}
+    li.box2 {float: left; border: 1px solid #e2e2e2; width: 440px; background-image: url(./img/vision-ico_2.png);
+        background-repeat: no-repeat; background-position: right; padding: 50px; margin-left: 10px; margin-bottom: 20px;}
+    li.box3 {float: left; border: 1px solid #e2e2e2; width: 440px; background-image: url(./img/vision-ico_3.png);
+        background-repeat: no-repeat; background-position: right; padding: 50px; margin-right: 10px;}
+    li.box4 {float: left; border: 1px solid #e2e2e2; width: 440px; background-image: url(./img/vision-ico_4.png);
+        background-repeat: no-repeat; background-position: right; padding: 50px; margin-left: 10px;}
+    .bread_box {clear: both; margin-left: 100px; margin-top: 30px;}
+    ul.bread > li {float: left; margin-left: 15px; }
     
- 
+    .platform_area {clear: both; width: 100%;}
+    .area_wrap h3 {text-align: center; font-size: 45px; padding: 70px 0 35px;}
+    .area_wrap p {text-align: center; font-size: 20px; margin-bottom: 25px;}
+    .area_wrap img {display: block; margin: 0 auto;}
+
+    .kt_esg {clear: both; width: 100%;}
+    .kt_esg .column h3 {text-align: center; font-size: 45px; padding: 70px 0 35px;}
+    .kt_esg .column img {display: block; margin: 0 auto;}
+    .kt_report .column h3 {text-align: center; font-size: 45px; padding: 70px 0 35px;}    
+    
+    .kt_report {clear: both; width: 100%; }
+    .kt_report .column {position: relative; width: 1100px; margin: 0 auto; }
+    .report_img {float: left; position: relative;}
+    .report_video {position: relative;}
+    .report_img .img1 {display: block; position: relative; padding-right: 20px;}
+    .report_img .img2 {display: block; margin-top: 22px;}
+
+    .kt_team {clear: both; width: 100%; position: relative;}
+    .kt_team > h3 { text-align: center; font-size: 45px; margin-top: 80px; margin-bottom: 40px;}
+    .kt_team img { display: block; margin: 0 auto; }
+    .kt_team .column {clear: both; position: absolute; top: 250px; margin-left: 250px;}
+    .kt_team .column h3 {margin-bottom: 20px; font-size: 30px; color: #fff}
+    .kt_team .column p {font-size: 17px; letter-spacing: 2px; color: #fff }
+    
+    
    </style>
   
 </head>
@@ -107,40 +150,52 @@
            <div class="content_wrap">
                <section class="page" id="page1">
                    <div class="img_box">
-                    <img src="./img/visual-kt1.jpg" alt="">
-                       <div class="column">
+                        <img src="./img/visual-kt1.jpg" alt="">
+                        <div class="column">
                            <p class="col_tit">KT소개<br></p>
                            <p class="col_com">1981년 창립 이후, 대한민국 정보통신을 이끌어온 KT <br>
                             디지털 플랫폼 기업(DIGICO)으로서 고객 삶의 변화와 타 산업 혁신을 이끌어 가겠습니다.</p>
                        </div>
                     </div>   
-                       <div class="kt_vission">
-                           <div class="column">
-                               <h3>VISION</h3>
-                               <img src="./img/kt1-2-vision_img.png" alt="">
-                           </div>
-                        </div>   
-                        <div class="kt_area">
-                            <div class="column">
-                                <h3>KT 핵심가치</h3>
-                                <ul>
-                                    <li class="box1">고객중심</li>
-                                    <li class="box2">주인정신</li>
-                                    <li class="box3">소통협업</li>
-                                    <li class="box4">본질/과정</li>
-                                </ul>
-                            </div>
-                        </div>  
-                   <div class="bread_box">
-                       <div class="bread_wrap">
-                           <ul class="bread">
-                               <li class="item1">
-                                   <a href="index" class="home">HOME</a>
+                    <div class="kt_vission">
+                        <div class="column">
+                            <h3>VISION</h3>
+                            <img src="./img/kt1-2-vision_img.png" alt="">
+                        </div>
+                    </div>   
+                    <div class="kt_area">
+                        <div class="column">
+                            <h3>KT 핵심가치</h3>
+                            <ul class="inner">
+                                <li class="box1">
+                                    <p>고객중심</p>
+                                    <p>고객發 자기혁신을 통해 고객이 원하는 것을 <br>민첩하고 유연하게 제공합니다.</p>
                                 </li>
-                               <li class="item2">회사소개</li>
-                               <li class="item3">
-                                   <select name="sel" id="sel" >
-                                       <option value="ktinfo.html#page1">KT소개></option>
+                                </li>
+                                <li class="box2">
+                                    <p>주인정신</p>
+                                    <p>임직원 모두가 자부심과 실력을 갖춘 당당하고 단단한 <br>KT의 주인으로서 생각하고 행동합니다.</p>
+                                </li>
+                                <li class="box3">
+                                    <p>소통/협업</p>
+                                    <p>조직의 벽을 넘어서는 수평적인 소통과 유연한 협업 <br>체계를 강화합니다.</p>
+                                <li class="box4">
+                                    <p>본질/과정</p>
+                                    <p>業의 본질에 집중하고 최선의 결과를 위해 과정까지 <br>중요하게 생각합니다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                   <a href="index.html" class="home">HOME</a>
+                                </li>
+                                <li class="item2">회사소개</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel1" class="sel">
+                                       <option value="ktinfo.html#page1">KT소개</option>
                                        <option value="ktinfo.html#page2">사업소개</option>
                                        <option value="ktinfo.html#page3">ESG경영</option>
                                        <option value="ktinfo.html#page4">홍보센터</option>
@@ -148,120 +203,162 @@
                                </li>
                            </ul>
                        </div>
-                   </div>
-                   <div class="page_con">
-
-                   </div>
-               </section>
-               <section class="page" id="page2">
-                   <div class="img_box">
-                       <div class="column">
-                           <h1>사업소개<br>ㅡ
-                           </h1>
-                           <p>KT는 첨단 IoT기술과 사업 간 ICT융합을 통해
-                            앞서가는 ICT 서비스를 제공하고 있습니다</p>
-                            <img src="./img/visual-business1.jpg" alt="">
-                       </div>
-                    </div>
-                    <div class="platform_area">
-                        <div class="column">
-                           <h3>5대 플랫폼</h3>
-                           <p>인텔리전트 네트워크 역량에 기반한 KT의 미래 핵심 사업입니다.</p>
-                        </div>  
-                    </div>     
-                           <div class="media_img">
-                               <div class="media">
-                                   <p>미디어
-                                       ㅡ
-                                   </p>
-                                   <p>대한민국 No.1 IPTV를 기반으로
-                                    새로운 미디어 소비 경험과
-                                    차세대 미디어를 선도하는 플랫폼 사업</p>
-                               </div>
-                            </div>
-                    <div class="service_area">
-                        <div class="column">
-                            <h3>5G 서비스</h3>
-                            <p>세계 최초의 5G 경험을 제공합니다.</p>
-                            <img src="./img/img-business3.jpg" alt="">
-                        </div>
                     </div>
                     <div class="page_con">
-
+                    <div class="page_wrap">
                     </div>
-               </section>
-               <section class="page" id="page3">
-                   <div class="img_box">
-                       <div class="column">
-                           <h1>ESG경영<br>ㅡ
-                           </h1>
-                           <p>KT는 환경경영, 사회적 책임경영, 투명경영을 적극 실천하며
-                            기업과 사회가 공존하는 지속가능한 미래를 앞당기기 위해 노력하고 있습니다.</p>
-                            <img src="./img/visual-esg1.jpg" alt="">
-                       </div>
-                   </div>
-                   <div class="column">
-                       <h3>ESG경영 선언</h3>
-                       <img src="./img/img-esg2.png" alt="">
-                   </div>
-                   <div class="esg">
-                       <div closs="column">
-                           <h3>ESG경영 지향점 및 추진전략</h3>
-                           <dl>
-                               <dt>비전</dt>
-                               <dd>KT는 고객의 삶의 변화와 다른 산업의 혁신을 리딩하여 대한민국 발전에 기여한다</dd>
-                               <dt>경영방향</dt>
-                               <dd>통신 기반의 디지털 플랫폼 기업(Digico)으로 변화하고 성장한다</dd>
-                               <dt>ESG경영
-                                   지향점</dt>
-                               <dd>ESG경영으로 지속가능한 성장을 실현한다</dd>
-                               <dt>3대
-                                   추진전략
-                               </dt>
-                               <dd>디지털 기술 활용한
-                                환경경영 선도</dd>
-                                <dd>디지털 기술 활용한
-                                    사회적 책임경영 실천</dd>
-                                <dd>국내 최고의 준법·공정
-                                    이행으로 투명경영 실현</dd>
-                           </dl>
+                    </div>
+                </section>
+                <section class="page" id="page2">
+                    <div class="img_box">
+                    <img src="./img/visual-business1.jpg" alt="">
+                        <div class="column">
+                            <p class="col_tit">사업소개</p>
+                            <p class="col_com">KT는 첨단 IoT기술과 사업 간 ICT융합을 통해 <br>
+                            앞서가는 ICT 서비스를 제공하고 있습니다</p>
                         </div>
-                   </div>
-               </section>
-               <section class="page" id="page4">
-                   <div class="img_box">
-                       <div class="column">
-                           <h1>홍보센터<br> ㅡ
-                           </h1>
-                           <p>KT의 최신소식을 전해드립니다.</p>
-                           <img src="./img/bg-main-promotion1.jpg" alt="">
+                    </div>
+                    <div class="area_wrap">
+                        <div class="platform_area">
+                            <div class="column">
+                                <h3>5대 플랫폼</h3>
+                                <p>인텔리전트 네트워크 역량에 기반한 KT의 미래 핵심 사업입니다.</p>
+                            </div> 
+                            <img src="./img/bg-platform5.jpg">          
+                        </div>
+                        <div class="service_area">
+                            <div class="column">
+                                <h3>ph>5G 서비스</h3>
+                                <p>세계 최초의 5G 경험을 제공합니다.</p>
+                                <img src="./img/img-business3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                   <a href="index.html" class="home">HOME</a>
+                                </li>
+                                <li class="item2">회사소개</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel2" class="sel">
+                                       <option value="ktinfo.html#page1">KT소개</option>
+                                       <option value="ktinfo.html#page2">사업소개</option>
+                                       <option value="ktinfo.html#page3">ESG경영</option>
+                                       <option value="ktinfo.html#page4">홍보센터</option>
+                                   </select>
+                               </li>
+                           </ul>
                        </div>
-                   </div>
-                   <div class="kt_report">
-                       <div class="column">
-                           <h3>보도자료 ></h3>
-                           <div class="reportimg">
-                               <img class="img1" src="./img/promotion2.jpg">
-                               <img class="img2" src="./img/promotion3.jpg">
-                               <video src="https://youtu.be/wPOU1goqfEA"></video>
-                           </div>
+                    </div>
+                    <div class="page_con">
+                    <div class="page_wrap">
+                    </div>
+                    </div>
+                </section>
+                <section class="page" id="page3">
+                    <div class="img_box">
+                        <img src="./img/visual-esg1.jpg" alt="">
+                        <div class="column">
+                            <p class="col_tit">ESG경영</p>
+                            <p class="col_com">KT는 환경경영, 사회적 책임경영, 투명경영을 적극 실천하며
+                            기업과 사회가 공존하는 지속가능한 미래를 앞당기기 위해 노력하고 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="kt_esg">
+                        <div class="column">
+                            <h3>ESG경영 선언</h3>
+                            <img src="./img/img-esg2.png" alt="">
+                        </div> 
+                    </div>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                   <a href="index.html" class="home">HOME</a>
+                                </li>
+                                <li class="item2">회사소개</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel3" class="sel">
+                                       <option value="ktinfo.html#page1">KT소개</option>
+                                       <option value="ktinfo.html#page2">사업소개</option>
+                                       <option value="ktinfo.html#page3">ESG경영</option>
+                                       <option value="ktinfo.html#page4">홍보센터</option>
+                                   </select>
+                               </li>
+                           </ul>
                        </div>
-                   </div>
-                   <div class="kt_team">
-                       <div class="column">
-                           <h3>AI One Team</h3>
-                           <div class="ai_wrap">
-                               <img src="">
-                               <h5>AI 1등 국가 대한민국, 저희가 만들겠습니다.</h5>
-                               <p>AI One Team은 국내 대표 산·학·연이 모여 대한민국의 AI 역량을 강화하고,
-                                  기업 및 산업의 AI 경쟁력을 드높이고자 2020년 출범한 협력체입니다.
-                               </p>
-                           </div>
+                    </div>
+                    <div class="page_con">
+                    <div class="page_wrap">
+                    </div>
+                    </div>
+                </section>
+                <section class="page" id="page4">
+                    <div class="img_box">
+                        <img src="./img/bg-main-promotion1.jpg" alt="">
+                        <div class="column">
+                            <p class="col_tit">홍보센터</p>
+                            <p class="col_com">KT의 최신소식을 전해드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="kt_report">
+                        <div class="column">
+                            <h3>보도자료 ></h3>
+                            <div class="reportimg">
+                                <div class="report_img">
+                                    <img class="img1" src="./img/promotion2.jpg">
+                                    <img class="img2" src="./img/promotion3.jpg">
+                                </div>
+                                <div class="report_video">    
+                                    <iframe class="video" width="730" height="403" src="https://www.youtube.com/embed/wPOU1goqfEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></video>
+                                </div>
+                            </div>
                        </div>
-                   </div>
-               </section>
-           </div> 
-        </div>
+                    </div>
+                    <div class="kt_team">
+                        <h3>AI One Team</h3>
+                        <img src="./img/prpmo5.png">
+                        <div class="column">
+                            <h3>AI 1등 국가 대한민국, 저희가 만들겠습니다.</h3>
+                            <p>AI One Team은 국내 대표 산·학·연이 모여 대한민국의 AI 역량을 강화하고,<br>
+                             기업 및 산업의 AI 경쟁력을 드높이고자 2020년 출범한 협력체입니다.
+                            </p>
+                        </div>               
+                    </div>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                   <a href="index.html" class="home">HOME</a>
+                                </li>
+                                <li class="item2">회사소개</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel4" class="sel">
+                                       <option value="ktinfo.html#page1">KT소개</option>
+                                       <option value="ktinfo.html#page2">사업소개</option>
+                                       <option value="ktinfo.html#page3">ESG경영</option>
+                                       <option value="ktinfo.html#page4">홍보센터</option>
+                                   </select>
+                               </li>
+                           </ul>
+                       </div>
+                    </div>
+                    <div class="page_con">
+                    <div class="page_wrap">
+                    </div>
+                 </div>
+            </section>
+            </div> 
+        </div>    
+           <script>
+           $(document).ready(function(){
+            $(".sel").change(function(){
+                location.href = this.value;
+            });
+        });    
+        </script>
         
         <footer id="ft">
             <div class="ft_wrap">
