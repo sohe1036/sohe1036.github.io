@@ -32,16 +32,17 @@
     .bread_box {clear: both; margin-left: 100px; margin-top: 30px;}
     ul.bread > li {float: left; margin-left: 15px; }
 
-    #product_kt {clear: both; width: 100%; overflow-x: hidden;}
-    .product_warp {clear: both; padding-top: 90px;}
-    .product_tit {position: relative; width: 100%;}
-    .product_tit img {display: block;  height: 300px; width: 100%;}
-    .product_tit .coulmn {position: absolute; top: 50px; width: 1450px; padding: 30px; text-align: center;}
-    .product_tit h3 {font-size: 43px; padding-bottom: 15px; text-align: center;}
+    #product_kt {clear: both; width: 100%; height: auto; overflow-x: hidden; padding-top: 90px;}
+
+    .product_warp {clear: both; width: 100%; height: 250px; background-image: url(./img/mobile1.jpg); }
+    .product_tit {width: 1260px; margin: 0 auto; height: 100%; }
+    .product_tit .coulmn { width: 1080px; margin: 0 auto; padding: 30px; text-align: center;}
+    .product_tit h3 {font-size: 40px; padding-bottom: 15px; text-align: center; margin-top: 50px;}
     .product_tit p {font-size: 18px;}
 
+    .product_content {clear: both; width: 100%; height: 250px;}
     .mobile_choice {clear: both; background-color: #38445d; height: 260px; }
-    .mobile_choice .column {clear: both; position: relative; width: 1100px; height: 100%; margin: 0 auto;}
+    .mobile_choice .column {clear: both; width: 1100px; height: 100%; margin: 0 auto;}
     .mobile_choice .inner {width: 1280px; height: 100%; text-align: center; }
     .choice1 {float: left; margin-top: 30px; margin-right: 30px; color: #fff; letter-spacing: 2px;}
     .choice1 h4 {padding-bottom: 20px; font-size: 23px;}
@@ -71,21 +72,21 @@
     .pl_p2 {display: block; padding-left: 90px;}
     .pl_p3 {display: block; padding-left: 185px;}
 
-    .product_banner {clear: both; width: 100%; float: left; position: relative;}
+    .product_banner {clear: both; width: 100%; float: left; }
     .banner1 img {display: block; margin: 0 auto; margin-top: 60px;}
-    .product_banner .inner {height: 171px; position: relative; width: 1080px; margin: 0 auto; }
+    .product_banner .inner {height: 171px; width: 1080px; margin: 0 auto; }
     .list_banner {height: 171px; }
-    .list_banner .inner {position: relative; left: 0; width: 1080px; margin: 0 auto; }
+    .list_banner .inner { left: 0; width: 1080px; margin: 0 auto; }
     .banner2 { float: left; padding-top: 10px;}
 
-    .internet_quality {width: 100%; height: 450px; text-align: center; background-image: url(./img/internet1.png); }
-    .internet_quality .column {height: 100%; position: relative; width: 1260px; margin: 0 auto;}    
+    .internet_quality {width: 100%; height: 450px; text-align: center; background-image: url(./img/internet1.png); margin-bottom: 50px;}
+    .internet_quality .column {height: 100%; width: 1260px; margin: 0 auto;}    
     .internet_quality .column h3 {padding-top: 135px; font-size: 54px; color: #fff;}
     .internet_quality .column p {margin-top: 40px; font-size: 25px; color: #fff;}
     
     .usagefee {margin-top: 25px; text-align: left;}
-    .usagefee .column {height: 100%; position: relative; width: 1260px; margin: 0 auto; margin-top: 150px; }
-    .usagefee  .inner {width: 1150px; position: relative;}
+    .usagefee .column {height: 100%;  width: 1260px; margin: 0 auto; margin-top: 150px; }
+    .usagefee  .inner {width: 1150px; }
     .info_usaefee {background-image: url(./img/internet.png); background-repeat: no-repeat; background-position: right;
          height: 269px; padding-bottom: 50px;}
     .info_usaefee h3 {padding-top: 65px; font-size: 40px; padding-left: 100px;}
@@ -101,8 +102,8 @@
     .info_coverage span {display: block; margin-top: 10px; font-size: 12px; padding-left: 100px;}
 
     .history {margin-top: 20px; margin-bottom: 80px;}
-    .history .column {position: relative; width: 1260px; margin: 0 auto;}
-    .history .inner {width: 1080px; margin: 0 auto; position: relative;}
+    .history .column { width: 1260px; margin: 0 auto;}
+    .history .inner {width: 1080px; margin: 0 auto; }
     .history h3 {margin-bottom: 20px; text-align: left; font-size: 38px;}
     
     .vod_section {height: 1274px; background-image: url(./img/tv1.jpg); width: 100%; 
@@ -183,8 +184,7 @@
                             <ul class="sub">
                                 <li><a href="buy.html#page1">핸드폰구매</a></li>
                                 <li><a href="buy.html#page2">인터넷/tv</a></li>
-                                <li><a href="buy.html#page3">유심/자급제</a></li>
-                                <li><a href="buy.html#page4">테마관</a></li>
+                                <li><a href="buy.html#page3">테마관</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -201,14 +201,13 @@
                <section class="page" id="page1">
                    <div id="product_kt">
                        <div class="product_warp">
-                           <div class="product_content">
                                <div class="product_tit">
-                                   <img src="./img/mobile1.jpg" alt="">
-                                       <div class="coulmn">
-                                           <h3>요금제</h3>
-                                           <p>나의 모바일 스타일에 꼭 맞는 요금상품을 찾아보세요!</p>
-                                       </div>
+                                    <div class="coulmn">
+                                        <h3>요금제</h3>
+                                        <p>나의 모바일 스타일에 꼭 맞는 요금상품을 찾아보세요!</p>
+                                    </div>
                                </div>
+                            <div class="product_content">   
                                <div class="mobile_choice">
                                    <div class="column">
                                        <div class="inner">
@@ -377,16 +376,14 @@
                 </section>
                 <section class="page" id="page2">
                     <div id="product_kt">
-                        <div class="product_warp">
-                            <div class="product_content">
-                                <div class="product_tit">
-                                    <img src="./img/mobile1.jpg" alt="">
-                                        <div class="coulmn">
-                                            <h3>Why KT 인터넷</h3>
-                                            <p>900만 고객님이 인정한 KT의 우수한 품질</p>
-                                        </div>
+                        <div class="product_warp">    
+                            <div class="product_tit">
+                                <div class="coulmn">
+                                    <h3>Why KT 인터넷</h3>
+                                    <p>900만 고객님이 인정한 KT의 우수한 품질</p>
                                 </div>
                             </div>
+                        </div>               
                             <div class="internet_quality">
                                 <div class="column">
                                     <div class="inner">
@@ -395,40 +392,39 @@
                                         <p>900만 고객 님이 인정한 KT의 우수한 품질</p>
                                     </div>
                                 </div>
-                            </div>          
-                            <div class="usagefee">
-                                <div class="column">
-                                    <div class="inner">
-                                        <div class="info_usaefee">
-                                            <h3>합리적인 이용요금</h3>
-                                            <p>온라인할인, 우수고객 GiGA속도제공 등 다양한 할인제도를<br>
-                                                        운용하여 이용요금에 대한 부담을 최소화하였습니다.</p>
-                                        </div>
-                                        <div class="koreakt">
-                                            <h3>대한민국 인터넷의 역사 KT</h3>
-                                            <p>고품질의 초고속 인터넷으로<br>
-                                                        끊김없이 안정적인 사업 환경을 제공합니다.</p>
-                                        </div>
-                                        <div class="info_coverage">
-                                            <h3>기가인터넷 커버리지 99%</h3>
-                                            <p>전국 기가인터넷 커버리지 99%로,<br>
-                                                        어디서나 기가인터넷 서비스 제공가능!</p>
-                                            <span>※ 단, 서비스 제공 지역이어도 설치 장소의 건물 유형 또는 시설방식 등<br>
-                                                        현장 상황에 따라 서비스 제공이 어려울 수도 있습니다.</span>
-                                        </div>
+                            </div>             
+                        <div class="usagefee">
+                            <div class="column">
+                                <div class="inner">
+                                    <div class="info_usaefee">
+                                        <h3>합리적인 이용요금</h3>
+                                        <p>온라인할인, 우수고객 GiGA속도제공 등 다양한 할인제도를<br>
+                                                    운용하여 이용요금에 대한 부담을 최소화하였습니다.</p>
+                                    </div>
+                                    <div class="koreakt">
+                                        <h3>대한민국 인터넷의 역사 KT</h3>
+                                        <p>고품질의 초고속 인터넷으로<br>
+                                                    끊김없이 안정적인 사업 환경을 제공합니다.</p>
+                                    </div>
+                                    <div class="info_coverage">
+                                        <h3>기가인터넷 커버리지 99%</h3>
+                                        <p>전국 기가인터넷 커버리지 99%로,<br>
+                                                    어디서나 기가인터넷 서비스 제공가능!</p>
+                                        <span>※ 단, 서비스 제공 지역이어도 설치 장소의 건물 유형 또는 시설방식 등<br>
+                                                    현장 상황에 따라 서비스 제공이 어려울 수도 있습니다.</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="history">
-                                <div class="column">
-                                    <div class="inner">
-                                        <h3>AP수상이력</h3>
-                                        <img src="./img/internet5.png" alt="">
-                                    </div>
+                        </div>
+                        <div class="history">
+                            <div class="column">
+                                <div class="inner">
+                                    <h3>AP수상이력</h3>
+                                    <img src="./img/internet5.png" alt="">
                                 </div>
                             </div>
-                        </div>    
-                    </div>        
+                        </div>
+                    </div> 
                     <div class="bread_box">
                         <div class="bread_wrap">
                             <ul class="bread">
@@ -454,66 +450,64 @@
                 <section class="page" id="page3">
                     <div id="product_kt">
                         <div class="product_warp">
-                            <div class="product_content">
-                                <div class="product_content">
-                                    <div class="product_tit">
-                                        <img src="./img/tv1.jpg" alt="">
-                                            <div class="coulmn">
-                                                <h3>olleh tv 소개</h3>
-                                                <p>900만 이상 고객이 선택한 No.1 IPTV</p>
-                                            </div>
-                                    </div>
-                                <div class="vod_section">
-                                    <div class="vod_cover">
-                                        <div class="column">
-                                            <div class="inner">
-                                                <h4>국내 최다 볼거리</h4>
-                                                <p>국내 최대 260여개 채널과 30만여편 VOD</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                                <div class="tv_section">
-                                    <div class="column">
-                                        <div class="inner">
-                                            <h4>구형 TV도 스마트하게 업그레이드</h4>
-                                            <div class="copy_text">
-                                                <p>싱글을 위한 가성비 만점 필수템</p>
-                                                <h3>기가지니A</h3>
-                                                <p>우리 집 TV에 셋톱박스를 연결한 뒤 TV앱을 다운받아<br>
-                                                    내가 즐겨보는 다양한 OTT를 큰 화면으로 감상</p>
-                                            </div>
-                                        </div>
+                            <div class="product_tit">
+                                <div class="coulmn">
+                                    <h3>olleh tv 소개</h3>
+                                    <p>900만 이상 고객이 선택한 No.1 IPTV</p>
+                                </div>
+                            </div>
+                        </div>           
+                        <div class="vod_section">
+                            <div class="vod_cover">
+                                <div class="column">
+                                    <div class="inner">
+                                        <h4>국내 최다 볼거리</h4>
+                                        <p>국내 최대 260여개 채널과 30만여편 VOD</p>
                                     </div>
                                 </div>
-                                <div class="google_section">
-                                    <div class="column">
-                                        <div class="inner">
-                                            <h4>우리 집이 영화관, 콘서트장, 골프장으로 변신</h4>
-                                            <div class="copy_text">
-                                                <p>슬기로운 신혼부부 집콕 생활</p>
-                                                <h3>즐기는 TV 서비스</h3>
-                                                <p>넷플릭스, 콘서트 생중계 , 스크린 골프, 홈트 등<br>
-                                                    보는 TV(Watching)는 기본, 즐기는 TV(Playing) 까지</p>
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>    
+                        <div class="tv_section">
+                            <div class="column">
+                                <div class="inner">
+                                    <h4>구형 TV도 스마트하게 업그레이드</h4>
+                                    <div class="copy_text">
+                                        <p>싱글을 위한 가성비 만점 필수템</p>
+                                        <h3>기가지니A</h3>
+                                        <p>우리 집 TV에 셋톱박스를 연결한 뒤 TV앱을 다운받아<br>
+                                            내가 즐겨보는 다양한 OTT를 큰 화면으로 감상</p>
                                     </div>
                                 </div>
-                                <div class="kid_section">
-                                    <div class="column">
-                                        <div class="inner">
-                                            <h4>놀면서 배우는 영어놀이터까지!</h4>
-                                            <div class="copy_text">
-                                                <p>놀면서 배우는 영어놀이터까지!
-                                                    아이를 생각한다면</p>
-                                                <h3>키즈랜드</h3>
-                                                <p>아이 연령 및 수준별 커리큘럼에 따라 영어 콘텐츠 보고 ,<br>
-                                                    무료 워크지로 공부하면 엄마표영어 완성</p>
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>
+                        <div class="google_section">
+                            <div class="column">
+                                <div class="inner">
+                                    <h4>우리 집이 영화관, 콘서트장, 골프장으로 변신</h4>
+                                    <div class="copy_text">
+                                        <p>슬기로운 신혼부부 집콕 생활</p>
+                                        <h3>즐기는 TV 서비스</h3>
+                                        <p>넷플릭스, 콘서트 생중계 , 스크린 골프, 홈트 등<br>
+                                            보는 TV(Watching)는 기본, 즐기는 TV(Playing) 까지</p>
                                     </div>
                                 </div>
-                            </div>        
+                            </div>
+                        </div>
+                        <div class="kid_section">
+                            <div class="column">
+                                <div class="inner">
+                                    <h4>놀면서 배우는 영어놀이터까지!</h4>
+                                    <div class="copy_text">
+                                        <p>놀면서 배우는 영어놀이터까지!
+                                            아이를 생각한다면</p>
+                                        <h3>키즈랜드</h3>
+                                        <p>아이 연령 및 수준별 커리큘럼에 따라 영어 콘텐츠 보고 ,<br>
+                                            무료 워크지로 공부하면 엄마표영어 완성</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
                     <div class="bread_box">
                         <div class="bread_wrap">
                             <ul class="bread">
@@ -535,6 +529,7 @@
                     <div class="page_wrap">
                     </div>
                     </div>
+     
                 </section>
             </div> 
         </div>    

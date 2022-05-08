@@ -32,7 +32,7 @@
     .bread_box {clear: both; margin-left: 100px; margin-top: 30px;}
     ul.bread > li {float: left; margin-left: 15px; }
 
-    .member_kt {clear: both; width: 100%;}
+    .member_kt {clear: both; width: 100%; height: auto;}
     .member {width: 100%; height: 250px; padding-top: 90px; margin: 0 auto; overflow: hidden;}
     .member .column {width: 1260px; height: 100%; margin: 0 auto;}
     .member .inner {width: 100%; text-align: center; position: relative; text-align: center; bottom: 200px; } 
@@ -54,12 +54,28 @@
     .btm h4 {font-size: 34px; text-align: center; padding-top: 20px; width: 100%; margin-right: 30px;}
     .btm .inner p {font-size: 18px; text-align: center; width: 100%; padding-top: 20px;}    
     
-    .mem_warp {clear: both; width: 100%; padding-top: 90px;}
-    .mem_img {clear: both; width: 1260px; margin: 0 auto;}
-    .mem_img .column {width: 1080px; margin: 0 auto;}
-    .ev_warp {clear: both; width: 100%; height: 500px; padding-top: 10px;}
-    .ev {width: 1260px; margin: 0 auto;}
-    .ev img {padding-left: 40px;}
+    .ev_warp {clear: both; width: 1260px; margin: 0 auto; height: 1080px}
+    .ev_warp .ev {clear: both; width: 1080px; margin: 0 auto; height: 100%;}
+    .ev_warp ul:after {content: ""; width: 100%; clear: both; display: block;}
+    .ev_warp li {float: left; width: 255px; height: 310px; padding-bottom: 30px; position: relative; background-color: #f9f9f9;
+        margin-right: 20px; text-align: center;}
+    .ev_warp li:nth-child(4n) {margin-right: 0;}
+    .ev_warp li.menu1 {background-image: url(./img/ev1.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu2 {background-image: url(./img/ev2.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu3 {background-image: url(./img/ev3.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu4 {background-image: url(./img/ev4.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu5 {background-image: url(./img/ev5.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu6 {background-image: url(./img/ev6.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu7 {background-image: url(./img/ev7.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu8 {background-image: url(./img/ev8.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu9 {background-image: url(./img/ev9.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu10 {background-image: url(./img/ev10.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu11 {background-image: url(./img/ev11.jpg); background-repeat: no-repeat;}
+    .ev_warp li.menu12 {background-image: url(./img/ev12.jpg); background-repeat: no-repeat;}
+    .ev_warp p.tit { width: 255px; text-align: center; position: absolute; bottom: 55px; font-size: 20px;}
+    .ev_warp p.date {width: 255px; text-align: center; position: absolute; bottom: 30px; font-size: 13px; color: #888;}
+
+
    </style>
   
 </head>
@@ -112,8 +128,7 @@
                             <ul class="sub">
                                 <li><a href="buy.html#page1">핸드폰구매</a></li>
                                 <li><a href="buy.html#page2">인터넷/tv</a></li>
-                                <li><a href="buy.html#page3">유심/자급제</a></li>
-                                <li><a href="buy.html#page4">테마관</a></li>
+                                <li><a href="buy.html#page3"></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -276,16 +291,56 @@
                         </div>
                         <div class="ev_warp">
                             <div class="ev">
-                                <img src="./img/ev1.jpg" alt="">
-                                <img src="./img/ev2.jpg" alt="">
-                                <img src="./img/ev3.jpg" alt="">
-                                <img src="./img/ev4.jpg" alt="">
-                            </div>
-                            <div class="ev">
-                                <img src="./img/ev5.jpg" alt="">
-                                <img src="./img/ev6.jpg" alt="">
-                                <img src="./img/ev7.jpg" alt="">
-                                <img src="./img/ev8.jpg" alt="">
+                                <ul>
+                                    <li class="menu1">
+                                        <p class="tit"><구필수는 없다> V컬러링<br>설정 이벤트</p>
+                                        <p class="date">2022.05.04 ~ 2022.06.02</p>
+                                    </li>
+                                    <li class="menu2">
+                                        <p class="tit">올레 tv play 출석 체크<br>이벤트</p>
+                                        <p class="date">2022.05.01 ~ 2022.05.31</p>
+                                    </li>
+                                    <li class="menu3">
+                                        <p class="tit">KT 멤버십 테마파크 할인<br>혜택 안내</p>
+                                        <p class="date">2022.05.01 ~ 2022.05.31</p>
+                                    </li>
+                                    <li class="menu4">
+                                        <p class="tit">KT 멤버십 히트조명 할인<br>혜택</p>
+                                        <p class="date">2022.05.02 ~ 2022.12.31</p>
+                                    </li>
+                                    <li class="menu5">
+                                        <p class="tit">KT 멤버십 핫선글라스 할인<br>혜택</p>
+                                        <p class="date">2022.05.02 ~ 2022.12.31</p>
+                                    </li>
+                                    <li class="menu6">
+                                        <p class="tit">KT 멤버십 나의 초이스<br>혜택 안내</p>
+                                        <p class="date">2022.05.02 ~ 2022.05.15</p>
+                                    </li>
+                                    <li class="menu7">
+                                        <p class="tit">KT 멤버십 VVIP 스페셜<br>혜택 블루보틀</p>
+                                        <p class="date">2022.05.01 ~ 2022.05.31</p>
+                                    </li>
+                                    <li class="menu8">
+                                        <p class="tit">5월 더블할인 문화혜택</p>
+                                        <p class="date">2022.05.01 ~ 2022.05.31</p>
+                                    </li>
+                                    <li class="menu9">
+                                        <p class="tit">키즈랜드 배움 패키지<br>받아가세요!</p>
+                                        <p class="date">2022.04.27 ~ 2022.05.15</p>
+                                    </li>
+                                    <li class="menu10">
+                                        <p class="tit">KT 디지털명세서 함께<br>Green 세상 프로모션</p>
+                                        <p class="date">2022.04.12 ~ 2022.05.13</p>
+                                    </li>
+                                    <li class="menu11">
+                                        <p class="tit">KT 멤버십 VVIP 초이스<br>할리스 혜택</p>
+                                        <p class="date">2022.04.01 ~ 2022.12.31</p>
+                                    </li>
+                                    <li class="menu12">
+                                        <p class="tit">지금 결혼하러 갑니다</p>
+                                        <p class="date">2022.04.08 ~ 2022.05.31</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>    
