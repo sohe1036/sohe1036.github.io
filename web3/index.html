@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTP-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<!--shortcut icon 및 파비콘 크기별로 ico이나 png로 연결-->
+
+<!--문서메타정보연결-->
+<meta name="url" content="https://sohe1036.github.io/web3/index.html"/>
+<meta name="title" content="대한민국 민속문화예술특구 진도군 관광문화"/>
+<meta name="subject" content="대한민국 민속문화예술특구 진도군 관광문화"/>
+<meta name="description" content="jindo 진도군 관광문화축제, 테마관광, 공연축제, 관광안내, 교통안내 "/>
+<meta name="keywords" content="진도, 진도여행, 국내여행, 전라도여행, 금골산 ,명량대첩축제, 소치, 삼별초공원, 신비의바닷길 "/>
+<!--오픈 그래프연결-->
+<meta property="og:url" content="https://sohe1036.github.io/web3/index.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="진도관광문화">
+<meta property="og:description" content="jindo 진도군 관광문화축제, 테마관광, 공연축제, 관광안내, 교통안내, 커뮤니티"/>
+<meta property="og:image" href="./img/jindo_logo.jpg"/>
+<!--기본 플러그인 연결-->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="./js/jquery-1.9.1.js"></script>
+<!--폰트 연결 및 폰트 설정-->
+<style>
+    @font-face {
+    font-family: 'EliceDigitalBaeum_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+</style>
+<title>메인페이지</title>
+<style>
+    /*스타일 초기화*/
+	*{ margin: 0%; padding: 0%; }
+   body, html { width: 100%;}
+   ul { list-style: none; }
+   a { text-decoration: none; color: #333; }
+   input, button { outline: 0; border:0; }
+   table, .table{ display: table; border-collapse: collapse; }
+   tr, .tr { display: table-row; }
+   td, .td, th, .th { display: table-cell; }
+
+   /*클리어 픽스처리*/
+   .clrfx:after { content:""; display: block; width: 100%; clear: both;}
+
+   /*hrader*/
+    #hd { clear: both; width: 100%; height: auto;}
+    .hd_wrap { clear: both; width: 100%; height: 100%;}
+    .top_hd_wrap {clear: both; width: 100%; height: 30px; background-color: #edeceb; border-bottom: 1px solid #dcdbd9; }
+    #tnb { width: 1200px; margin: 0 auto; height: 100%; }
+    #tnb ul { float: right; }
+    #tnb ul li { float: left; padding: 5px 15px; font-size: 13px; border-left: 1px solid #dcdbd9; }
+    #tnb ul:last-child li { border-right: 1px solid #dcdbd9; }
+  
+</style>
+</head>
+<body>
+	<div class=containar>
+		<header id="hd" class="clrfx">
+            <div class="hd_wrap"> 
+                <div class="top_hd_wrap clrfx">          
+                    <nav id="tnb">
+                        <ul>
+                            <li><a href="">진도군청</a></li>
+                            <li><a href="">열린군수실</a></li>
+                            <li><a href="">군의회</a></li>
+                            <li><a href="">global</a></li>
+                        </ul> 
+                    </nav>
+                </div>    
+                <div class="middle_hd_wrap clrfx">
+                    <nav id="tnb2">
+                        <div class="main_logo">
+                            <a href="index.html">
+                                <img src="./img/jindo_logo.jpg" alt="jindo_logo">
+                            </a>
+                        </div>
+                        <div class="info_call">
+                            <img src="./img/button_head_call.jpg" alt="info_call">
+                        </div>
+                        <div class="jindo_login">
+                            <ul>
+                                <li><a href="">로그인</a></li>
+                                <li><a href="">사이드맵</a></li>
+                                <li><a href="">글자크기</a></li>
+                            </ul>
+                        </div>
+                        <div class="jindo_sns">
+                            <ul>
+                                <li><a href=""><img src="./img/tnb_sns_01.jpg" alt="페이스북"></a></li>
+                                <li><a href=""><img src="./img/tnb_sns_02.jpg" alt="블로그"></a></li>
+                                <li><a href=""><img src="./img/tnb_sns_03.jpg" alt="인스타그램"></a></li>
+                                <li><a href=""><img src="./img/tnb_sns_04.jpg" alt="카카오스토리"></a></li>
+                                <li><a href=""><img src="./img/tnb_sns_05.jpg" alt="유튜브"></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>        
+                <div class="bottom_hd_wrap clrfx">    
+                    <nav id="gnb">
+                        <ul>
+                            <li><a href="" class="menu1">관광명소</a>
+                                <ul class="sub">
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=11'>산</a></li>	
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=12'>바다</a></li>                   
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=13'>계곡</a></li> 
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=14'>박물관/미술관</a></li>
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=15'>사찰</a></li>                 
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=16'>전망대/산책로/등산로</a></li>                  
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=17'>섬</a></li>                     
+                                        <li class="cate"><a href='PlaceCtrl.html?ptype=A&prop=17'>기타</a></li>
+                                </ul>
+                            <li><a href="" class="menu1">축제</a>
+                                <ul class="sub">
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=B&prop=11'>문화예술행사</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=B&prop=12'>축제</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=B&prop=13'>공연</a></li>      
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=B&prop=14'>기타</a></li>
+                                </ul>
+                            </li>	
+                            <li><a href="" class="menu1">문화제</a>
+                                <ul class="sub">     
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=C&prop=11'>무형문화제</a></li> 
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=C&prop=12'>유형문화제</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=C&prop=13'>향토문화유산</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=C&prop=14'>기타</a></li>
+                                </ul>
+                            </li>	
+                            <li><a href="" class="menu1">체험</a>
+                                <ul class="sub">           
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=E&prop=11'>관람</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=E&prop=12'>체험</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=E&prop=13'>캠핑</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=E&prop=14'>기타</a></li>  
+                                </ul>
+                            </li>	
+                            <li><a href="" class="menu1">음식/쇼핑/숙박</a>
+                                <ul class="sub">     
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=D&prop=11'>한정식</a></li>			
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=D&prop=12'>고기류</a></li>                 
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=D&prop=13'>생선류</a></li>  
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=D&prop=14'>기타</a></li>  
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=F&prop=11'>전통시장</a></li>  
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=F&prop=12'>온라인몰</a></li>    
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=F&prop=13'>기타</a></li>   
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=G&prop=11'>호텔/리조트</a></li>    
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=G&prop=12'>펜션</a></li>    
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=G&prop=13'>민박</a></li>     
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=G&prop=14'>모텔</a></li>    
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=G&prop=15'>게스트하우스</a></li>
+                                </ul>
+                            </li>		
+                            <li><a href="" class="menu1">교통</a>
+                                <ul class="sub">    
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=11'>시외버스</a></li> 
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=12'>군내버스</a></li> 
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=21'>KTX</a></li>  
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=22'>SRT</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=31'>여객선</a></li>
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=32'>유람선</a></li>  
+                                    <li class="cate"><a href='PlaceCtrl.html?ptype=H&prop=41'>시티버스</a></li>
+                                
+                                </ul>
+                            </li> 
+                            <li><a href="" class="menu1">커뮤니티</a>
+                                <ul class="sub">
+                                    <li class="cate"><a href="GetUserImpressionListCtrl.html" >이용후기</a></li>
+                                    <li class="cate"><a href="" >자료실</a></li>
+                                    <li class="cate"><a href="GetUserNoticeListCtrl.html" >공지사항</a></li>
+                                </ul>
+                            </li>					
+                        </ul>
+                    </nav>
+                </div>
+            </div>     
+		</header>
+		<div class="content">
+		</div>
+        <footer id="ft">		
+            <div class="ft_wrap">
+                <h3>푸터</h3>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>
