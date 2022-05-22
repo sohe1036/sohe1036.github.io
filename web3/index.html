@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 <!--shortcut icon 및 파비콘 크기별로 ico이나 png로 연결-->
-
+<!-- 웹 아이콘 XEIcon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <!--문서메타정보연결-->
 <meta name="url" content="https://sohe1036.github.io/web3/index.html"/>
 <meta name="title" content="대한민국 민속문화예술특구 진도군 관광문화"/>
@@ -52,7 +53,7 @@
    /*클리어 픽스처리*/
    .clrfx:after { content:""; display: block; width: 100%; clear: both;}
 
-   sli
+   
     /*hrader*/
     #hd { clear: both; width: 100%; height: auto;}
     .hd_wrap { clear: both; width: 100%; height: 100%; background;}
@@ -66,23 +67,28 @@
     .tnb_right { float: right;}
     #tnb li.sns_icon { padding: 0 ;}
     /*메인메뉴*/
-    .bottom_hd_wrap { clear: both; width: 100%; height: 65px; padding-top: 30px;}
-    #gnb { width: 1300px; margin: 0 auto; height: 100%; }
+    .bottom_hd_wrap { clear: both; width: 100%; height: 65px; padding-top: 30px; position: relative;}
+    .hd_inner { width: 100%; height: 65px; position: absolute; top: 0.1px; padding-top: 20px;}
+    .bottom_hd_wrap:hover .hd_inner { background-color: #fff; }
+    #gnb { width: 1300px; margin: 0 auto; height: 50px; position: relative; }
     #gnb .main_logo { display: block;  float: left; width: 250px;}
     #gnb .main_logo img { width: 250px; }
     #gnb .main_menu {  height: 100%;}
-    #gnb .main_menu > ul > li { float: left; padding-top: 7px; padding-bottom: 10px; position: relative; width: 150px; font-size: 16px; font-weight: bold; text-align: center;}
+    #gnb .main_menu > ul > li { float: left; padding-top: 7px; padding-bottom: 10px; position: relative; width: 150px; font-size: 16px; font-weight: bold; text-align: center; }
+    #gnb .main_menu > ul > li a {color: #fff; text-shadow: 1px 1px 1px #000; letter-spacing: 3px;}
     #gnb .main_menu > ul > li:hover .sub { display: block; }
     #gnb .main_menu > ul > li:hover>a { color: #c62540;}
     #gnb .main_menu > ul > li > ul { display: none; position: absolute; width: 150px; font-size: 15px; margin-top: 10px; text-align: center; 
-        font-weight: normal; top: 30px; background-color: #f5efef; z-index: 999;}
+        font-weight: normal; top: 30px; z-index: 999;}
     #gnb .main_menu li.cate { padding: 5px 0; }
+    #gnb .main_menu li.cate:hover a { color: #c62540; }
 
     /*content*/
-    .content { clear: both; width: 100%; height: auto; }
-    .main_visual { width: 100%; overflow: hidden;}
+    .content { clear: both; width: 100%; height: auto; position: absolute; top: 0.1px; z-index: -100;}
+    .main_visual { width: 100%; overflow: hidden; position: relative; }
     .visual_img { width: 500%; }
-    .visual_img li { float: left; width: 20%; }
+    .visual_img li { float: left; width: 20%;}
+    .visual_img li img { width: 1920px; height: 600px;}
    
    
 </style>
@@ -119,6 +125,7 @@
                     </nav>
                 </div>       
                 <div class="bottom_hd_wrap clrfx">    
+                    <div class="hd_inner">
                     <nav id="gnb">
                         <div class="main_logo">
                             <a href="index.html">
@@ -202,14 +209,15 @@
                         </div>   
                     </nav>
                 </div>
+                </div>
             </div>     
 		</header>
 		<div class="content">
             <div class="main_visual">
                 <ul class="visual_img">
                     <li>
-                        <video width="" height="" autoplay muted loop class="visual">
-                            <source src="./video/background_video.mp4" type="video/mp4">
+                        <video width="1920px" autoplay muted loop class="visual">
+                            <source src="./video/background_video3.mp4" type="video/mp4">
                         </video>
                     </li>
                     <li><img src="./img/main1.png" alt="명량대첩" class="visual"></li>
@@ -219,13 +227,16 @@
                 </ul>
             </div>
             <div class="btn_group">
-                <button class="prev_btn"><img src=""></button>
-                <button class="next_btn"><img src=""></button>
+                <button class="prev_btn"><i class="xi-angle-left"></i></button>
+                <button class="stop_btn"><i class="xi-pause"></i></button>
+                <button class="next_btn"><i class="xi-angle-right"></i></button>
             </div>
 		</div>
-        <<script>
+        <script>
             $(".visual_img").slick({
                 autoplay: true, 
+                pauseOnHover: false,
+                pauseOnFocus: false,
                 autoplaySpeed: 4000});
          </script> 
         <footer id="ft">		
