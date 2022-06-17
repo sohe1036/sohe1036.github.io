@@ -17,9 +17,9 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/jquery-ui-1.9.2.custom.js"></script>
-    <link rel="stylesheet" href="./css/slickstyle.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slickstyle.css">
     <script src="./js/slick.js"></script>
     <!--폰트-->
     <title>메인페이지</title>
@@ -50,7 +50,7 @@
         /* gnb */
         .top_hd_wrap {height: 50px; clear: both;}
         .top_nav_wrap {height: 100px; width: 1400px; margin: 0 auto;}
-        .gnb{height: 70px; clear: both; width: 100%; border-top: 1px solid #ddd;background-color: #fbfbfb; z-index: 99;}
+        .gnb{height: 70px; clear: both; width: 100%; border-top: 1px solid #ddd;background-color: #fbfbfb; z-index: 99; border-bottom: 1px solid #ddd; }
         .gnb_wrap {margin: 0 auto; height: 300px; z-index: 1;}
         .background {clear: both;width: 100%; position:absolute; width: 1920px; background-color: #fff; height:0; top:171px; z-index:1; left: 0;} 
         .main_ul {margin: 0 auto; height: 70px; width: 1400px;}
@@ -75,57 +75,33 @@
         .sm_last, .mm_last { border-right: 1px solid #ddd;}
 
         
-        .content { clear: both; width: 100%; height: 1800px; }
+        .content { clear: both; width: 100%; height: auto; overflow: hidden; }
+        .content_wrap {width: 1400px; margin: 0 auto;}
+
+        /*사이드*/
+        .right_btn {width: 65px; height: 200px; position:fixed; right: 55px; bottom: 45px; z-index: 999;}
+        .right_btn img {width: 90%; padding-bottom: 11px;}
+
         /* 비주얼슬라이더*/
-        #ic {width:100%; overflow: hidden;}
+        #ic {width:100%; overflow: hidden; position: relative; }
         .img_box{ width:100%;}
         .img_box li { float: left; width: 25%; position: relative; }
         .imb_box li a {display: block;}
         .img_box li a img{display: block; width: 100%; height: auto;}
+        
 
-        .intro0 {float: left; width: 20%; }
-        .intro0 caption {width: 100%; font-size: 25px; text-align: center; }
-        .intro0 th {display: block; float: left; width: 25%;text-align: center; font-size: 18px; box-sizing: border-box; }
-        .intro0 td {display: block; float: left; text-align: center; width: 25%; font-size: 16px; box-sizing: border-box; }
-        .intro1 {float: left; width: 20%; }
-        .intro1 caption {width: 100%; font-size: 25px; text-align: center;  }
-        .intro1 th {display: block; float: left; width: 33%;text-align: center; font-size: 18px; box-sizing: border-box; }
-        .intro1 td {display: block; float: left; text-align: center; width: 33%; font-size: 16px;box-sizing: border-box;  }
-        .intro2 {float: left; width: 20%; }
-        .intro2 caption {width: 100%; font-size: 25px; text-align: center; }
-        .intro2 th {display: block; float: left; width: 33%;text-align: center; font-size: 18px; box-sizing: border-box; }
-        .intro2 td {display: block; float: left; text-align: center; width: 33%; font-size: 16px;box-sizing: border-box;  }
-        .intro3 {float: left; width: 20%; }
-        .intro3 caption {width: 100%; font-size: 25px; text-align: center;  }
-        .intro3 th {display: block; float: left; width: 33%;text-align: center; font-size: 18px;box-sizing: border-box;  }
-        .intro3 td {display: block; float: left; text-align: center; width: 33%; font-size: 16px; box-sizing: border-box; }
-
-        /* 게시판 스타일-의료진 예약 */
-        .intro0 thead{border-top: 1px solid#ddd; }
-        .intro0 thead{border-bottom: 1px solid#ddd; }
-        .intro0 th{border-left: 1px solid#ddd ;}
-        .intro0 td{border-left: 1px solid#ddd ;}
-        .intro0 td{border-bottom: 1px solid#ddd ;}
-
-        .intro1 thead{border-top: 1px solid#ddd;}
-        .intro1 thead{border-bottom: 1px solid#ddd; }
-        .intro1 th{border-left: 1px solid#ddd ;}
-        .intro1 td{border-left: 1px solid#ddd ;}
-        .intro1 td{border-bottom: 1px solid#ddd ;}
-
-
-        .intro2 thead{border-top: 1px solid#ddd;}
-        .intro2 thead{border-bottom: 1px solid#ddd; }
-        .intro2 th{border-left: 1px solid#ddd ;}
-        .intro2 td{border-left: 1px solid#ddd ;}
-        .intro2 td{border-bottom: 1px solid#ddd ;}
-
-        .intro3 thead{border-top: 1px solid#ddd;}
-        .intro3 thead{border-bottom: 1px solid#ddd; }
-        .intro3 th{border-left: 1px solid#ddd ;}
-        .intro3 td{border-left: 1px solid#ddd ;}
-        .intro3 td{border-bottom: 1px solid#ddd ;}
-
+         /* 게시판 스타일-의료진 예약 */
+        .medical li{display: block; width: 300px; height: 84px; border: 1px solid #ddd; margin: 0 auto; float: left; text-align: center; font-size: 24px; }
+        .medical a{color: #0087ab; line-height: 80px;}
+        .medical_box{width: 1350px; margin: 0 auto; height: 400px; margin-top: 40px; margin-bottom: 100px;   border:1px solid #0087ab ; background-image: url("./img/bg_main1.jpg");}
+        .medical_leftbox{width: 65%; height: 100%; background-color: rgb(255, 255, 255);}
+        .main {display: block;  width: 400px;}
+        .medical_title{width: 100%; margin-left: 60px;font-size: 30px; color: #0087ab; padding-top: 15px; }
+        .medical_comment{width: 100%; margin-left: 60px;font-size: 26px; color: #000; padding-top: 15px;}
+        .medical{padding-left: 60px; padding-top: 20px;}
+        .medical li:hover{background-color: #0087ab; }
+        .medical li:hover a{color: #fff;}
+        .backcolor{position: absolute;left: 0; width: 1920px; top: 750px; height: 520px; background-color: #f6f6fa; z-index: -1;}
 
          /*공지사항, 게시판*/
         .news_section { clear: both; width: 1200px; height: 450px; margin: 0 auto; }
@@ -141,6 +117,8 @@
         .notice li { height: 60px;  width: 600px; line-height: 60px; margin: 0 auto; }
         .notice li a { float: left; margin-left: 40px;}
         .notice li span { float: right; margin-right: 20px; color: #999; }
+        .board ul { margin: 0 auto; }
+        .notice ul { margin: 0 auto; }
         .board li { height: 60px; width: 400px; line-height: 60px; margin: 0 auto; }
         .board li a { color: #fff; }
         .notice li:first-child { border-top: 1px solid #333; border-collapse: collapse;}
@@ -168,8 +146,21 @@
         .time b { padding-right: 30px; color: #0087ab; }   
         .xi-whatsapp { font-size: 40px; }
 
+        /*푸터 sns*/
+        .ft_line {width: 100%; height: 45px; background-color: #327cb6; padding: 18px; color: #fff; font-size: 16px;}
+        .ft_line p {float:left; padding-right: 10px; margin-top: 12px; padding-left: 11%; font-weight: 500;}
+        .ft_link1 ,.ft_link2,.ft_link3,.ft_link4,.ft_link5,.ft_link6 {display: inline-block; width: 45px; height: 45px; 
+            margin: 0 10px;vertical-align: middle; background-size: cover}
+        .ft_link1 {background-image:url("./img/icon_quick_link1.png")}
+        .ft_link2 {background-image:url("./img/icon_quick_link2.png")}
+        .ft_link3 {background-image:url("./img/icon_quick_link3.png")}
+        .ft_link4 {background-image:url("./img/icon_quick_link4.png")}
+        .ft_link5 {background-image:url("./img/icon_quick_link5.png")}
+        .ft_link6 {background-image:url("./img/icon_quick_link6.png")}
+
+
         /*푸터*/
-        #ft { clear: both; width: 100%; height: 185px; }
+        #ft { clear: both; width: 100%; height: 300px; }
         .fnb { clear: both; width: 100%; height: 20px; border: 1px solid #ddd; padding: 10px 0; }
         .fnb .inner { width: 1450px; height: 100%; margin-left: 30px; margin: 0 auto; }
         .fnb span { margin: 0 10px; font-size: 13px; }
@@ -177,10 +168,10 @@
         .fnb span:last-child:after { content: ""; }
         .snb { clear: both; width: 100%; height: 100px; padding: 20px 10px; }
         .snb .inner{ width: 1450px; height: 100%; margin-left: 40px; margin: 0 auto; }
-        .copy_warp { float: left; }
+        .copy_wrap { float: left; }
         .ft_logo { float: right; }
-        .copy_warp b { display: block; margin-bottom: 10px; }
-        .copy_warp p, .copy_warp span { font-size: 13px; padding-right: 10px; color: #666; }
+        .copy_wrap b { display: block; margin-bottom: 10px; }
+        .copy_wrap p, .copy_wrap span { font-size: 13px; padding-right: 10px; color: #666; }
         .copy { margin-top: 10px; color: #444; }
         
 
@@ -228,25 +219,25 @@
                                         <li class="submenu"><a href="time.html">진료시간</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat1.html">진료1</a>
+                                <li class="mainmenu"><a href="treat1.html">수정체/망막질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat1_sub1.html">진료1</a></li>
-                                        <li class="submenu"><a href="treat1_sub2.html">진료2</a></li>
-                                        <li class="submenu"><a href="treat1_sub3.html">진료3</a></li>
+                                        <li class="submenu"><a href="treat1_sub1.html">백내장</a></li>
+                                        <li class="submenu"><a href="treat1_sub2.html">녹내장</a></li>
+                                        <li class="submenu"><a href="treat1_sub3.html">당뇨망막병증</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat2.html">진료2</a>
+                                <li class="mainmenu"><a href="treat2.html">안질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat2_sub1.html">진료1</a></li>
-                                        <li class="submenu"><a href="treat2_sub2.html">진료2</a></li>
-                                        <li class="submenu"><a href="treat2_sub3.html">진료3</a></li>
+                                        <li class="submenu"><a href="treat2_sub1.html">비문증</a></li>
+                                        <li class="submenu"><a href="treat2_sub2.html">안구건조증</a></li>
+                                        <li class="submenu"><a href="treat2_sub3.html">사시/약시</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat3.html">진료3</a>
+                                <li class="mainmenu"><a href="treat3.html">소아질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat3_sub1.html">진료1</a></li>
-                                        <li class="submenu"><a href="treat3_sub2.html">진료2</a></li>
-                                        <li class="submenu"><a href="treat3_sub3.html">진료3</a></li>
+                                        <li class="submenu"><a href="treat3_sub1.html">시력발달</a></li>
+                                        <li class="submenu"><a href="treat3_sub2.html">사시/약시</a></li>
+                                        <li class="submenu"><a href="treat3_sub3.html">드림렌즈</a></li>
                                     </ul>
                                 </li>        
                                 <li class="mainmenu mm_last"><a href="news.html">병원소식</a>
@@ -263,6 +254,7 @@
             </div>
         </header>
         <div class="content">
+            
             <div id="ic">
                 <ul class="img_box">
                     <li>
@@ -280,8 +272,8 @@
                             <img src="./img/slide03.jpg" alt="의료3" class="inc">
                         </a>   
                     </li>
-                 </ul>
-       
+                </ul>
+    
                 <button id="play_btn" class="play_btn" ></button>
                 <!-- <div class="btn_group">
                     <button class="prev_btn"><i class="xi-arrow-left"></i></button>
@@ -304,214 +296,133 @@
                     });	
                 </script>
             </div>
-            <table class="intro0">
-                <caption>의료진소개</caption>
-                <thead>
-                    <tr>
-                        <th>이름</th>
-                        <th>경력</th>
-                        <th>학력</th>
-                        <th>전공</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="drintro.html">여승원1</a></td>
-                        <td>20년</td>
-                        <td>대학석사</td>
-                        <td>외과</td>
-                    </tr>
-                    <tr>
-                        <td><a href="drintro.html">여승원2</a></td>
-                        <td>15년</td>
-                        <td>해외의대</td>
-                        <td>비뇨기과</td>
-                    </tr>
-                    <tr>
-                        <td><a href="drintro.html">여승원3</a></td>
-                        <td>23년</td>
-                        <td>석박사수료</td>
-                        <td>치과</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="intro1">
-                <caption>진료안내</caption>
-                <thead>
-                    <tr>
-                        <th>전공의진료날짜</th>
-                        <th>진료시간</th>
-                        <th>전공의휴무</th>
-                    </tr>
-                </thead> 
-                <tbody>
-                    <tr>
-                        <td>매주 화요일</td>
-                        <td>08:00~18:00</td>
-                        <td>격주 금</td>
-                    </tr>
-                    <tr>
-                        <td>매주 수요일</td>
-                        <td>08:00~18:00</td>
-                        <td>격주 월</td>
-                    </tr>
-                    <tr>
-                        <td>매주 목요일</td>
-                        <td>08:00~18:00</td>
-                        <td>격주 수</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="intro2">
-                <caption>진료예약</caption>
-                <thead>
-                    <tr>
-                        <th>진료과목</th>
-                        <th>진료날짜</th>
-                        <th>전공의</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>클리닉1입니다</td>
-                        <td>주1일입니다</td>
-                        <td>방법1</td>
-                    </tr>
-                    <tr>
-                        <td>클리닉2입니다</td>
-                        <td>주2일입니다</td>
-                        <td>방법2</td>
-                    </tr>
-                    <tr>
-                        <td>클리닉3입니다</td>
-                        <td>주3입니다</td>
-                        <td>방법2</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="intro3">
-                <caption><a href="qna.html">진료상담</a> </caption>
-                <thead>
-                    <tr>
-                        <th><a href="qna.html">자주묻는질문</a></th>
-                        <th><a href="notice.html">공지사항</a></th>
-                        <th><a href="qna.html">문의사항</a></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>질문1입니다</td>
-                        <td>공지사항1입니다</td>
-                        <td>불만사항1</td>
-                    </tr>
-                    <tr>
-                        <td>질문2입니다</td>
-                        <td>공지사항2입니다</td>
-                        <td>불만사항2</td>
-                    </tr>
-                    <tr>
-                        <td>질문3입니다</td>
-                        <td>공지사항3입니다</td>
-                        <td>불만사항2</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="news_section">
-                <section class="notice">
-                    <div class="box">
-                        <h2 class="title"><a href="">공지사항</a></h2>
-                        <ul class="table">
-                            <li>
-                                <a href="">공지 1 타이틀입니다.</a>
-                                <span>2022.06.15</span>
-                            </li>
-                            <li>
-                                <a href="">공지 2 타이틀입니다.</a>
-                                <span>2022.06.15</span>
-                            </li>
-                            <li>
-                                <a href="">공지 3 타이틀입니다.</a>
-                                <span>2022.06.15</span>
-                            </li>
-                            <li>
-                                <a href="">공지 4 타이틀입니다.</a>
-                                <span>2022.06.15</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="board">
-                    <div class="box">
-                        <h2 class="title"><a href="">게시판</a></h2>
-                        <ul class="table">
-                            <li>
-                                <a href="">게시판 1 타이틀입니다.</a>
-                            </li>
-                            <li>
-                                <a href="">게시판 2 타이틀입니다.</a>
-                            </li>
-                            <li>
-                                <a href="">게시판 3 타이틀입니다.</a>
-                            </li>
-                            <li>
-                                <a href="">게시판 4 타이틀입니다.</a>
-                            </li>
-                        </ul>    
-                    </div>
-                </section>
-            </div>
-            <div class="info_section">
-                <section class="map">
-                    <div class="box">
-                        <h2 class="title">
-                            <i class="xi-map-o"></i>
-                            <a href="">
-                                &nbsp;찾아오시는 길</a>
-                        </h2>
-                        <span><b>주소</b>김포시 김포한강4로 113 신한프라자 402호</span> 
-                        <ul>
-                            <li><a href=""><i class="xi-bus"></i>버스</a></li>
-                            <li><a href=""><i class="xi-subway"></i>지하철</a></li>
-                            <li><a href=""><i class="xi-park"></i>주차안내</a></li>
-                            <li><a href=""><i class="xi-maker"></i>지도</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="time">
-                    <div class="box">
-                        <h2 class="title">
-                            <i class="xi-time-o"></i>
-                            <a href="">
-                                &nbsp;진료시간</a>
-                        </h2>
-                        <ul class="table">
-                            <li>
-                                <span><b>평일 진료</b>09:00~18:30
-                                </span>
-                            </li>
-                            <li>
-                                <span><b>점심시간</b>13:00~14:00
-                                </span>
-                            </li>
-                            <li>
-                                <span><b>토요일 진료</b>09:00~13:00
-                                </span>
-                            </li>
-                            <li>
-                                <span><b>공휴일</b>09:00~13:00(전화문의)
-                                </span>
-                            </li>
-                            <li>
-                                <span class="call">031.992.0083</span>&nbsp;
-                                <i class="xi-whatsapp"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
+            <div class="content_wrap"> 
+                <div class="right_btn">
+                   <a href=""><img src="./img/btn-calling.png" alt=""></a>
+                   <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
+                   <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
+                </div>   
+                <div class="backcolor"></div>
+                            <div class="medical_box">
+                                <div class="medical_leftbox">
+                                    <div class="medical_title"><h2>처음 오셨나요?</h2></div>
+                                    <div class="medical_comment"><p>코, 목, 귀 질환 증상에 따른 알맞은 치료로<br>
+                                        빠른 회복을 돕겠습니다.<p></div>
+                                    <ul class="medical">
+                                    <!--<img src="./img/bg_main1.jpg" alt="" class="main"> -->
+                                    <li><a href="">의료진소개</a></li>
+                                    <li><a href="">진료안내</a></li>
+                                    <li><a href="">진료예약</a></li>
+                                    <li><a href="">진료상담</a></li>     
+                                    </ul>
+                                </div>
+       			    </div>
+                <div class="news_section">
+                    <section class="notice">
+                        <div class="box">
+                            <h2 class="title"><a href="">공지사항</a></h2>
+                            <ul class="table">
+                                <li>
+                                    <a href="">공지 1 타이틀입니다.</a>
+                                    <span>2022.06.15</span>
+                                </li>
+                                <li>
+                                    <a href="">공지 2 타이틀입니다.</a>
+                                    <span>2022.06.15</span>
+                                </li>
+                                <li>
+                                    <a href="">공지 3 타이틀입니다.</a>
+                                    <span>2022.06.15</span>
+                                </li>
+                                <li>
+                                    <a href="">공지 4 타이틀입니다.</a>
+                                    <span>2022.06.15</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="board">
+                        <div class="box">
+                            <h2 class="title"><a href="">게시판</a></h2>
+                            <ul class="table">
+                                <li>
+                                    <a href="">게시판 1 타이틀입니다.</a>
+                                </li>
+                                <li>
+                                    <a href="">게시판 2 타이틀입니다.</a>
+                                </li>
+                                <li>
+                                    <a href="">게시판 3 타이틀입니다.</a>
+                                </li>
+                                <li>
+                                    <a href="">게시판 4 타이틀입니다.</a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </section>
+                </div>
+                <div class="info_section">
+                    <section class="map">
+                        <div class="box">
+                            <h2 class="title">
+                                <i class="xi-map-o"></i>
+                                <a href="">
+                                    &nbsp;찾아오시는 길</a>
+                            </h2>
+                            <span><b>주소</b>김포시 김포한강4로 113 신한프라자 402호</span> 
+                            <ul>
+                                <li><a href=""><i class="xi-bus"></i>버스</a></li>
+                                <li><a href=""><i class="xi-subway"></i>지하철</a></li>
+                                <li><a href=""><i class="xi-park"></i>주차안내</a></li>
+                                <li><a href=""><i class="xi-maker"></i>지도</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="time">
+                        <div class="box">
+                            <h2 class="title">
+                                <i class="xi-time-o"></i>
+                                <a href="">
+                                    &nbsp;진료시간</a>
+                            </h2>
+                            <ul class="table">
+                                <li>
+                                    <span><b>평일 진료</b>09:00~18:30
+                                    </span>
+                                </li>
+                                <li>
+                                    <span><b>점심시간</b>13:00~14:00
+                                    </span>
+                                </li>
+                                <li>
+                                    <span><b>토요일 진료</b>09:00~13:00
+                                    </span>
+                                </li>
+                                <li>
+                                    <span><b>공휴일</b>09:00~13:00(전화문의)
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="call">031.992.0083</span>&nbsp;
+                                    <i class="xi-whatsapp"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>                
         </div>
         <footer id="ft">
-            <div class="ftwarp">
+            <div class="ftwrap">
+                <div class="ft_line">
+                    <p>김포아산안과 SNS</p>
+                    <a href="" class="ft_link1"></a>
+                    <a href="" class="ft_link2"></a>
+                    <a href="" class="ft_link3"></a>
+                    <a href="" class="ft_link4"></a>
+                    <a href="" class="ft_link5"></a>
+                    <a href="" class="ft_link6"></a>
+                </div>      
                 <div class="fnb">
                     <div class="inner">
                         <span><a href="">이용약관</a></span>
@@ -522,7 +433,7 @@
                 </div>
                 <div class="snb">
                     <div class="inner">
-                        <div class="copy_warp">
+                        <div class="copy_wrap">
                             <b>아산안과</b>
                             <p>주소 : 경기도 김포시 김포한강4로 113, 402호(장기동)
                                 신한프라자(4층)</p>
