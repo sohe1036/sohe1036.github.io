@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--메타포 문서정보-->
+    <!-- 웹 아이콘 XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" href="./img/logo_brand.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+     <!-- 기본 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+
+    <title>병원소식</title>
+
+    <style>
+        /*서브메뉴*/
+            /* #header {  clear: both; position: fixed; top: 0; left: 0; width: 100%; }  */
+            .page { clear:both; min-height:100vh; display:none; width: 100%;}
+            .page:target { display:block; }
+            .content { clear: both; width: 100%; height: auto; overflow: hidden; }
+            .sub_content { clear: both; width: 100%; height: auto; }
+            .content_wrap {width: 1400px; margin: 0 auto;}
+
+
+            .page_tit { width: 100%; height: 70px; margin-top: 30px; border-bottom: 1px solid #ddd; }
+            .page_tit .inner { width: 1200px; height: 100%; margin: 0 auto; }
+            .page_tit h3 { float: left; font-size: 36px; padding-top: 5px; }
+            .page_tit p { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
+            .page_tit p a { color: rgb(123, 123, 123); }
+            .page_tit .loca2 { color: #000; }
+           
+            .page_table .inner { width: 1200px; margin: 0 auto; margin-top: 70px; }
+            .page_table .inner form { display: block; text-align: center; height: 50px; position: relative; margin-bottom: 20px; }
+            .page_table .searchCondition { width: 120px; outline: 0; border: 0; font-size: 18px; text-align: center; vertical-align: middle; margin-left: 5px; }
+            .page_table .searchKeyword { width: 390px; font-size: 18px; height: 45px; vertical-align: middle; }
+            .page_table .btn { width: 50px; background: url(./img/btn_search.png); background-repeat: no-repeat; background-position: center;
+                vertical-align: middle; height: 50px; cursor: pointer; }
+            .page_table .search_tb { display: inline-block; margin: 0 auto; border: 1px solid #dfe5ed; border-radius: 38px; }
+
+            .button { float: right; margin: 10px 20px 30px 0; }
+            .button a { color: #fff; font-size: 15px;  padding: 10px 30px; background-color: #1f75b0; }
+
+            .page_table .inner > table { display: table; width: 100%; text-align: center; margin: 0 auto; margin-bottom: 50px; border-top: 2px solid #1f75b0; }
+            .page_table .inner > table tr { height: 60px; border-bottom: 1px solid #ddd; }
+            .page_table .inner > table thead tr:first-child { background-color: #f6f6fa; }
+            .page_table .th1, .page_table .th3 { width: 100px; }
+            .page_table .th2 { width: 500px; }
+            .page_table .th4 {width: 150px;}
+
+            .table_btn { width: 100%; height: 55px; margin-bottom: 20px; }
+            .table_btn ul { overflow: hidden; display: table; text-align: center; margin: 0 auto; }
+            .table_btn li { float: left; }
+            .table_btn li a { display: inline-block; width: 46px; height: 46px; font-size: 15px; line-height: 46px; 
+                border: 1px solid #ddd; border-collapse: collapse; }
+            .table_btn li a:hover { background-color: #1f75b0; color: #fff; }
+            
+
+    </style>
+ 
+    <title>공지사항</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="" id="header_wrap">
+                <div class="top_nav_wrap">
+                    <div class="logo">
+                        <a href="index.html"><img src="./img/logo_brand.png" alt="로고"></a> 
+                    </div>
+                    <nav class="tnb">
+                        <div class="login">
+                            <span class="sign">
+                                <a href="login.html">로그인</a>
+                            </span> 
+                            <span class="line">|</span>
+                                <span>
+                                <a href="agree.html">회원가입</a>
+                            </span>
+                        </div>
+                    </nav>
+                </div>
+                    <nav class="gnb" id="gnb">
+                        <div class="gnb_wrap">
+                            <ul class="main_ul">
+                                <div class="background">
+                                </div>
+                                <li class="mainmenu"><a href="">병원소개</a>
+                                    <ul class="sub_ul">
+                                        <li class="submenu"><a href="intro.html">병원안내</a></li>
+                                        <li class="submenu"><a href="drintro.html">의료진 소개</a></li>
+                                        <li class="submenu"><a href="map.html">오시는 길</a></li>
+                                    </ul>
+                                </li>  
+                                <li class="mainmenu"><a href="">진료안내</a>
+                                    <ul class="sub_ul">
+                                        <li class="submenu"><a href="info.html">진료안내</a></li>
+                                        <li class="submenu"><a href="reserve.html">진료예약</a></li>
+                                        <li class="submenu"><a href="time.html">진료시간</a></li>
+                                    </ul>
+                                </li>  
+                                <li class="mainmenu"><a href="">수정체/망막질환</a>
+                                    <ul class="sub_ul">
+                                        <li class="submenu"><a href="treat1.html#sub1">백내장</a></li>
+                                        <li class="submenu"><a href="treat1.html#sub2">녹내장</a></li>
+                                        <li class="submenu"><a href="treat1.html#sub3">당뇨망막병증</a></li>
+                                    </ul>
+                                </li>  
+                                <li class="mainmenu"><a href="">안질환</a>
+                                    <ul class="sub_ul">
+                                        <li class="submenu"><a href="treat2.html#sub1">비문증</a></li>
+                                        <li class="submenu"><a href="treat2.html#sub2">안구건조증</a></li>
+                                        <li class="submenu"><a href="treat2.html#sub3">사시/약시</a></li>
+                                    </ul>
+                                </li>  
+                                <li class="mainmenu"><a href="">소아질환</a>
+                                    <ul class="sub_ul">
+                                        <li class="submenu"><a href="treat3.html#sub1">시력발달</a></li>
+                                        <li class="submenu"><a href="treat3.html#sub2">사시/약시</a></li>
+                                        <li class="submenu"><a href="treat3.html#sub3">드림렌즈</a></li>
+                                    </ul>
+                                </li>        
+                                <li class="mainmenu mm_last"><a href="">병원소식</a>
+                                    <ul class="sub_ul sub_ul1">
+                                        <li class="submenu"><a href="news.html#notice">공지사항</a></li>
+                                        <li class="submenu"><a href="news.html#data">자료실</a></li>
+                                        <li class="submenu"><a href="news.html#board">게시판</a></li>
+                                        <li class="submenu"><a href="news.html#qna">Q&A</a></li>
+                                    </ul>
+                                </li>             
+                            </ul>                          
+                        </div>
+                    </nav>
+            </div>
+        </header>
+        <div class="content">            
+            <div class="sub_content">
+                <div class="content_wrap">
+                    <div class="right_btn">
+                        <a href=""><img src="./img/btn-calling.png" alt=""></a>
+                        <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
+                        <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
+                    </div>
+                    <section class="page" id="notice">
+                        <div class="page_tit">
+                            <div class="inner">
+                                <h3>공지사항</h3>
+                                <p>
+                                    <span><a href="index.html">HOME</a></span>
+                                    &nbsp;&nbsp;
+                                    |
+                                    &nbsp;&nbsp;
+                                    <span class="loca1">병원소식</span>
+                                    &nbsp;&nbsp;
+                                    >
+                                    &nbsp;&nbsp;
+                                    <span class="loca2">공지사항</span>
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="page_table">
+                            <div class="inner">                            
+                                <form method="post" action="">
+                                    <table class="search_tb" id="search_tb">
+                                        <tr>
+                                            <td>
+                                                <select name="searchCondition" class="searchCondition" >
+                                                    <option value="title">제목</option>
+                                                    <option value="content">내용</option>
+                                                </select>
+                                                <input type="text" name="searchKeyword" class="searchKeyword" placeholder="키워드를 입력하세요.">
+                                                <input type="submit" value="" class="btn">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                                <div class="button">
+                                    <a href="addnotice.html">글 추가</a>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="th1">NO</th>
+                                            <th class="th2">제목</th>
+                                            <th class="th3">작성자</th>
+                                            <th class="th4">작성일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>공지사항 제목10</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>공지사항 제목9</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>공지사항 제목8</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>공지사항 제목7</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>공지사항 제목6</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>공지사항 제목5</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>공지사항 제목4</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>공지사항 제목3</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>공지사항 제목2</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>공지사항 제목1</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                                <div class="table_btn">
+                                    <ul>
+                                        <li><a href=""><i class="xi-angle-left"></i></a></li>
+                                        <li><a href="">1</a></li>
+                                        <li><a href="">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><a href="">4</a></li>
+                                        <li><a href="">5</a></li>
+                                        <li><a href=""><i class="xi-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>    
+                    </section>    
+                    <section class="page" id="data">
+                        <div class="page_tit">
+                            <div class="inner">
+                                <h3>자료실</h3>
+                                <p>
+                                    <span><a href="index.html">HOME</a></span>
+                                    &nbsp;&nbsp;
+                                    |
+                                    &nbsp;&nbsp;
+                                    <span class="loca1">병원소식</span>
+                                    &nbsp;&nbsp;
+                                    >
+                                    &nbsp;&nbsp;
+                                    <span class="loca2">자료실</span>
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="page_table">
+                            <div class="inner">                            
+                                <form method="post" action="">
+                                    <table class="search_tb" id="search_tb">
+                                        <tr>
+                                            <td>
+                                                <select name="searchCondition" class="searchCondition" >
+                                                    <option value="title">제목</option>
+                                                    <option value="content">내용</option>
+                                                </select>
+                                                <input type="text" name="searchKeyword" class="searchKeyword" placeholder="키워드를 입력하세요.">
+                                                <input type="submit" value="" class="btn">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                                <div class="button">
+                                    <a href="addnotice.html">글 추가</a>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="th1">NO</th>
+                                            <th class="th2">제목</th>
+                                            <th class="th3">작성자</th>
+                                            <th class="th4">작성일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>자료실 제목10</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>자료실 제목9</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>자료실 제목8</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>자료실 제목7</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>자료실 제목6</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>자료실 제목5</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>자료실 제목4</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>자료실 제목3</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>자료실 제목2</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>자료실 제목1</td>
+                                            <td>관리자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                                <div class="table_btn">
+                                    <ul>
+                                        <li><a href=""><i class="xi-angle-left"></i></a></li>
+                                        <li><a href="">1</a></li>
+                                        <li><a href="">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><a href="">4</a></li>
+                                        <li><a href="">5</a></li>
+                                        <li><a href=""><i class="xi-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>    
+                    </section>    
+                    <section class="page" id="board">
+                        <div class="page_tit">
+                            <div class="inner">
+                                <h3>게시판</h3>
+                                <p>
+                                    <span><a href="index.html">HOME</a></span>
+                                    &nbsp;&nbsp;
+                                    |
+                                    &nbsp;&nbsp;
+                                    <span class="loca1">병원소식</span>
+                                    &nbsp;&nbsp;
+                                    >
+                                    &nbsp;&nbsp;
+                                    <span class="loca2">게시판</span>
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="page_table">
+                            <div class="inner">                            
+                                <form method="post" action="">
+                                    <table class="search_tb" id="search_tb">
+                                        <tr>
+                                            <td>
+                                                <select name="searchCondition" class="searchCondition" >
+                                                    <option value="title">제목</option>
+                                                    <option value="content">내용</option>
+                                                </select>
+                                                <input type="text" name="searchKeyword" class="searchKeyword" placeholder="키워드를 입력하세요.">
+                                                <input type="submit" value="" class="btn">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                                <div class="button">
+                                    <a href="">글 추가</a>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="th1">NO</th>
+                                            <th class="th2">제목</th>
+                                            <th class="th3">작성자</th>
+                                            <th class="th4">작성일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>게시판 제목10</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>게시판 제목9</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>게시판 제목8</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>게시판 제목7</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>게시판 제목6</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>게시판 제목5</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>게시판 제목4</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>게시판 제목3</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>게시판 제목2</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>게시판 제목1</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                                <div class="table_btn">
+                                    <ul>
+                                        <li><a href=""><i class="xi-angle-left"></i></a></li>
+                                        <li><a href="">1</a></li>
+                                        <li><a href="">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><a href="">4</a></li>
+                                        <li><a href="">5</a></li>
+                                        <li><a href=""><i class="xi-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>    
+                    </section>    
+                    <section class="page" id="qna">
+                        <div class="page_tit">
+                            <div class="inner">
+                                <h3>Q&A</h3>
+                                <p>
+                                    <span><a href="index.html">HOME</a></span>
+                                    &nbsp;&nbsp;
+                                    |
+                                    &nbsp;&nbsp;
+                                    <span class="loca1">병원소식</span>
+                                    &nbsp;&nbsp;
+                                    >
+                                    &nbsp;&nbsp;
+                                    <span class="loca2">Q&A</span>
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="page_table">
+                            <div class="inner">                            
+                                <form method="post" action="">
+                                    <table class="search_tb" id="search_tb">
+                                        <tr>
+                                            <td>
+                                                <select name="searchCondition" class="searchCondition" >
+                                                    <option value="title">제목</option>
+                                                    <option value="content">내용</option>
+                                                </select>
+                                                <input type="text" name="searchKeyword" class="searchKeyword" placeholder="키워드를 입력하세요.">
+                                                <input type="submit" value="" class="btn">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                                <div class="button">
+                                    <a href="">글 추가</a>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="th1">NO</th>
+                                            <th class="th2">제목</th>
+                                            <th class="th3">작성자</th>
+                                            <th class="th4">작성일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Q&A 제목10</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Q&A 제목9</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Q&A 제목8</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Q&A 제목7</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Q&A 제목6</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Q&A 제목5</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Q&A 제목4</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Q&A 제목3</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Q&A 제목2</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Q&A 제목1</td>
+                                            <td>작성자</td>
+                                            <td>2022.06.19</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                                <div class="table_btn">
+                                    <ul>
+                                        <li><a href=""><i class="xi-angle-left"></i></a></li>
+                                        <li><a href="">1</a></li>
+                                        <li><a href="">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><a href="">4</a></li>
+                                        <li><a href="">5</a></li>
+                                        <li><a href=""><i class="xi-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>     
+                    </section>    
+                </div>
+            </div>
+        </div>
+        <footer id="ft">
+            <div class="ftwrap">
+                <div class="ft_line">
+                    <p>김포아산안과 SNS</p>
+                    <a href="" class="ft_link1"></a>
+                    <a href="" class="ft_link2"></a>
+                    <a href="" class="ft_link3"></a>
+                    <a href="" class="ft_link4"></a>
+                    <a href="" class="ft_link5"></a>
+                    <a href="" class="ft_link6"></a>
+                </div>      
+                <div class="fnb">
+                    <div class="inner">
+                        <span><a href="">이용약관</a></span>
+                        <span><a href="">개인정보처리방침</a></span>
+                        <span><a href="">환자의 권리와 의무</a></span>
+                        <span><a href="">비급여안내</a></span>
+                    </div>
+                </div>
+                <div class="snb">
+                    <div class="inner">
+                        <div class="copy_wrap">
+                            <b>아산안과</b>
+                            <p>주소 : 경기도 김포시 김포한강4로 113, 402호(장기동)
+                                신한프라자(4층)</p>
+                            <span>대표자 : 남윤호</span>
+                            <span>사업자등록번호 : 454-95-00993</span>
+                            <span>대표전화 : T. 031)992-0083 F.031)992-0096</span>
+                            <p class="copy">COPYRIGHT© 2021 ASAN EYE HOSPITAL. ALL RIGHT RESERVED.</p>
+                        </div>
+                        <div class="ft_logo">
+                            <img src="./img/logo2.png" alt="ft_logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    </div>    
+</body>
+</html>

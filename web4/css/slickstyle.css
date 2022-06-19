@@ -6,7 +6,7 @@
 .slick-next:hover, .slick-prev:hover{ background:rgba(0,0,0,0.4); }
 .slick-prev{
     top: auto;
-    bottom: -43px; 
+    bottom: 0; 
     width: 84px; 
     z-index: 90;
     right: 254px;
@@ -19,7 +19,7 @@
 }
 .slick-next{
     top: auto;
-    bottom: -43px; 
+    bottom: 0; 
     width: 84px; 
     z-index: 90;
     right: 170px;
