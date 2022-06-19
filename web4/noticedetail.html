@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="./css/common.css">
 
-    <title>공지사항추가</title>
+    <title>공지사항 디테일</title>
 
     <style>
         /*서브메뉴*/
@@ -41,16 +41,14 @@
 
             .page_table { width: 100%; height: 650px; margin-top: 100px; }
             .page_table .inner { width: 1200px; margin: 0 auto; }
-            .page_table .form_tb { display: table; width: 1000px; margin: 0 auto; }
-            .page_table .form_tb tr { border-bottom: 1px solid #ddd; }
+            .page_table .detail_tb { display: table; width: 1000px; margin: 0 auto; }
+            .page_table .detail_tb tr { border-bottom: 1px solid #ddd; }
 
-            .page_table .form_tb tr:first-child { border-top: 2px solid #1f75b0; }
-            .page_table .form_tb tr:last-child { border: 0; }
-            .page_table .form_tb th { width: 20%; font-size: 20px; height: 60px; line-height: 20px; }
-            .page_table .form_tb td input { font-size: 16px; text-align: center; }
+            .page_table .detail_tb tr:first-child { border-top: 2px solid #1f75b0; }
+            .page_table .detail_tb tr:last-child { border: 0; }
+            .page_table .detail_tb th { width: 20%; font-size: 20px; height: 60px; line-height: 20px; }
+            .page_table .detail_tb td input { font-size: 16px; text-align: center; }
          
-            .button { float: right; width: 120px; margin: 10px 20px 30px 0; color: #fff; font-size: 15px; margin-top: 30px;
-                background-color: #1f75b0; }
 
 
     </style>        
@@ -139,7 +137,7 @@
                     </div>
                     <div class="page_tit">
                         <div class="inner">
-                            <h3>공지사항 추가</h3>
+                            <h3>공지사항</h3>
                             <p>
                                 <span><a href="index.html">HOME</a></span>
                                 &nbsp;&nbsp;
@@ -153,51 +151,42 @@
                                 &nbsp;&nbsp;
                                 >
                                 &nbsp;&nbsp;
-                                <span class="loca2">공지사항 추가</span>
+                                <span class="loca2">공지사항상세</span>
                             </p>
                         </div>    
                     </div>
                     <div class="page_table">
                         <div class="inner">                            
-                            <form method="post" action="">
-                                <table class="form_tb">
-                                    <tbody>
-                                        <tr>
-                                            <th>NO</th>
-                                            <td><input type="text"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>제목</th>
-                                            <td><input type="text"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>내용</th>
-                                            <td>
-                                                <textarea name="" cols="100" rows="12"></textarea>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>첨부파일</th>
-                                            <td><input type="file" class="file"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>작성자</th>
-                                            <td><input type="text"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>작성일</th>
-                                            <td><input type="date"></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <input type="submit" value="추가" class="button">
-                                                &nbsp;&nbsp;
-                                                <input type="reset" value="취소" class="button">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </form>
+                            <table class="detail_tb">
+                                <tbody>
+                                    <tr>
+                                        <th>NO</th>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td>공지사항 10 제목입니다. </td>
+                                    </tr>
+                                    <tr>
+                                        <th>내용</th>
+                                        <td>
+                                            <textarea name="" cols="100" rows="12" readonly>공지사항10 내용입니다.</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부파일</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>작성자</th>
+                                        <td>관리자</td>
+                                    </tr>
+                                    <tr>
+                                        <th>작성일</th>
+                                        <td>2022.06.19</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>            
                 </div>
