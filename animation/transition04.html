@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션04</title>
+    <script src="./prefixfree.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        #graph { clear: both; width: 900px; margin: 50px auto;}
+        #graph li { clear: both; margin-top: 20px; line-height: 40px; }
+        #graph li.bar { width: 30px; height: 40px; transition: 2s; }
+        #graph li:first-child { background-color: sandybrown;transition-timing-function: linear; }
+        #graph li:nth-child(2) { background-color: thistle; transition-timing-function: ease; }
+        #graph li:nth-child(3) { background-color: skyblue; transition-timing-function: ease-in; } 
+        #graph li:nth-child(4) { background-color: hotpink; transition-timing-function: ease-out; }
+        #graph li:nth-child(5) { background-color: darkseagreen; transition-timing-function: ease-in-out; }
+        #graph li:last-child { background-color: red; transition-timing-function: cubic-bezier(0,1.26,1,-1.54); }
+        #graph:hover li.bar { width: 850px; }
+    </style>
+</head>
+<body>
+    <nav id="graph">
+        <ul class="canvas">
+            <li class="bar">1</li>
+            <li class="bar">2</li>
+            <li class="bar">3</li>
+            <li class="bar">4</li>
+            <li class="bar">5</li>
+            <li class="bar">6</li>
+        </ul>
+    </nav>
+</body>
+</html>

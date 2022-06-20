@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션06-통합속성</title>
+    <script src="./prefixfree.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        #graph { clear: both; width: 900px; margin: 50px auto;}
+        #graph li { clear: both; margin-top: 20px; line-height: 40px; }
+        #graph li.bar { width: 30px; height: 40px; 
+            transition: background-color 3s ease-in, width 1s ease-out 1s;}
+       /*통합속성 순서   property duration  timing-function   delay*/
+        #graph li:first-child { background-color: sandybrown; width: 400px; }
+        #graph li:nth-child(2) { background-color: thistle; width: 300px;}
+        #graph li:nth-child(3) { background-color: skyblue; width: 500px; } 
+        #graph li:nth-child(4) { background-color: hotpink; width: 900px; }
+        #graph li:nth-child(5) { background-color: darkseagreen; width: 200px; }
+        #graph li:last-child { background-color: red; width: 600px; }
+        #graph:hover li.bar { width: 850px; }
+    </style>
+</head>
+<body>
+    <nav id="graph">
+        <ul class="canvas">
+            <li class="bar">1</li>
+            <li class="bar">2</li>
+            <li class="bar">3</li>
+            <li class="bar">4</li>
+            <li class="bar">5</li>
+            <li class="bar">6</li>
+        </ul>
+    </nav>
+</body>
+</html>

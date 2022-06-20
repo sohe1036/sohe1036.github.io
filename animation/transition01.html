@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트렌지션01</title>
+    <script src="prefixfree.min.js"></script>
+    <style>
+        .box { width: 100px; 
+        height: 100px; 
+        background-color: aquamarine; 
+        line-height: 100px; 
+        text-align: center; 
+        margin: 40px auto; 
+        opacity: 0.5;
+        font-size: 40px;
+        cursor: crosshair;
+        transform: rotate(0deg);
+        
+        /*구현브라우저는 크로스브라우징(벤터프리)적어줘야함-> 아니면 prefixfree.js적용*/
+        -ms-transition-duration:1s; /*인터넥익스플로어*/
+        -o-transition-duration:1s; /*오페라*/
+        -moz-transition-duration:1s; /*파이어폭스*/
+        -webkit-transition-duration:1s; /*크롬 사파리*/
+        transition-duration: 1s; }
+        .sphere { background: radial-gradient(at 30% 20%, yellow, red, brown);
+        border-radius: 50px; 
+        box-shadow: 2px 2px 3px #666; 
+        margin: 40px auto; }
+        .box:hover { width: 400px; 
+        height: 400px; 
+        line-height: 100px;
+        font-size: 100px; 
+        opacity: 1; 
+        transform: rotate(720deg); }
+        .box:active { width: 200px; }
+    </style>
+</head>
+<body>
+    <div class="box">BOX</div>
+    <div class="sphere box">SPHERE</div>
+</body>
+</html>
