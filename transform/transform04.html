@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 04 </title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body, html { width: 100%; min-height: 100%; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        button, input { outline:0; border:0; background: none; }
+        .wrap { clear:both; width: 100%; min-height: 100vh; }
+        .tit { text-align: center; line-height: 1.6; padding-top: 1em; padding-bottom: 1em; }
+        .wrap:after, .box:after { content:""; display:block; clear: both ;}
+        .box { width: 200px; height: 200px; position:relative; margin: 400px auto;
+        
+        transform-style:preserve-3d; animation:ani1 2s ease-in 0s infinite; perspective: 200px; }
+        .box li { width: 200px; height: 200px; position:absolute; top: 0; left: 0; 
+        outline:1px solid #fff; background-color: #fff; opacity:0.6; }
+        .box li a { display: block; width: 200px; height: 200px; overflow:hidden; }
+        .box li a img { display:block; width: 200px; height:auto; }
+        .box li.item1 { transform:rotateY(0deg) translateZ(100px); }
+        .box li.item2 { transform:rotateY(90deg) translateZ(100px); }
+        .box li.item3 { transform:rotateY(180deg) translateZ(100px); }
+        .box li.item4 { transform:rotateY(270deg) translateZ(100px); }
+        .box li.item5 { transform:rotateX(90deg) translateZ(100px); }
+        .box li.item6 { transform:rotateX(270deg) translateZ(100px); }
+        @keyframes ani1 {
+            0% { transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            100% { transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+    </style>
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="box">
+            <li class="item1"><a href=""><img src="./image/exo/baekhyun.jpg" alt=""></a></li>
+            <li class="item2"><a href=""><img src="./image/exo/chanyeol.jpg" alt=""></a></li>
+            <li class="item3"><a href=""><img src="./image/exo/chen.jpg" alt=""></a></li>
+            <li class="item4"><a href=""><img src="./image/exo/do.jpg" alt=""></a></li>
+            <li class="item5"><a href=""><img src="./image/exo/kai.jpg" alt=""></a></li>
+            <li class="item6"><a href=""><img src="./image/exo/sehun.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>

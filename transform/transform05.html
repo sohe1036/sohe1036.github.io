@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 05 </title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body, html { width: 100%; min-height: 100%; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        button, input { outline:0; border:0; background: none; }
+        .wrap { clear:both; width: 100%; min-height: 100vh; }
+        .tit { text-align: center; line-height: 1.6; padding-top: 1em; padding-bottom: 1em; }
+        .wrap:after, .box:after { content:""; display:block; clear: both ;}
+        .box { width: 200px; height: 200px; position:relative; margin: 400px auto;
+        transform-style:preserve-3d; animation:ani1 3s ease-in 0s infinite;
+        animation-play-state: running; }
+        .box li { width: 170px; height: 200px; position:absolute; top: 0; left: 0; 
+        outline:1px solid #fff; background-color: #fff; opacity:0.6; }
+        .box li a { display: block; width: 170px; height: 200px; overflow:hidden; }
+        .box li a img { display:block; width: 170px; height:auto; }
+        .box li.item1 { transform:rotateY(0deg) translateZ(500px); }
+        .box li.item2 { transform:rotateY(24deg) translateZ(500px); }
+        .box li.item3 { transform:rotateY(48deg) translateZ(500px); }
+        .box li.item4 { transform:rotateY(72deg) translateZ(500px); }
+        .box li.item5 { transform:rotateY(96deg) translateZ(500px); }
+        .box li.item6 { transform:rotateY(120deg) translateZ(500px); }
+        .box li.item7 { transform:rotateY(144deg) translateZ(500px); }
+        .box li.item8 { transform:rotateY(168deg) translateZ(500px); }
+        .box li.item9 { transform:rotateY(192deg) translateZ(500px); }
+        .box li.item10 { transform:rotateY(216deg) translateZ(500px); }
+        .box li.item11 { transform:rotateY(240deg) translateZ(500px); }
+        .box li.item12 { transform:rotateY(264deg) translateZ(500px); }
+        .box li.item13 { transform:rotateY(288deg) translateZ(500px); }
+        .box li.item14 { transform:rotateY(312deg) translateZ(500px); }
+        .box li.item15 { transform:rotateY(336deg) translateZ(500px); }
+        .box:hover { animation-play-state: paused; }
+        @keyframes ani1 {
+            0% { transform:rotateX(-10deg) rotateY(0deg) rotateZ(0deg); }
+            100% { transform:rotateX(-10deg) rotateY(360deg) rotateZ(30deg); }
+        }
+    </style>
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="box">
+            <li class="item1"><a href=""><img src="./image/exo/baekhyun.jpg" alt=""></a></li>
+            <li class="item2"><a href=""><img src="./image/exo/chanyeol.jpg" alt=""></a></li>
+            <li class="item3"><a href=""><img src="./image/exo/chen.jpg" alt=""></a></li>
+            <li class="item4"><a href=""><img src="./image/exo/do.jpg" alt=""></a></li>
+            <li class="item5"><a href=""><img src="./image/exo/kai.jpg" alt=""></a></li>
+            <li class="item6"><a href=""><img src="./image/exo/sehun.jpg" alt=""></a></li>
+            <li class="item7"><a href=""><img src="./image/bts/jhope.jpg" alt=""></a></li>
+            <li class="item8"><a href=""><img src="./image/bts/jimin.jpg" alt=""></a></li>
+            <li class="item9"><a href=""><img src="./image/bts/jin.jpg" alt=""></a></li>
+            <li class="item10"><a href=""><img src="./image/bts/jungkook.jpg" alt=""></a></li>
+            <li class="item11"><a href=""><img src="./image/bts/rm.jpg" alt=""></a></li>
+            <li class="item12"><a href=""><img src="./image/bts/suga.jpg" alt=""></a></li>
+            <li class="item13"><a href=""><img src="./image/bts/v.jpg" alt=""></a></li>
+            <li class="item14"><a href=""><img src="./image/exo/suho.jpg" alt=""></a></li>
+            <li class="item15"><a href=""><img src="./image/exo/xiumin.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>
