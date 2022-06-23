@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필터01</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html { width: 100%; }
+        .wrap { clear: both; width: 100%; }
+        .vs { width: 720px; margin: 30px auto; }
+        .vs img { display: block; width: 100%; transition-duration: 0.5s; }
+        .tit { text-align: center; line-height: 3.6; }
+
+        .items1 img { filter: none; }
+        .items2:hover img { filter: blur(3px); } 
+        .items3:hover img { filter: brightness(1.5); }
+        .items4:hover img { filter: contrast(200%); }
+        .items5:hover img { filter: drop-shadow( 16px 16px 20px blue); }
+        .items6:hover img { filter: grayscale(80%); }
+        .items7:hover img { filter: hue-rotate(90deg);}
+        .items8:hover img { filter: invert(100%);}
+        .items9:hover img  { filter: opacity(50%); }
+    .items10:hover img { filter: saturate(50%); }
+        .items11:hover img { filter: sepia(50%); }
+        .items12:hover img { filter: contrast(175%) brightness(50%); }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <figure class="vs items1">
+            <h2 class="tit">원본</h2>
+            <img src="./image/1.jpg" alt="원본이미지" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items2">
+            <h2 class="tit">블러</h2>
+            <img src="./image/1.jpg" alt="블러" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items3">
+            <h2 class="tit">밝기</h2>
+            <img src="./image/1.jpg" alt="밝기" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items4">
+            <h2 class="tit">대비</h2>
+            <img src="./image/1.jpg" alt="대비" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items5">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items6">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items7">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items8">
+            <h2 class="tit"></h2>
+            <img src="" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items9">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items10">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items11">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs items12">
+            <h2 class="tit"></h2>
+            <img src="./image/1.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+</body>
+</html>

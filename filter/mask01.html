@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필터 02 - mask-img</title>
+</head>
+<style>
+/*
+    mask-image:url("png또는 svg 이미지경로및파일명") 
+        svg 파일 안에 여러 도형이 있는 경우 해당 도형의 아이디를 기재해야함 -> ex) mask-image:url(star.svg#star1)
+    mask-image:그라디언트 지정도 가능
+    mask-size:px|%|em단위 크기, cover, contain
+    mask-repeat:마스크 이미지의 반복 속성 - repeat-x | repeat-y | repeat | space | round | no-repeat
+    mask-position:마스크의 위치 지정 - left|center|right top|center|bottom
+        또는 %|px|em 단위로 지정하며, 앞은 가로위치 뒤는 세로위치를 나타냄
+    mask-mode:여러 마스크 혼합모드 - alpha | luminance | match-source | revert | revert-layer | unset
+    mask-clip:마스크가 어디까지 적용 범위지정 content-box | padding-box | border-box | margin-box | fill-box | stroke-box | view-box | no-clip
+    mask-origin:마스크의 시작위치 기준 content-box | padding-box | border-box | margin-box | fill-box | stroke-box | view-box | no-clip
+    mask-composite:마스크의 연산 방법 add | subtract | intersect | exclude | revert | revert-layer | unset
+*/
+    *{margin: 0; padding: 0;}
+    body, html { width: 100%; }
+    .wrap { clear: both; width: 100%; }
+    .vs { width: 700px; margin: 30px auto; }
+    .vs img { display: block; width: 100%; transition-duration: 0.5s; }
+    .tit { text-align: center; line-height: 3.6; }
+
+    .item2 img { mask-image: url('Melon_logo.png'); -webkit-mask-image: url('Melon_logo.png'); 
+        mask-size: 100px; -webkit-mask-size: 100px;}
+
+    .item3 img { mask-size: 50px; -webkit-mask-size: 50px;
+        mask-image: linear-gradient(0deg, rgba(0,0,0,0.3) 50% , rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 50%);
+        -webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0.3) 50% , rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 50%);}
+    
+    .item4 img { { mask-size: 100px; -webkit-mask-size: 100px;
+        mask-image: linear-gradient(90deg, rgba(0,0,0,0.3) 50% , rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 50%);
+        -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0.3) 50% , rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 50%);}
+     }
+
+    .item5 img { mask-size: 10px 10px; -webkit-mask-size: 10px 10px; 
+        mask-image: linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0.2) 25%), linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0.2) 25%), linear-gradient(45deg, rgba(0, 0, 0, 0.2) 75%, #000000 75%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 75%, #000000 75%);
+        -webkit-mask-image: linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0.2) 25%), linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0.2) 25%), linear-gradient(45deg, rgba(0, 0, 0, 0.2) 75%, #000000 75%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 75%, #000000 75%);
+    }
+
+    /*https://haikei.app/  SVG만드는 사이트*/
+    .item6 img { mask-size: 150px; -webkit-mask-size: 150px;
+    mask-image: url(polygon-scatter-haikei.svg#visual); -webkit-mask-image: url(polygon-scatter-haikei.svg#visual);
+    transition-duration: 1s;
+     }
+    .item6:hover img { mask-size: 700px; -webkit-mask-size: 700px; }
+
+
+</style>
+<body>
+    <div class="wrap">
+        <figure class="vs item1">
+            <h2 class="tit">원본</h2>
+            <img src="./image/6.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs item2">
+            <h2 class="tit"></h2>
+            <img src="./image/6.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs item3">
+            <h2 class="tit"></h2>
+            <img src="./image/6.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs item4">
+            <h2 class="tit"></h2>
+            <img src="./image/6.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs item5">
+            <h2 class="tit"></h2>
+            <img src="./image/6.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+    <div class="wrap">
+        <figure class="vs item6">
+            <h2 class="tit"></h2>
+            <img src="./image/6.jpg" alt="" class="vs_img">
+        </figure>
+    </div>
+</body>
+</html>
