@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--메타포 문서정보-->
     <!-- 웹 아이콘 XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 오픈 그래프 -->
     <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="asan">
+    <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
     <meta property="og:image" href="./img/logo_brand.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
      <!-- 기본 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--<link rel="stylesheet" href="./css/slick-theme.css">-->
+    <!--<link rel="stylesheet" href="./css/slick.css">-->
+    <link rel="stylesheet" href="./css/slickstyle.css">
+    <script src="./js/slick.js"></script>
     <!--폰트-->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>메인페이지</title>
+    <style>
+        @font-face {
+      font-family: 'HallymGothic-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      }
+  </style>
+    <title>오시는길</title>
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/jquery-ui-1.9.2.custom.js"></script>
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
-    <script src="./js/slick.js"></script>
     <!--문서 로딩전 스트립트(부트스트립,불마 등..)-->
     <style>
         /*초기화*/
         *{ margin: 0; padding: 0; text-decoration: none; list-style: none; }        
         #header {width:100%;}
-        body, html{ width: 100%; overflow-x: hidden;}
+        body, html{ width: 100%; overflow-x: hidden;  font-family: 'HallymGothic-Regular';}
         ul {list-style: none;}
         a {text-decoration: none; color: #333;}
         .wrap {clear: both; width: 100%;}
@@ -183,6 +192,14 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
         .inner_top h2 {float:left; font-size: 40px; font-weight: 400; font-family: 'Noto Sans KR', sans-serif}
         .inner_top p {float:right; font-size: 14px; line-height: 160px; font-family: 'Noto Sans KR', sans-serif}
 
+        /*서브메뉴 이름란*/
+        .page_tit { width: 100%; height: 70px; margin-top: 30px; border-bottom: 1px solid #ddd; }
+        .page_tit .inner { width: 1120px; height: 100%; margin: 0 auto; }
+        .page_tit h3 { float: left; font-size: 36px; padding-top: 5px; }
+        .page_tit p { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
+        .page_tit p a { color: rgb(123, 123, 123); }
+        .page_tit .loca2 { color: #000; }
+
         .inner_title {font-family: 'Noto Sans KR', sans-serif; color:#327cb6; margin:60px 0px 60px 0px; width: 100%;}
         .inner_title h2{text-align: center; font-size: 24px; margin: 0 auto; font-weight: 500; width: 750px;}
 
@@ -240,14 +257,14 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
                             <ul class="main_ul">
                                 <div class="background">
                                 </div>
-                                <li class="mainmenu"><a href="">병원소개</a>
+                                <li class="mainmenu"><a href="intro.html">병원소개</a>
                                     <ul class="sub_ul">
                                         <li class="submenu"><a href="intro.html">병원안내</a></li>
                                         <li class="submenu"><a href="drintro.html">의료진 소개</a></li>
                                         <li class="submenu"><a href="map.html">오시는 길</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="">진료안내</a>
+                                <li class="mainmenu"><a href="info.html">진료안내</a>
                                     <ul class="sub_ul">
                                         <li class="submenu"><a href="info.html">진료안내</a></li>
                                         <li class="submenu"><a href="reserve.html">진료예약</a></li>
@@ -275,7 +292,7 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
                                         <li class="submenu"><a href="treat3_sub3.html">드림렌즈</a></li>
                                     </ul>
                                 </li>        
-                                <li class="mainmenu mm_last"><a href="">병원소식</a>
+                                <li class="mainmenu mm_last"><a href="notice.html">병원소식</a>
                                     <ul class="sub_ul sub_ul1">
                                         <li class="submenu"><a href="notice.html">공지사항</a></li>
                                         <li class="submenu"><a href="data.html">자료실</a></li>
@@ -288,124 +305,133 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
                     </nav>
             </div>
         </header>
-    <article class="content">        
-        <div class="sub_wrap">
-            <div class="right_btn">
-                <a href=""><img src="./img/btn-calling.png" alt=""></a>
-                <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
-                <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
-            </div>
-            <div class="sub_bg_menu">
-                <div class="sub_bg_img">
-                    <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
-                    <h2>병원소개</h2> 
+        <article class="content">        
+            <div class="sub_wrap">
+                <div class="right_btn">
+                    <a href=""><img src="./img/btn-calling.png" alt=""></a>
+                    <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
+                    <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
                 </div>
-                <div class="sub_bg_line">
-                    <div class="sub_bg_text">
-                        <!-- 현재 페이지에 맞게 <b>태그를 넣어주세요 -->
-                        <!-- 메뉴가 4개인 페이지는 .sub_bg_line a 스타일의 width를 25%로 줄여주세요 -->
-                        <a href="intro.html">병원안내</a>
-                        <a href="drintro.html">의료진 소개</a>
-                        <a href="map.html"><b>오시는 길</b></a>
-                        <!-- <a href="">4번째 메뉴</a> -->
+                <div class="sub_bg_menu">
+                    <div class="sub_bg_img">
+                        <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
+                        <h2>병원소개</h2> 
+                    </div>
+                    <div class="sub_bg_line">
+                        <div class="sub_bg_text">
+                            <!-- 현재 페이지에 맞게 <b>태그를 넣어주세요 -->
+                            <!-- 메뉴가 4개인 페이지는 .sub_bg_line a 스타일의 width를 25%로 줄여주세요 -->
+                            <a href="intro.html">병원안내</a>
+                            <a href="drintro.html">의료진 소개</a>
+                            <a href="map.html"><b>오시는 길</b></a>
+                            <!-- <a href="">4번째 메뉴</a> -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="sub_top">
-                <div class="inner_top">
-                    <h2>오시는 길</h2>
-                    <p><a href="/">HOME</a> > 병원소개 > 오시는 길</p>
-                    <!-- 페이지에 따라 메인메뉴와 서브메뉴 이름을 적어주세요 -->
-                </div>
-            </div>
-            <div class="sub_content">
-                <div class="inner">
-                    <div class="inner_title"><h2>김포 아산안과로 빠르고 편하게 내원하실 수 있는 방법을 안내드립니다.</h2></div>
-                    <div class="map">
-                     <!-- * 카카오맵 - 지도퍼가기 -->
-                    <!-- 1. 지도 노드 -->
-                    <div id="daumRoughmapContainer1655998307870" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-                    <!--
-                        2. 설치 스크립트
-                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-                    -->
-                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                    <!-- 3. 실행 스크립트 -->
-                    <script charset="UTF-8">
-                        new daum.roughmap.Lander({
-                            "timestamp" : "1655998307870",
-                            "key" : "2aq2m",
-                            "mapWidth" : "1120",
-                            "mapHeight" : "480"
-                        }).render();
-                    </script>
-                    </div>
-                    <div class="map_subway">
-                        <h2><strong>지하철</strong>이용시</h2>
-                        <span>장기역</span><p>지하철 김포골드라인 장기역 1번출구 도보 2분</p>
-                    </div>
-                    <div class="map_bus">
-                        <h2><strong>버스</strong>이용시</h2>
-                        <p class="bus_com">A. 장기역 김포고용복지플러스센터 : 도보 2분</p>
-                        <span class="bus1">일반</span><p>4-1, 60-3, 81-1</p><br>
-                        <span class="bus2">마을</span><p>30-1, 35</p><br>
-                        <span class="bus3">직행</span><p>8000, 9008, G6000, G6001</p><br>
-                        <span class="bus4">급행</span><p>8601, 8601A</p><br>
-                        <span class="bus5">좌석</span><p>22</p><br>
-                        <p class="bus_com">B.장기역.신영아파트 : 도보 2분</p>
-                        <span class="bus1">일반</span><p>4-1, 60-3, 81-1, 101, 102</p><br>
-                        <span class="bus2">마을</span><p>35, 54</p><br>
-                        <span class="bus3">직행</span><p>6427, 8000, 9000, 9008, 이음1, 이음2</p><br>
-                        <span class="bus4">급행</span><p>8600, 8601, 8601A</p><br>
-                        <span class="bus5">좌석</span><p>22</p><br>
-                    </div>
-                    <div class="map_owncar">
-                        <h2><strong>자가용</strong>이용시</h2>
-                        <p>경기 김포시 김포한강4로 113 신한프라자 국민은행 4층 402호
+                <div class="page_tit">
+                    <div class="inner">
+                        <h3>백내장</h3>
+                        <p>
+                            <span><a href="index.html">HOME</a></span>
+                            &nbsp;&nbsp;
+                            |
+                            &nbsp;&nbsp;
+                            <span class="loca1">수정체/망막질환</span>
+                            &nbsp;&nbsp;
+                            >
+                            &nbsp;&nbsp;
+                            <span class="loca2">백내장</span>
                         </p>
+                    </div>    
+                </div>
+                <div class="sub_content">
+                    <div class="inner">
+                        <div class="inner_title"><h2>김포 아산안과로 빠르고 편하게 내원하실 수 있는 방법을 안내드립니다.</h2></div>
+                        <div class="map">
+                        <!-- * 카카오맵 - 지도퍼가기 -->
+                        <!-- 1. 지도 노드 -->
+                        <div id="daumRoughmapContainer1655998307870" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                        <!--
+                            2. 설치 스크립트
+                            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                        -->
+                        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                        <!-- 3. 실행 스크립트 -->
+                        <script charset="UTF-8">
+                            new daum.roughmap.Lander({
+                                "timestamp" : "1655998307870",
+                                "key" : "2aq2m",
+                                "mapWidth" : "1120",
+                                "mapHeight" : "480"
+                            }).render();
+                        </script>
+                        </div>
+                        <div class="map_subway">
+                            <h2><strong>지하철</strong>이용시</h2>
+                            <span>장기역</span><p>지하철 김포골드라인 장기역 1번출구 도보 2분</p>
+                        </div>
+                        <div class="map_bus">
+                            <h2><strong>버스</strong>이용시</h2>
+                            <p class="bus_com">A. 장기역 김포고용복지플러스센터 : 도보 2분</p>
+                            <span class="bus1">일반</span><p>4-1, 60-3, 81-1</p><br>
+                            <span class="bus2">마을</span><p>30-1, 35</p><br>
+                            <span class="bus3">직행</span><p>8000, 9008, G6000, G6001</p><br>
+                            <span class="bus4">급행</span><p>8601, 8601A</p><br>
+                            <span class="bus5">좌석</span><p>22</p><br>
+                            <p class="bus_com">B.장기역.신영아파트 : 도보 2분</p>
+                            <span class="bus1">일반</span><p>4-1, 60-3, 81-1, 101, 102</p><br>
+                            <span class="bus2">마을</span><p>35, 54</p><br>
+                            <span class="bus3">직행</span><p>6427, 8000, 9000, 9008, 이음1, 이음2</p><br>
+                            <span class="bus4">급행</span><p>8600, 8601, 8601A</p><br>
+                            <span class="bus5">좌석</span><p>22</p><br>
+                        </div>
+                        <div class="map_owncar">
+                            <h2><strong>자가용</strong>이용시</h2>
+                            <p>경기 김포시 김포한강4로 113 신한프라자 국민은행 4층 402호
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </article>
+        <footer id="ft">
+            <div class="ftwrap">
+                <div class="ft_line">
+                    <p>김포아산안과 SNS</p>
+                    <a href="" class="ft_link1"></a>
+                    <a href="" class="ft_link2"></a>
+                    <a href="" class="ft_link3"></a>
+                    <a href="" class="ft_link4"></a>
+                    <a href="" class="ft_link5"></a>
+                    <a href="" class="ft_link6"></a>
+                </div>      
+                <div class="fnb">
+                    <div class="inner">
+                        <span><a href="">이용약관</a></span>
+                        <span><a href="">개인정보처리방침</a></span>
+                        <span><a href="">환자의 권리와 의무</a></span>
+                        <span><a href="">비급여안내</a></span>
+                    </div>
+                </div>
+                <div class="snb">
+                    <div class="inner">
+                        <div class="copy_wrap">
+                            <b>아산안과</b>
+                            <p>주소 : 경기도 김포시 김포한강4로 113, 402호(장기동)
+                                신한프라자(4층)</p>
+                            <span>대표자 : 남윤호</span>
+                            <span>사업자등록번호 : 454-95-00993</span>
+                            <span>대표전화 : T. 031)992-0083 F.031)992-0096</span>
+                            <p class="copy">COPYRIGHT© 2021 ASAN EYE HOSPITAL. ALL RIGHT RESERVED.</p>
+                        </div>
+                        <div class="ft_logo">
+                            <img src="./img/logo2.png" alt="ft_logo">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>    
-    </article>
-    <footer id="ft">
-        <div class="ftwrap">
-            <div class="ft_line">
-                <p>김포아산안과 SNS</p>
-                <a href="" class="ft_link1"></a>
-                <a href="" class="ft_link2"></a>
-                <a href="" class="ft_link3"></a>
-                <a href="" class="ft_link4"></a>
-                <a href="" class="ft_link5"></a>
-                <a href="" class="ft_link6"></a>
-            </div>      
-            <div class="fnb">
-                <div class="inner">
-                    <span><a href="">이용약관</a></span>
-                    <span><a href="">개인정보처리방침</a></span>
-                    <span><a href="">환자의 권리와 의무</a></span>
-                    <span><a href="">비급여안내</a></span>
-                </div>
-            </div>
-            <div class="snb">
-                <div class="inner">
-                    <div class="copy_wrap">
-                        <b>아산안과</b>
-                        <p>주소 : 경기도 김포시 김포한강4로 113, 402호(장기동)
-                            신한프라자(4층)</p>
-                        <span>대표자 : 남윤호</span>
-                        <span>사업자등록번호 : 454-95-00993</span>
-                        <span>대표전화 : T. 031)992-0083 F.031)992-0096</span>
-                        <p class="copy">COPYRIGHT© 2021 ASAN EYE HOSPITAL. ALL RIGHT RESERVED.</p>
-                    </div>
-                    <div class="ft_logo">
-                        <img src="./img/logo2.png" alt="ft_logo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>

@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--메타포 문서정보-->
     <!-- 웹 아이콘 XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 오픈 그래프 -->
     <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="asan">
+    <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
     <meta property="og:image" href="./img/logo_brand.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
      <!-- 기본 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--<link rel="stylesheet" href="./css/slick-theme.css">-->
+    <!--<link rel="stylesheet" href="./css/slick.css">-->
+    <link rel="stylesheet" href="./css/slickstyle.css">
+    <script src="./js/slick.js"></script>
     <!--폰트-->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>메인페이지</title>
+    <style>
+        @font-face {
+      font-family: 'HallymGothic-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      }
+  </style>
+    <title>의료진 소개</title>
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/jquery-ui-1.9.2.custom.js"></script>
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
-    <script src="./js/slick.js"></script>
     <!--문서 로딩전 스트립트(부트스트립,불마 등..)-->
     <style>
         /*초기화*/
         *{ margin: 0; padding: 0; text-decoration: none; list-style: none; }        
         #header {width:100%;}
-        body, html{ width: 100%; overflow-x: hidden;}
+        body, html{ width: 100%; overflow-x: hidden;  font-family: 'HallymGothic-Regular'; }
         ul {list-style: none;}
         a {text-decoration: none; color: #333;}
         .wrap {clear: both; width: 100%;}
@@ -183,6 +192,14 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
         .inner_top h2 {float:left; font-size: 40px; font-weight: 400;}
         .inner_top p {float:right; font-size: 14px; line-height: 160px;}
 
+        /*서브메뉴 이름란*/
+        .page_tit { width: 100%; height: 70px; margin-top: 30px; border-bottom: 1px solid #ddd; }
+            .page_tit .inner { width: 1120px; height: 100%; margin: 0 auto; }
+            .page_tit h3 { float: left; font-size: 36px; padding-top: 5px; }
+            .page_tit p { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
+            .page_tit p a { color: rgb(123, 123, 123); }
+            .page_tit .loca2 { color: #000; }
+
         .dr_intro {height: 730px;}
 
         .dr_imgbox {border: 1px solid #ddd; width: 350px; height: 500px; float:left; margin-top: 20px;}
@@ -235,7 +252,7 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
 </head>
 <body>
 <!--DOM구조설계-->    
-    <div class="container">
+    <div class="wrap">
         <header class="header" id="header">
             <div class="" id="header_wrap">
                 <div class="top_nav_wrap">
@@ -259,14 +276,14 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
                             <ul class="main_ul">
                                 <div class="background">
                                 </div>
-                                <li class="mainmenu"><a href="">병원소개</a>
+                                <li class="mainmenu"><a href="intro.html">병원소개</a>
                                     <ul class="sub_ul">
                                         <li class="submenu"><a href="intro.html">병원안내</a></li>
                                         <li class="submenu"><a href="drintro.html">의료진 소개</a></li>
                                         <li class="submenu"><a href="map.html">오시는 길</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="">진료안내</a>
+                                <li class="mainmenu"><a href="info.html">진료안내</a>
                                     <ul class="sub_ul">
                                         <li class="submenu"><a href="info.html">진료안내</a></li>
                                         <li class="submenu"><a href="reserve.html">진료예약</a></li>
@@ -294,7 +311,7 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
                                         <li class="submenu"><a href="treat3_sub3.html">드림렌즈</a></li>
                                     </ul>
                                 </li>        
-                                <li class="mainmenu mm_last"><a href="">병원소식</a>
+                                <li class="mainmenu mm_last"><a href="notice.html">병원소식</a>
                                     <ul class="sub_ul sub_ul1">
                                         <li class="submenu"><a href="notice.html">공지사항</a></li>
                                         <li class="submenu"><a href="data.html">자료실</a></li>
@@ -307,171 +324,180 @@ hr {border: 0; border-top: 1px solid rgb(200,200,200);}
                     </nav>
             </div>
         </header>
-    <article class="content">        
-        <div class="sub_wrap">
-            <div class="right_btn">
-                <a href=""><img src="./img/btn-calling.png" alt=""></a>
-                <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
-                <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
-            </div>
-            <div class="sub_bg_menu">
-                <div class="sub_bg_img">
-                    <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
-                    <h2>병원소개</h2> 
+        <article class="content">        
+            <div class="sub_wrap">
+                <div class="right_btn">
+                    <a href=""><img src="./img/btn-calling.png" alt=""></a>
+                    <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
+                    <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
                 </div>
-                <div class="sub_bg_line">
-                    <div class="sub_bg_text">
-                        <!-- 현재 페이지에 맞게 <b>태그를 넣어주세요 -->
-                        <!-- 메뉴가 4개인 페이지는 .sub_bg_line a 스타일의 width를 25%로 줄여주세요 -->
-                        <a href="intro.html">병원안내</a>
-                        <a href="drintro.html"><b>의료진 소개</b></a>
-                        <a href="map.html">오시는 길</a>
-                        <!-- <a>4번째 메뉴</a> -->
+                <div class="sub_bg_menu">
+                    <div class="sub_bg_img">
+                        <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
+                        <h2>병원소개</h2> 
                     </div>
-                </div>
-            </div>
-            <div class="sub_top">
-                <div class="inner_top">
-                    <h2>의료진 소개</h2>
-                    <p><a href="/">HOME</a> > 병원소개 > 의료진 소개</p>
-                    <!-- 페이지에 따라 메인메뉴와 서브메뉴 이름을 적어주세요 -->
-                </div>
-            </div>
-            <div class="sub_content">
-                <div class="inner">
-                    <!-- 의사가 더 있을경우 여기부터 복사-->
-                    <div class="dr_intro">
-                        <div class="dr_imgbox">
-                            <img src="./img/dr.jpg" alt="">
+                    <div class="sub_bg_line">
+                        <div class="sub_bg_text">
+                            <!-- 현재 페이지에 맞게 <b>태그를 넣어주세요 -->
+                            <!-- 메뉴가 4개인 페이지는 .sub_bg_line a 스타일의 width를 25%로 줄여주세요 -->
+                            <a href="intro.html">병원안내</a>
+                            <a href="drintro.html"><b>의료진 소개</b></a>
+                            <a href="map.html">오시는 길</a>
+                            <!-- <a>4번째 메뉴</a> -->
                         </div>
-                        <div class="dr_infobox">
-                            <div class="dr_name">
-                                <h2>남윤표</h2>
-                                <p>원장</p>             
-                                <span>안과 전문의</span>                  
-                            </div>
-                            <div class="dr_info">
-                                <b class="dr_infoline">진료과</b><p class="dr_infoline">안질환(백내장, 녹내장, 익상편), 시력교정술, 노안교정술</p>
-                                <b>전문분야</b><p>백내장 수술 6000례이상(미세초음파 수술), 노안수술 3000례 이상, 익상편 수술 1000례, 굴절교정 수술 3000례 이상</p>
-                            </div>
-                            <div class="dr_table">
-                                <table class="dr_tb">
-                                    <tr>
-                                        <th>시간</th>
-                                        <th>월</th>
-                                        <th>화</th>
-                                        <th>수</th>
-                                        <th>목</th>
-                                        <th>금</th>
-                                        <th>토</th>
-                                    </tr>
-                                    <tr>
-                                        <th>오전</th>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <th>오후</th>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>진료</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <th>비고</th>
-                                        <td colspan="6" class="td">토요일은 휴진 입니다
-                                            <br>
-                                            ※ 응급 수술 등에 의해 진료시간이 변경될 수 있으니 예약 및 내원 시 확인바랍니다.
-                                        </td>
-                                    </tr>
-                                </table>                                
-                            </div>
-                            <div class="dr_button_box">
-                                <button onclick="car()" class="dr_career_btn">주요경력</button>
-                                <button onclick="res()" class="dr_career_btn">논문&연구실적</button>
-                                <a href="reserve.html"><p>온라인예약</p></a>                       
-                            </div>     
-                            <div id="dr_career" style="display: none;">
-                                <ul>
-                                    <li>서울아산병원 울산대학교 대학원 수료</li>
-                                    <li>서울아산병원 수련의</li>
-                                    <li>서울아산병원 안과 전문의</li>
-                                    <li>서울아산병원 안과 외래교수</li>
-                                    <li>대한안과학회 정회원</li>
-                                    <li>대한백내장굴절수술학회 정회원</li>
-                                    <li>미국백내장굴절수술학회(ASCRS) 정회원</li>
-                                    <li>한국콘택트렌즈 연구회 정회원</li>
-                                    <li>전 김포연세안과 원장</li>
-                                </ul>
-                            </div>  
-                            <div id="dr_research" style="display: none;">
-                                <ul>
-                                    <li> Performance of Humphrey Matrix Frequency Doubling Technology Perimetry and Standard Automated Perimetry Global Indices<br>
-                                        험프리매트릭스 주파수배가시야검사법과 표준 자동시야검사법의 검사 지표에 대한 비교 분석
-                                        </li>
-                                    <li>Yoonpyo Nam, MD, Sung Yong Kang, MD, Seong Bae Park, MD,Kyung Rim Sung, MD, PhD, Michael S. Kook, MD<br>
-                                        남윤표ㆍ강성용ㆍ박성배ㆍ성경림ㆍ국문석
-                                        </li>
-                                    <li>Clinical Validation of Visual Field Index<br>
-                                        녹내장 시야 지표의 임상적 유용성</li>
-                                    <li>Jung Woo Cho, MD, Yoon Pyo Nam, MD, Dong Yoon Kim, MD, Sung Yong Kang, MD,Kyung Rim Sung, MD, PhD, Michael S Kook, MD.<br>
-                                        조정우ㆍ남윤표ㆍ김동윤ㆍ강성용ㆍ성경림ㆍ국문석</li>
-                                    <li>Relationship Between Central Corneal Thickness and Retinal Nerve<br>
-                                        Fiber Layer Thickness in Glaucomatous Subject<br>
-                                        녹내장안에서 망막신경섬유층두께와 중심각막두께의 상관관계 분석</li>
-                                </ul>
-                            </div>                 
-                        </div> 
-                    </div>
-                    <!--여기까지 복사 -->
-                </div>
-            </div>
-        </div>    
-    </article>
-    <footer id="ft">
-        <div class="ftwrap">
-            <div class="ft_line">
-                <p>김포아산안과 SNS</p>
-                <a href="" class="ft_link1"></a>
-                <a href="" class="ft_link2"></a>
-                <a href="" class="ft_link3"></a>
-                <a href="" class="ft_link4"></a>
-                <a href="" class="ft_link5"></a>
-                <a href="" class="ft_link6"></a>
-            </div>      
-            <div class="fnb">
-                <div class="inner">
-                    <span><a href="">이용약관</a></span>
-                    <span><a href="">개인정보처리방침</a></span>
-                    <span><a href="">환자의 권리와 의무</a></span>
-                    <span><a href="">비급여안내</a></span>
-                </div>
-            </div>
-            <div class="snb">
-                <div class="inner">
-                    <div class="copy_wrap">
-                        <b>아산안과</b>
-                        <p>주소 : 경기도 김포시 김포한강4로 113, 402호(장기동)
-                            신한프라자(4층)</p>
-                        <span>대표자 : 남윤호</span>
-                        <span>사업자등록번호 : 454-95-00993</span>
-                        <span>대표전화 : T. 031)992-0083 F.031)992-0096</span>
-                        <p class="copy">COPYRIGHT© 2021 ASAN EYE HOSPITAL. ALL RIGHT RESERVED.</p>
-                    </div>
-                    <div class="ft_logo">
-                        <img src="./img/logo2.png" alt="ft_logo">
                     </div>
                 </div>
+                <div class="page_tit">
+                    <div class="inner">
+                        <h3>백내장</h3>
+                        <p>
+                            <span><a href="index.html">HOME</a></span>
+                            &nbsp;&nbsp;
+                            |
+                            &nbsp;&nbsp;
+                            <span class="loca1">수정체/망막질환</span>
+                            &nbsp;&nbsp;
+                            >
+                            &nbsp;&nbsp;
+                            <span class="loca2">백내장</span>
+                        </p>
+                    </div>    
+                </div>
+                <div class="sub_content">
+                    <div class="inner">
+                        <!-- 의사가 더 있을경우 여기부터 복사-->
+                        <div class="dr_intro">
+                            <div class="dr_imgbox">
+                                <img src="./img/dr.jpg" alt="">
+                            </div>
+                            <div class="dr_infobox">
+                                <div class="dr_name">
+                                    <h2>남윤표</h2>
+                                    <p>원장</p>             
+                                    <span>안과 전문의</span>                  
+                                </div>
+                                <div class="dr_info">
+                                    <b class="dr_infoline">진료과</b><p class="dr_infoline">안질환(백내장, 녹내장, 익상편), 시력교정술, 노안교정술</p>
+                                    <b>전문분야</b><p>백내장 수술 6000례이상(미세초음파 수술), 노안수술 3000례 이상, 익상편 수술 1000례, 굴절교정 수술 3000례 이상</p>
+                                </div>
+                                <div class="dr_table">
+                                    <table class="dr_tb">
+                                        <tr>
+                                            <th>시간</th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th>토</th>
+                                        </tr>
+                                        <tr>
+                                            <th>오전</th>
+                                            <td>진료</td>
+                                            <td>진료</td>
+                                            <td>진료</td>
+                                            <td>휴진</td>
+                                            <td>진료</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>오후</th>
+                                            <td>진료</td>
+                                            <td>진료</td>
+                                            <td>진료없음</td>
+                                            <td>휴진</td>
+                                            <td>진료</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>비고</th>
+                                            <td colspan="6" class="td">토요일진료는 병원으로 입니다
+                                                <br>
+                                                ※ 응급 수술 등에 의해 진료시간이 변경될 수 있으니 예약 및 내원 시 확인바랍니다.
+                                            </td>
+                                        </tr>
+                                    </table>                                
+                                </div>
+                                <div class="dr_button_box">
+                                    <button onclick="car()" class="dr_career_btn">주요경력</button>
+                                    <button onclick="res()" class="dr_career_btn">논문&연구실적</button>
+                                    <a href="reserve.html"><p>온라인예약</p></a>                       
+                                </div>     
+                                <div id="dr_career" style="display: none;">
+                                    <ul>
+                                        <li>서울아산병원 울산대학교 대학원 수료</li>
+                                        <li>서울아산병원 수련의</li>
+                                        <li>서울아산병원 안과 전문의</li>
+                                        <li>서울아산병원 안과 외래교수</li>
+                                        <li>대한안과학회 정회원</li>
+                                        <li>대한백내장굴절수술학회 정회원</li>
+                                        <li>미국백내장굴절수술학회(ASCRS) 정회원</li>
+                                        <li>한국콘택트렌즈 연구회 정회원</li>
+                                        <li>전 김포연세안과 원장</li>
+                                    </ul>
+                                </div>  
+                                <div id="dr_research" style="display: none;">
+                                    <ul>
+                                        <li> Performance of Humphrey Matrix Frequency Doubling Technology Perimetry and Standard Automated Perimetry Global Indices<br>
+                                            험프리매트릭스 주파수배가시야검사법과 표준 자동시야검사법의 검사 지표에 대한 비교 분석
+                                            </li>
+                                        <li>Yoonpyo Nam, MD, Sung Yong Kang, MD, Seong Bae Park, MD,Kyung Rim Sung, MD, PhD, Michael S. Kook, MD<br>
+                                            남윤표ㆍ강성용ㆍ박성배ㆍ성경림ㆍ국문석
+                                            </li>
+                                        <li>Clinical Validation of Visual Field Index<br>
+                                            녹내장 시야 지표의 임상적 유용성</li>
+                                        <li>Jung Woo Cho, MD, Yoon Pyo Nam, MD, Dong Yoon Kim, MD, Sung Yong Kang, MD,Kyung Rim Sung, MD, PhD, Michael S Kook, MD.<br>
+                                            조정우ㆍ남윤표ㆍ김동윤ㆍ강성용ㆍ성경림ㆍ국문석</li>
+                                        <li>Relationship Between Central Corneal Thickness and Retinal Nerve<br>
+                                            Fiber Layer Thickness in Glaucomatous Subject<br>
+                                            녹내장안에서 망막신경섬유층두께와 중심각막두께의 상관관계 분석</li>
+                                    </ul>
+                                </div>                 
+                            </div> 
+                        </div>
+                        <!--여기까지 복사 -->
+                    </div>
+                </div>
+            </div>    
+        </article>
+        <footer id="ft">
+            <div class="ftwrap">
+                <div class="ft_line">
+                    <p>김포아산안과 SNS</p>
+                    <a href="" class="ft_link1"></a>
+                    <a href="" class="ft_link2"></a>
+                    <a href="" class="ft_link3"></a>
+                    <a href="" class="ft_link4"></a>
+                    <a href="" class="ft_link5"></a>
+                    <a href="" class="ft_link6"></a>
+                </div>      
+                <div class="fnb">
+                    <div class="inner">
+                        <span><a href="">이용약관</a></span>
+                        <span><a href="">개인정보처리방침</a></span>
+                        <span><a href="">환자의 권리와 의무</a></span>
+                        <span><a href="">비급여안내</a></span>
+                    </div>
+                </div>
+                <div class="snb">
+                    <div class="inner">
+                        <div class="copy_wrap">
+                            <b>아산안과</b>
+                            <p>주소 : 경기도 김포시 김포한강4로 113, 402호(장기동)
+                                신한프라자(4층)</p>
+                            <span>대표자 : 남윤호</span>
+                            <span>사업자등록번호 : 454-95-00993</span>
+                            <span>대표전화 : T. 031)992-0083 F.031)992-0096</span>
+                            <p class="copy">COPYRIGHT© 2021 ASAN EYE HOSPITAL. ALL RIGHT RESERVED.</p>
+                        </div>
+                        <div class="ft_logo">
+                            <img src="./img/logo2.png" alt="ft_logo">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
-    </article>
+        </footer>
+    
     <script>
         function car(){
             var career = document.getElementById("dr_career");
