@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--메타포 문서정보-->
     <!-- 웹 아이콘 XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 오픈 그래프 -->
     <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="asan">
+    <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
     <meta property="og:image" href="./img/logo_brand.png">
      <!-- 기본 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <!--폰트-->
-    <style>
-        @font-face {
-      font-family: 'HallymGothic-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      }
-    </style>
+    <script src="./js/jquery-1.9.1.js"></script>
+    <script src="./js/jquery-ui-1.9.2.custom.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
     <title>약관동의</title>
 </head>
 <style>
@@ -166,28 +159,28 @@
                                         <li class="submenu"><a href="time.html">진료시간</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat1.html#sub1">수정체/망막질환</a>
+                                <li class="mainmenu"><a href="treat1_sub1.html">수정체/망막질환</a>
                                     <ul class="sub_ul">
                                         <li class="submenu"><a href="treat1_sub1.html">백내장</a></li>
                                         <li class="submenu"><a href="treat1_sub2.html">녹내장</a></li>
                                         <li class="submenu"><a href="treat1_sub3.html">당뇨망막병증</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat2.html#sub1">안질환</a>
+                                <li class="mainmenu"><a href="treat2_sub1.html">안질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat2.html#sub1">비문증</a></li>
-                                        <li class="submenu"><a href="treat2.html#sub2">안구건조증</a></li>
-                                        <li class="submenu"><a href="treat2.html#sub3">사시/약시</a></li>
+                                        <li class="submenu"><a href="treat2_sub1.html">비문증</a></li>
+                                        <li class="submenu"><a href="treat2_sub2.html">안구건조증</a></li>
+                                        <li class="submenu"><a href="treat2_sub3.html">사시/약시</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat3.html#sub1">소아질환</a>
+                                <li class="mainmenu"><a href="treat3_sub1.html">소아질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat3.html#sub1">시력발달</a></li>
-                                        <li class="submenu"><a href="treat3.html#sub2">사시/약시</a></li>
-                                        <li class="submenu"><a href="treat3.html#sub3">드림렌즈</a></li>
+                                        <li class="submenu"><a href="treat3_sub1.html">시력발달</a></li>
+                                        <li class="submenu"><a href="treat3_sub2.html">사시/약시</a></li>
+                                        <li class="submenu"><a href="treat3_sub3.html">드림렌즈</a></li>
                                     </ul>
                                 </li>        
-                                <li class="mainmenu mm_last"><a href="news.html">병원소식</a>
+                                <li class="mainmenu mm_last"><a href="notice.html">병원소식</a>
                                     <ul class="sub_ul sub_ul1">
                                         <li class="submenu"><a href="notice.html">공지사항</a></li>
                                         <li class="submenu"><a href="data.html">자료실</a></li>
@@ -211,12 +204,13 @@
                  <div class="sub_bg_menu">
                     <div class="sub_bg_img">
                         <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
-                        <h2>병원소개</h2> 
+                        <h2>회원가입약관</h2> 
                     </div>
                     <div class="sub_content">
                         <div class="inner">
-                            <form action="join.html" class="agree_form" method="post">
+                            <form action="join.html" class="agree_form" method="get">
                                 <h3>이용약관</h3>
+                                <br>
                                 <!--병원이름수정하기-->
                                 <textarea cols="140" rows="13" class="textcheck" readonly style="resize: none;">
 제1장 총칙 제1조 (목적)
@@ -419,6 +413,7 @@
                                 <input type="checkbox" name="ck1" id="ck1">
                                 <label for="ck1">위의 이용약관에 동의합니다.</label>
                                 <h3>개인정보처리방침</h3>
+                                <br>
                                 <!--병원이름수정하기-->
                                 <textarea cols="140" rows="13" class="textcheck" readonly style="resize: none;">
 김포아산안과(이하 "본원"이라 함)의 개인정보처리방침에 대해 알려드립니다.

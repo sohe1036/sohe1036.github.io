@@ -1,69 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- shortcut icon 및 파비콘 연걸 -->
-<link rel="shortcut icon" href="" sizes="">
-<!--  문서 메타 정보-->
-<meta name="application-name" content="">
-<meta name="title" content="">
-<meta name="subject" content="">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<!-- 오픈그래프 -->
-<meta property="og:url" content="">
-<meta property="og:type" content="">
-<meta property="og:image" content="">
-<meta property="og:article:author" content="">
-<meta property="og:article:publisher" content="">
-<meta property="og:article:thumbnailUrl" content="">
-<meta property="og:article:author" content="">
-<meta property="og:article:author:url" content="">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<!-- 기본플러그인 연결 -->
-<script src="./js/jquery-1.9.1.js"></script>
-<script src="./js/jquery-ui-1.9.2.custom.js"></script>
-<link rel="stylesheet" href="./css/slickstyle.css">
-<link rel="stylesheet" href="./css/slick-theme.css">
-<script src="./js/slick.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹 아이콘 XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:title" content="asan">
+    <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
+    <meta property="og:image" href="./img/logo_brand.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+     <!-- 기본 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.9.1.js"></script>
+    <script src="./js/jquery-ui-1.9.2.custom.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <!--폰트-->
+    <style>
+        @font-face {
+      font-family: 'HallymGothic-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      }
+  </style>
     <title>진료시간</title> 
    <style>
-/* 스타일 초기화 */
-#header {width:100%;}
-*{margin: 0; padding: 0;}
-body, html { width: 100%;  font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden;}
-ul{list-style: none;}
-a{text-decoration: none; }
-input, button{outline: 0; border: 0;}
-table, .table{display: table; border-collapse:collapse;}
-tr, .tr { display: table-row;}
-.wrap { clear:both; width: 100%; }
-.wrap:after, #header:after, #content:after, #ft:after, #sub_content::after { content:""; display:block; clear:both; }   
-.clrfx::after{content: 0;display: block; width: 100%; clear: both;}
-.content {clear: both; width: 100%;}
-/* 헤더부분 스타일 */
-/* logo */
-.logo {float: left; padding-top: 25px;}
-/* tnb */
-.tnb {padding-top: 27px;}
-.login {float: right; border:2px solid#eee; border-radius: 46px; padding: 10px; font-size: 14px; padding-right: 25px; padding-left: 25px;}
-.login .sign::before {content: ""; background: url("./img/icon_login.png"); width: 15px; height: 18px;display: inline-block; margin-right: 10px; vertical-align: -3px;}
-.line {font-size: 12px; vertical-align: 2px; color: #ddd; padding: 5px;}
-.login span a {color: #000; font-weight: 500; font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
-.login span:hover a{color:blue;}
-/* gnb */
-.top_hd_wrap {height: 50px; clear: both;}
-.top_nav_wrap {height: 100px; width: 1400px; margin: 0 auto;}
-.gnb{height: 70px; clear: both; width: 100%; border-top: 1px solid #ddd;background-color: #fbfbfb; z-index: 99; border-bottom: 1px solid #ddd;}
-.gnb_wrap {margin: 0 auto; height: 300px; z-index: 1;}
-.background {clear: both;width: 100%; position:absolute; width: 1920px; background-color: #fff; height:0; top:171px; z-index:1; left: 0;} 
-.main_ul {margin: 0 auto; height: 70px; width: 1400px;}
-.main_ul .mainmenu {margin: 0 auto; position: relative; width: 16.66%; height: 100%; display: block; float:left; box-sizing: border-box;}
-.mainmenu>a{font-size: 18px; color: #222222; line-height: 70px; display: block; text-align: center; border-left: 1px solid #ddd; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
-.mainmenu:hover>a{background-color: rgb(31, 117, 176); color: #fff;}
-.mainmenu:hover .sub_ul {background-color: rgb(244,248,251);}
+
 
 .sub_menu {width: 1400px; margin: 0 auto;}
 .sub_ul {float:left;width:100%;height: 0px; border-left: 1px solid#ddd; box-sizing: border-box; position: absolute;}
@@ -103,33 +68,13 @@ tr, .tr { display: table-row;}
 
 .sub_top, .sub_content {width: 1120px; margin: 0 auto;}
 .inner_top {width: 1100px; border-bottom: 1px solid #e4e4e4; height: 110px;line-height: 130px; margin-bottom: 40px; margin: 0 auto;}
-.inner_top h2 {float:left; font-size: 40px; font-weight: 400; font-family: 'Noto Sans KR', sans-serif}
-.inner_top p {float:right; font-size: 14px; line-height: 160px; font-family: 'Noto Sans KR', sans-serif}
+.inner_top h2 {float:left; font-size: 40px; }
+.inner_top p {float:right; font-size: 14px; line-height: 160px; }
 .info_1-1{width: 1120px; margin: 0 auto; line-height: 76px; color: rgb(0, 0, 0); font-size: 14px;font-weight: 100; font-family: 'Noto Sans KR', sans-serif}
-/*푸터*/
-.ft_link1 ,.ft_link2,.ft_link3,.ft_link4,.ft_link5,.ft_link6 {display: inline-block; width: 45px; height: 45px; margin: 0 10px;vertical-align: middle; background-size: cover}
-.ft_link1 {background-image:url("./img/icon_quick_link1.png")}
-.ft_link2 {background-image:url("./img/icon_quick_link2.png")}
-.ft_link3 {background-image:url("./img/icon_quick_link3.png")}
-.ft_link4 {background-image:url("./img/icon_quick_link4.png")}
-.ft_link5 {background-image:url("./img/icon_quick_link5.png")}
-.ft_link6 {background-image:url("./img/icon_quick_link6.png")}
-.ft_line {width: 100%; height: 45px; background-color: #327cb6; padding: 18px; color: #fff; font-size: 16px;}
-.ft_line p {float:left; padding-right: 10px; margin-top: 12px; padding-left: 11%; font-weight: 500;}
 
-#ft { clear: both; width: 100%; height: 185px; }
-.fnb { clear: both; width: 100%; height: 20px; border: 1px solid #ddd; padding: 10px 0; }
-.fnb .inner { width: 1450px; height: 100%; margin-left: 30px; margin: 0 auto; }
-.fnb span { margin: 0 10px; font-size: 13px; }
-.fnb span:after { content: "|"; padding-left: 20px; color: #ddd; }
-.fnb span:last-child:after { content: ""; }
-.snb { clear: both; width: 100%; height: 100px; padding: 20px 10px; }
-.snb .inner{ width: 1450px; height: 100%; margin-left: 40px; margin: 0 auto; }
-.copy_warp { float: left; }
-.ft_logo { float: right; }
-.copy_warp b { display: block; margin-bottom: 10px; }
-.copy_warp p, .copy_warp span { font-size: 13px; padding-right: 10px; color: #666; }
-.copy { margin-top: 10px; color: #444; }
+.page_tit { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
+.page_tit a { color: rgb(123, 123, 123); }
+.page_tit .loca2 { color: #000; }
 
 /* 진료시간표 수정 time sub수정 */
 .time_sub1{width: 1400px;height: 105px; font-weight: 100; line-height: 1.4; text-align: center; padding: 10px 0 35px;}
@@ -205,14 +150,14 @@ min-height: 263px; margin: 0 25px 40px 20px;}
                         <ul class="main_ul">
                             <div class="background">
                             </div>
-                            <li class="mainmenu"><a href="">병원소개</a>
+                            <li class="mainmenu"><a href="intro.html">병원소개</a>
                                 <ul class="sub_ul">
                                     <li class="submenu"><a href="intro.html">병원안내</a></li>
                                     <li class="submenu"><a href="drintro.html">의료진 소개</a></li>
                                     <li class="submenu"><a href="map.html">오시는 길</a></li>
                                 </ul>
                             </li>  
-                            <li class="mainmenu"><a href="">진료안내</a>
+                            <li class="mainmenu"><a href="info.html">진료안내</a>
                                 <ul class="sub_ul">
                                     <li class="submenu"><a href="info.html">진료안내</a></li>
                                     <li class="submenu"><a href="reserve.html">진료예약</a></li>
@@ -223,7 +168,7 @@ min-height: 263px; margin: 0 25px 40px 20px;}
                                 <ul class="sub_ul">
                                     <li class="submenu"><a href="treat1_sub1.html">백내장</a></li>
                                     <li class="submenu"><a href="treat1_sub2.html">녹내장</a></li>
-                                    <li class="submenu"><a href="treat1_sub3.htmㅣ">당뇨망막병증</a></li>
+                                    <li class="submenu"><a href="treat1_sub3.html">당뇨망막병증</a></li>
                                 </ul>
                             </li>  
                             <li class="mainmenu"><a href="treat2_sub1.html">안질환</a>
@@ -240,7 +185,7 @@ min-height: 263px; margin: 0 25px 40px 20px;}
                                     <li class="submenu"><a href="treat3_sub3.html">드림렌즈</a></li>
                                 </ul>
                             </li>        
-                            <li class="mainmenu mm_last"><a href="">병원소식</a>
+                            <li class="mainmenu mm_last"><a href="notice.html">병원소식</a>
                                 <ul class="sub_ul sub_ul1">
                                     <li class="submenu"><a href="notice.html">공지사항</a></li>
                                     <li class="submenu"><a href="data.html">자료실</a></li>
@@ -265,8 +210,8 @@ min-height: 263px; margin: 0 25px 40px 20px;}
                         <!-- 현재 페이지에 맞게 <b>태그를 넣어주세요 -->
                         <!-- 메뉴가 4개인 페이지는 .sub_bg_line a 스타일의 width를 25%로 줄여주세요 -->
                         <a href="info.html">진료안내</a>
-                        <a href="drintro.html">진료예약</a>
-                        <a href="map.html"><b>진료시간</a>
+                        <a href="reserve.html">진료예약</a>
+                        <a href="time.html"><b>진료시간</a>
                         <!-- <a href="">4번째 메뉴</a> -->
                   
                 </div>
@@ -277,8 +222,17 @@ min-height: 263px; margin: 0 25px 40px 20px;}
             <div class="sub_top">
                 <div class="inner_top">
                     <h2>진료 시간</h2>
-                    <p><a href="/">HOME</a> > 진료안내 > 진료시간</p>
-                    <!-- 페이지에 따라 메인메뉴와 서브메뉴 이름을 적어주세요 -->
+                    <p class="page_tit">
+                        <span><a href="index.html">HOME</a></span>
+                        &nbsp;&nbsp;
+                        |
+                        &nbsp;&nbsp;
+                        <span class="loca1">진료안내</span>
+                        &nbsp;&nbsp;
+                        >
+                        &nbsp;&nbsp;
+                        <span class="loca2">온라인예약</span>
+                    </p>
                 </div>
                 <div class="time_sub">
                         <h2 class="time_sub1">

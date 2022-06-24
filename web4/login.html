@@ -1,75 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 메타포 문서 정보 -->
-    <!-- 파비콘 -->
-    <!-- 오픈그래프 -->
-    <!--폰트-->
-    <style>
-        @font-face {
-      font-family: 'HallymGothic-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      }
-  </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- API 필수 플러그인 -->
-    <title>메인 페이지</title>
+    <!-- 웹 아이콘 XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:title" content="asan">
+    <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
+    <meta property="og:image" href="./img/logo_brand.png">
+     <!-- 기본 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.9.1.js"></script>
+    <script src="./js/jquery-ui-1.9.2.custom.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <title>로그인</title>
 
     <!-- 문서 로딩전 스크립트 -->
     <style>
-    /* 문서 초기화 스타일 */
-        *{ margin: 0; padding: 0; text-decoration: none; list-style: none;  font-family: 'HallymGothic-Regular'; }        
-
-        #header {width:100%;}
-    /* logo */
-        .logo {float: left; padding-top: 25px;}
-    /* tnb */
-        .tnb {padding-top: 27px;}
-        .login {float: right; border:2px solid#eee; border-radius: 46px; padding: 10px; font-size: 14px; padding-right: 25px; padding-left: 25px;}
-        .login .sign::before {content: ""; background: url("./img/icon_login.png"); width: 15px; height: 18px;display: inline-block; margin-right: 10px; vertical-align: -3px;}
-        .line {font-size: 12px; vertical-align: 2px; color: #ddd; padding: 5px;}
-        .login span a {color: #000; font-weight: 500; font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
-        .login span:hover a{color:blue;}
-    /* gnb */
-        .top_hd_wrap {height: 50px; clear: both;}
-        .top_nav_wrap {height: 100px; width: 1400px; margin: 0 auto;}
-        .gnb{height: 70px; clear: both; width: 100%; border-top: 1px solid #ddd;background-color: #fbfbfb; z-index: 99;}
-        .gnb_wrap {margin: 0 auto; height: 300px; z-index: 1;}
-        .background {clear: both;width: 100%; position:absolute; width: 1920px; background-color: #fff; height:0; top:171px; z-index:1; left: 0;} 
-        .main_ul {margin: 0 auto; height: 70px; width: 1400px;}
-        .main_ul .mainmenu {margin: 0 auto; position: relative; width: 16.66%; height: 100%; display: block; float:left; box-sizing: border-box;}
-        .mainmenu>a{font-size: 18px; color: #222222; line-height: 70px; display: block; text-align: center; border-left: 1px solid #ddd; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
-        .mainmenu:hover>a{background-color: rgb(31, 117, 176); color: #fff;}
-        .mainmenu:hover .sub_ul {background-color: rgb(244,248,251);}
+  
+        .content_wrap {width: 100%; margin: 0 auto;} 
+ 
         
-        .sub_menu {width: 1400px; margin: 0 auto;}
-        .sub_ul {float:left;width:100%;height: 0px; border-left: 1px solid#ddd; box-sizing: border-box; position: absolute;}
-        .sub_ul1 {border-right: 1px solid#ddd;} 
-        .submenu {width: 100%; line-height: 0px;}
-        .sub_ul a:hover {text-decoration: underline; color: rgb(31, 117, 176);}
-        .submenu a {font-size: 16px; padding-left: 14%; display: none; color:#666}
-        .sub_ul li:first-child a {margin-top: 15px;}
-
-        .main_ul:hover .sub_ul {height: 200px; transition-duration: 0.5s; z-index: 2;}
-        .main_ul:hover .background {height: 200px; transition-duration: 0.5s; box-shadow :  0 8px 8px -6px rgb(73, 72, 72);}
-        .main_ul:hover .submenu {line-height: 40px; transition-duration: 0.5s;}
-        .main_ul:hover .sub_ul a {display: block;}
-
-        .sm_last, .mm_last { border-right: 1px solid #ddd;}
-
-        /*사이드*/
-        .content_wrap {width: 1400px; margin: 0 auto;} 
-        .right_btn {width: 65px; height: 200px; position:fixed; right: 55px; bottom: 45px; z-index: 999;}
-        .right_btn img {width: 90%; padding-bottom: 11px;}
+        /*추가한부분*/
+        .sub_bg_img{height: 142px; background-image: url("./img/bg_sub_top1.jpg");}
+        .sub_bg_menu h2 {width: 1120px; margin: 0 auto; line-height: 142px; color: #fff; font-size: 38px;font-weight: 300; }
+        .sub_bg_line {height: 75px;background: #327cb6;}
+        .sub_bg_text {width: 1120px; margin: 0 auto; height: 100%; text-align: center;}
+        .sub_bg_line a {font-size: 18px; color:#addcf6; line-height: 90px; width: 33%; height: 20px; display: block; float:left; display: block;}  
+        .sub_bg_text a b {color: #fff; font-weight: normal; position: relative;}         
+        .sub_bg_text a b:after {content:""; background-color: #91e9ff; position: absolute; left: 0;bottom:-18px ;width: 100%; height: 10px; text-align: center;}
         
+        /*경로안내 추가한부분*/
+        .page_tit { width: 100%; height: 70px; margin-top: 30px; border-bottom: 1px solid #ddd; }
+        .page_tit .inner { width: 1120px; height: 100%; margin: 0 auto; }
+        .page_tit p { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
+        .page_tit p a { color: rgb(123, 123, 123); }
+        .page_tit .loca2 { color: #000; }
+
         /* login.html */
         .login_wrap {width: 1060px; margin: 0 auto; padding-bottom: 200px;}
-        .login_box {border: 1px solid #ececec; width: 520px; height: 250px; margin: 0 auto;}
+        .login_box {border: 1px solid #ececec; width: 520px; height: 180px; margin: 0 auto; }
         .login_form {height: 0px;}
         .login_form_wrap {width: 530px;  padding: 20px}
         .login_tb {width: 470px; height: 190px;}
@@ -80,7 +53,7 @@
         .jointitle a {float:right; padding-right: 40px; text-decoration: none; color:#222222}
         .jointitle span>a:hover {color: blue}
         .login_form_tit {font-size: 20px; color: #222222; padding-bottom: 20px;}
-        .login_wrap h2 {padding-left: 25%; padding-top: 30px;padding-bottom: 30px;}
+        .login_wrap h2 {padding-left: 25%; padding-top: 60px;padding-bottom: 30px;}
         .button_box button:hover {cursor:pointer; background-color: rgb(31, 117, 176);border:1px solid rgb(117, 182, 224); transition: 1s; color:#fff}
 
         /*푸터 sns*/
@@ -152,33 +125,33 @@
                                         <li class="submenu"><a href="time.html">진료시간</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat1.html#sub1">수정체/망막질환</a>
+                                <li class="mainmenu"><a href="treat1_sub1.html">수정체/망막질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat1.html#sub1">백내장</a></li>
-                                        <li class="submenu"><a href="treat1.html#sub2">녹내장</a></li>
-                                        <li class="submenu"><a href="treat1.html#sub3">당뇨망막병증</a></li>
+                                        <li class="submenu"><a href="treat1_sub1.html">백내장</a></li>
+                                        <li class="submenu"><a href="treat1_sub2.html">녹내장</a></li>
+                                        <li class="submenu"><a href="treat1_sub3.html">당뇨망막병증</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat2.html#sub1">안질환</a>
+                                <li class="mainmenu"><a href="treat2_sub1.html">안질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat2.html#sub1">비문증</a></li>
-                                        <li class="submenu"><a href="treat2.html#sub2">안구건조증</a></li>
-                                        <li class="submenu"><a href="treat2.html#sub3">사시/약시</a></li>
+                                        <li class="submenu"><a href="treat2_sub1.html">비문증</a></li>
+                                        <li class="submenu"><a href="treat2_sub2.html">안구건조증</a></li>
+                                        <li class="submenu"><a href="treat2_sub3.html">사시/약시</a></li>
                                     </ul>
                                 </li>  
-                                <li class="mainmenu"><a href="treat3.html#sub1">소아질환</a>
+                                <li class="mainmenu"><a href="treat3_sub1.html">소아질환</a>
                                     <ul class="sub_ul">
-                                        <li class="submenu"><a href="treat3.html#sub1">시력발달</a></li>
-                                        <li class="submenu"><a href="treat3.html#sub2">사시/약시</a></li>
-                                        <li class="submenu"><a href="treat3.html#sub3">드림렌즈</a></li>
+                                        <li class="submenu"><a href="treat3_sub1.html">시력발달</a></li>
+                                        <li class="submenu"><a href="treat3_sub2.html">사시/약시</a></li>
+                                        <li class="submenu"><a href="treat3_sub3.html">드림렌즈</a></li>
                                     </ul>
                                 </li>        
-                                <li class="mainmenu mm_last"><a href="news.html">병원소식</a>
+                                <li class="mainmenu mm_last"><a href="notice.html">병원소식</a>
                                     <ul class="sub_ul sub_ul1">
-                                        <li class="submenu"><a href="news.html#notice">공지사항</a></li>
-                                        <li class="submenu"><a href="news.html#data">자료실</a></li>
-                                        <li class="submenu"><a href="news.html#board">게시판</a></li>
-                                        <li class="submenu"><a href="news.html#qna">Q&A</a></li>
+                                        <li class="submenu"><a href="notice.html">공지사항</a></li>
+                                        <li class="submenu"><a href="data.html">자료실</a></li>
+                                        <li class="submenu"><a href="board.html">게시판</a></li>
+                                        <li class="submenu"><a href="qna.html">Q&A</a></li>
                                     </ul>
                                 </li>             
                             </ul>                          
@@ -192,7 +165,24 @@
                     <a href=""><img src="./img/btn-calling.png" alt=""></a>
                     <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
                     <a href="#header_wrap"><img src="./img/btn_top.png" alt=""></a>
-                 </div>   
+                 </div>
+                 <div class="sub_bg_menu">
+                    <div class="sub_bg_img">
+                        <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
+                        <h2>로그인</h2> 
+                    </div>
+                </div>
+                <div class="page_tit">
+                    <div class="inner">
+                        <p>
+                            <span><a href="index.html">HOME</a></span>
+                            &nbsp;&nbsp; 
+                            >
+                            &nbsp;&nbsp;
+                            <span class="loca2">로그인</span>
+                        </p>
+                    </div>    
+                </div>   
                 <section class="con_wrap">
                     <div class="login_wrap">
                         <h2>로그인</h2>
