@@ -183,7 +183,7 @@
                     </div>    
                     <div class="sub_content">
                         <div class="inner">
-                            <form action="join.html" class="agree_form" method="get">
+                            <form action="join.html" class="agree_form" method="get" onsubmit="return send(this)">
                                 <h3>이용약관</h3>
                                 <br>
                                 <!--병원이름수정하기-->
@@ -633,6 +633,16 @@ CT판독
                                 </div>
                                 
                             </form>
+                            <script>
+                                function send(f){
+                                    if(f.ck1.checked==true && f.ck2.checked==true){		//ck1과 ck2모두 체크도어있어야
+                                        return true;
+                                    }else{
+                                        alert ("약관에 모두 동의하지 않으셨습니다.")
+                                        return false;
+                                    }
+                                }
+                            </script>	
                         </div>
                     </div>
                 </div>
