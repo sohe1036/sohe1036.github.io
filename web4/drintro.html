@@ -94,9 +94,9 @@
         #dr_career li, #dr_career2 li { padding: 4px; margin-left: 28px; list-style: outside;}         
         .dr_career_btn:hover {cursor: pointer;}
 
-        #dr_research {max-height: 400px; clear:both; width: 700px; display:none ; font-size: 16px; background-color: rgb(246,246,250); margin-bottom: 40px;}
-        #dr_research ul {margin-top: 12%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px;}
-        #dr_research li { padding: 4px; margin-left: 28px; list-style: outside;}         
+        #dr_research , #dr_research2 {max-height: 400px; clear:both; width: 700px; display:none ; font-size: 16px; background-color: rgb(246,246,250); margin-bottom: 40px;}
+        #dr_research ul , #dr_research2 ul {margin-top: 12%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px;}
+        #dr_research li ,#dr_research2 li { padding: 4px; margin-left: 28px; list-style: outside;}         
  
     </style>
 
@@ -360,11 +360,11 @@
                                     </table>                                
                                 </div>
                                 <div class="dr_button_box">
-                                    <button onclick="car()" class="dr_career_btn">주요경력</button>
-                                    <button onclick="res()" class="dr_career_btn">논문&연구실적</button>
+                                    <button onclick="car2()" class="dr_career_btn">주요경력</button>
+                                    <button onclick="res2()" class="dr_career_btn">논문&연구실적</button>
                                     <a href="reserve.html"><p>온라인예약</p></a>                       
                                 </div>     
-                                <div id="dr_career" style="display: none;">
+                                <div id="dr_career2" style="display: none;">
                                     <ul>
                                         <li>서울아산병원 울산대학교 대학원 수료</li>
                                         <li>서울아산병원 수련의</li>
@@ -377,7 +377,7 @@
                                         <li>Smith-Kettlewell 안 연구소 임상강사</li>
                                     </ul>
                                 </div>  
-                                <div id="dr_research" style="display: none;">
+                                <div id="dr_research2" style="display: none;">
                                     <ul>
                                         <li> Usefulness of Optical Coherence Tomography Angiography in the Differential Diagnosis
                                             Between Superior Segmental Optic Hypoplasia and Normal-tension Glaucoma. J Glaucoma. 2020
@@ -454,6 +454,23 @@
                     research.style.display='block';
                 }else{research.style.display='none'}
             }
+
+            function car2(){
+            var career = document.getElementById("dr_career2");
+            var research = document.getElementById("dr_research2");
+                if(research.style.display=='block'){research.style.display='none'}
+                if(career.style.display=='none'){ 
+                    career.style.display='block';
+                }else{career.style.display='none'}                
+            }
+            function res2(){
+            var research = document.getElementById("dr_research2");
+            var career = document.getElementById("dr_career2");                
+                if(career.style.display=='block'){career.style.display='none'}
+                if(research.style.display=='none'){
+                    research.style.display='block';
+                }else{research.style.display='none'}
+            }    
         
     </script>
 </body>
