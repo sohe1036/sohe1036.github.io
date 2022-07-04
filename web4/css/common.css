@@ -5,6 +5,7 @@
     font-style: normal;
     }
 
+    
 /*초기화*/
 *{margin: 0%; padding: 0%; text-decoration: none; list-style: none;}
 body, html{ width: 100%; overflow-x: hidden; font-family: 'HallymGothic-Regular'; }

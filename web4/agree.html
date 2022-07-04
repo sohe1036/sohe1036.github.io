@@ -7,25 +7,17 @@
     <!-- 웹 아이콘 XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 오픈 그래프 -->
-    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:url" content="https://sohe1036.github.io/web4/index.html">
     <meta property="og:title" content="asan">
     <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
-    <meta property="og:image" href="./img/logo_brand.png">
+    <meta property="og:image" content="./img/logo_brand.png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
      <!-- 기본 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="./js/jquery-1.9.1.js"></script>
-    <script src="./js/jquery-ui-1.9.2.custom.js"></script>
     <link rel="stylesheet" href="./css/common.css">
-    <!--폰트-->
-    <style>
-        @font-face {
-      font-family: 'HallymGothic-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      }
-  </style>
+    <!--파비콘추가-->
+    <link rel="icon" href="./img/icon_.png">
+
     <title>약관동의</title>
 </head>
 <style>
@@ -183,7 +175,7 @@
                     </div>    
                     <div class="sub_content">
                         <div class="inner">
-                            <form action="join.html" class="agree_form" method="get" onsubmit="return send(this)">
+                            <form action="join.html" name="agree_form" class="agree_form" method="get" onsubmit="return send(this)">
                                 <h3>이용약관</h3>
                                 <br>
                                 <!--병원이름수정하기-->
@@ -628,12 +620,21 @@ CT판독
                                 </textarea>    
                                 <input type="checkbox" name="ck2" id="ck2">
                                 <label for="ck2">위의 개인 정보 수집  처리에 동의합니다.</label>
+                                <div class="all_check">
+                                    <input type="checkbox" name="ck3" id="ck3" onclick="allcheck()">
+                                    <label for="ck3">모든 약관에 동의합니다.</label>	
+                                </div>
                                 <div class="btn_warp">
                                     <input type="submit" value="회원가입" class="agree_btn">
                                 </div>
                                 
                             </form>
                             <script>
+                                function allcheck(){
+                                    agree_form.ck1.checked = true;
+                                    agree_form.ck2.checked = true;
+                                }
+
                                 function send(f){
                                     if(f.ck1.checked==true && f.ck2.checked==true){		//ck1과 ck2모두 체크도어있어야
                                         return true;

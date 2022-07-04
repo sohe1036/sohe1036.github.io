@@ -7,24 +7,18 @@
     <!-- 웹 아이콘 XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 오픈 그래프 -->
-    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:url" content="https://sohe1036.github.io/web4/index.html">
     <meta property="og:title" content="asan">
     <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
-    <meta property="og:image" href="./img/logo_brand.png">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    content    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
      <!-- 기본 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/jquery-ui-1.9.2.custom.js"></script>
     <link rel="stylesheet" href="./css/common.css">
-    <!--폰트-->
-    <style>
-        @font-face {
-      font-family: 'HallymGothic-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      }
+    <!--파비콘추가-->
+    <link rel="icon" href="./img/icon_.png">
+    
   </style>
     <title>진료예약</title> 
    <style>
@@ -67,7 +61,7 @@
 /* 온라인예약 수정 */
 .sub_wrap{width: 100%;}
 #rsvfrm{width: 1120px;height:1440px; display: block;}
-.reservediv {width: 1120px; height: 1360px; margin-top: 30px; border-top: 2px solid #1f75b0; display: block;}
+.reservediv {width: 1120px; height: auto; margin-top: 30px; border-top: 2px solid #1f75b0; display: block;}
 .reservediv td select{width: 250px; vertical-align: middle;}
 .reserve_wrap{width: 1130px; height: 2000px; margin: 0 auto; margin-top: 30px;}
 .reserve{border-bottom: 2px solid #0087ab ; padding-bottom: 30px;}
@@ -201,6 +195,11 @@ a.button1{border: 1px solid #0087ab; height: 30px; color:#0087ab}
         </header> 
         <div id="content" class="content clrfx">
             <div class="sub_wrap">
+                <div class="right_btn">
+                    <a href=""><img src="./img/btn-calling.png" alt="전화"></a>
+                    <a href=""><img src="./img/btn-chat-kakao.png" alt="카카오톡"></a>
+                    <a href="#header_wrap"><img src="./img/btn_top.png" alt="top"></a>
+                </div>
                 <div class="sub_bg_menu">
                     <div class="sub_bg_img">
                         <!-- 메인메뉴에 따라 이름을 바꿔주세요 -->
@@ -213,7 +212,7 @@ a.button1{border: 1px solid #0087ab; height: 30px; color:#0087ab}
                             <a href="info.html">진료안내</a>
                             <a href="reserve.html"><b>온라인예약</b></a>
                             <a href="time.html">진료시간</a>
-                            <!-- <a href="">4번째 메뉴</a> -->
+                            <!-- <a href="">4번째 메뉴</a> --> 
                         </div>
                     </div>
                     <div class="page_tit">
@@ -706,14 +705,18 @@ a.button1{border: 1px solid #0087ab; height: 30px; color:#0087ab}
                                 <textarea name="mb_con" cols="125" rows="5"></textarea>
                             </td>
                     </tr>
+                    <!--                    
                     <tr>
                         <th scope="row" class="F5">자동입력방지</th>
                         <td>
-                            <img src="/img/zmSpamFree.png" id="zsfimg" alt="아래 새로고침을 클릭해 주세요" style="vertical-align:middle;">
+                            <img src="/img/check.png" alt="아래 새로고침을 클릭해 주세요" style="vertical-align:middle;">
                             <input type="text" class="inputext" title="자동입력 방지" name="zsfCode" id="zsfCode">
+                            <a href="reserve.html" class="btn btnReplace" >새로고침</a>
                             <a href="#;" class="btn btnReplace" onclick="document.getElementById('zsfImg').src='http://www.hanaent.co.kr/bbs/zmSpamFree/zmSpamFree.php?re&amp;zsfimg=' + new Date().getTime(); return false;">새로고침</a>
                         </td>
                     </tr>
+                    -->
+
                 </tbody>
                 </table> 
                 </div>

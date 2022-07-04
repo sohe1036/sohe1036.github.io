@@ -7,25 +7,20 @@
     <!-- 웹 아이콘 XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- 오픈 그래프 -->
-    <meta property="og:url" content="https://sohe1036.github.io/web1/index.html">
+    <meta property="og:url" content="https://sohe1036.github.io/web4/index.html">
     <meta property="og:title" content="asan">
     <meta property="og:description" content="안과,김포안과,백내장,녹내장,시력검사,렌즈,안구건조증">
-    <meta property="og:image" href="./img/logo_brand.png">
+    <meta property="og:image" content="./img/logo_brand.png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
      <!-- 기본 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/jquery-ui-1.9.2.custom.js"></script>
     <link rel="stylesheet" href="./css/common.css">
-    <!--폰트-->
-    <style>
-        @font-face {
-      font-family: 'HallymGothic-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      }
-  </style>
+    <!--파비콘추가-->
+    <link rel="icon" href="./img/icon_.png">
+   
+
     <title>의료진 소개</title>
 
     <style>
@@ -45,18 +40,18 @@
         .sub_bg_text a b {color: #fff; font-weight: normal; position: relative;}         
         .sub_bg_text a b:after {content:""; background-color: #91e9ff; position: absolute; left: 0;bottom:-18px ;width: 100%; height: 10px; text-align: center;}
 
-        .sub_top, .sub_content {width: 1120px; margin: 0 auto; height: auto;}
+        .sub_top, .sub_content {width: 1120px; margin: 0 auto;}
         .inner_top {width: 100%; border-bottom: 1px solid #e4e4e4; height: 110px;line-height: 130px; margin-bottom: 40px;}
         .inner_top h2 {float:left; font-size: 40px; font-weight: 400;}
         .inner_top p {float:right; font-size: 14px; line-height: 160px;}
 
         /*서브메뉴 이름란*/
         .page_tit { width: 100%; height: 70px; margin-top: 30px;}
-        .page_tit .inner { width: 1120px; height: 100%; margin: 0 auto;  border-bottom: 1px solid #ddd; }
-        .page_tit h3 { float: left; font-size: 36px; padding-top: 5px; }
-        .page_tit p { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
-        .page_tit p a { color: rgb(123, 123, 123); }
-        .page_tit .loca2 { color: #000; }
+            .page_tit .inner { width: 1120px; height: 100%; margin: 0 auto;  border-bottom: 1px solid #ddd; }
+            .page_tit h3 { float: left; font-size: 36px; padding-top: 5px; }
+            .page_tit p { float: right; font-size: 14px; line-height: 80px; color: rgb(123, 123, 123); }
+            .page_tit p a { color: rgb(123, 123, 123); }
+            .page_tit .loca2 { color: #000; }
 
         .dr_intro {height: 730px;}
 
@@ -94,9 +89,9 @@
         #dr_career li, #dr_career2 li { padding: 4px; margin-left: 28px; list-style: outside;}         
         .dr_career_btn:hover {cursor: pointer;}
 
-        #dr_research, #dr_research2 {max-height: 400px; clear:both; width: 700px; display:none ; font-size: 16px; background-color: rgb(246,246,250); margin-bottom: 40px;}
-        #dr_research ul, #dr_research2 ul {margin-top: 12%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px;}
-        #dr_research li, #dr_research2 li { padding: 4px; margin-left: 28px; list-style: outside;}         
+        #dr_research , #dr_research2 {max-height: 400px; clear:both; width: 700px; display:none ; font-size: 16px; background-color: rgb(246,246,250); margin-bottom: 40px;}
+        #dr_research ul , #dr_research2 ul {margin-top: 12%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px;}
+        #dr_research li ,#dr_research2 li { padding: 4px; margin-left: 28px; list-style: outside;}         
  
     </style>
 
@@ -219,10 +214,10 @@
                         <!-- 의사가 더 있을경우 여기부터 복사-->
                         <div class="dr_intro">
                             <div class="dr_imgbox">
-                                <img src="./img/dr10.jpg" alt="의사1">
+                                <img src="./img/dr.jpg" alt="의사1">
                             </div>
                             <div class="dr_infobox">
-                                <div class="dr_name">
+                                <div class="dr_name" id="drname1">
                                     <h2>남윤표</h2>
                                     <p>원장</p>             
                                     <span>안과 전문의</span>                  
@@ -312,7 +307,7 @@
                                 <img src="./img/dr8.jpg" alt="의사2">
                             </div>
                             <div class="dr_infobox">
-                                <div class="dr_name">
+                                <div class="dr_name" id="drname2">
                                     <h2>성경림</h2>
                                     <p>원장</p>             
                                     <span>안과 전문의</span>                  
@@ -441,47 +436,37 @@
         function car(){
             var career = document.getElementById("dr_career");
             var research = document.getElementById("dr_research");
-                if(research.style.display=='block'){
-                    research.style.display='none'}
+                if(research.style.display=='block'){research.style.display='none'}
                 if(career.style.display=='none'){ 
                     career.style.display='block';
-                }else{
-                    career.style.display='none'
-                }                
+                }else{career.style.display='none'}                
             }
             function res(){
             var research = document.getElementById("dr_research");
             var career = document.getElementById("dr_career");                
-                if(career.style.display=='block'){
-                    career.style.display='none'}
+                if(career.style.display=='block'){career.style.display='none'}
                 if(research.style.display=='none'){
                     research.style.display='block';
-                }else{
-                    research.style.display='none'
-                }
+                }else{research.style.display='none'}
             }
+
             function car2(){
             var career = document.getElementById("dr_career2");
             var research = document.getElementById("dr_research2");
-                if(research.style.display=='block'){
-                    research.style.display='none'}
+                if(research.style.display=='block'){research.style.display='none'}
                 if(career.style.display=='none'){ 
                     career.style.display='block';
-                }else{
-                    career.style.display='none'
-                }                
+                }else{career.style.display='none'}                
             }
             function res2(){
             var research = document.getElementById("dr_research2");
             var career = document.getElementById("dr_career2");                
-                if(career.style.display=='block'){
-                    career.style.display='none'}
+                if(career.style.display=='block'){career.style.display='none'}
                 if(research.style.display=='none'){
                     research.style.display='block';
-                }else{
-                    research.style.display='none'
-                }
-            }
+                }else{research.style.display='none'}
+            }    
+        
     </script>
 </body>
 </html>
