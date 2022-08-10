@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="pro_txt">
-                        <img src="./img/web04_login.png" alt="로그인" style="width: 900px; display: block; margin:0 auto;">
+                        <img src="./img/web04_login.png" alt="로그인" style="width: 900px; display: block; margin:20px auto;">
                         <div class="bg">  
                             <div class="bg_box">
                                 <p>로그인</p>
@@ -206,8 +206,8 @@
                 <div class="pro_wrap">
                     <h4>게시판</h4>
                     <div class="pro_txt">
-                        <img src="./img/web04_board_1.png" alt="게시판목록" style="width: 900px; display: block; margin:0 auto;">
-                        <img src="./img/web04_board_2.png" alt="게시판글등록" style="width: 900px; display: block; margin:0 auto;">
+                        <img src="./img/web04_board_1.png" alt="게시판목록" style="width: 800px; display: block; margin:20px auto;">
+                        <img src="./img/web04_board_2.png" alt="게시판글등록" style="width: 900px; display: block; margin:20px auto;">
                         <div class="bg">  
                             <div class="bg_box">
                                 <p></p>
@@ -220,47 +220,46 @@
                 <div class="pro_wrap">
                     <h4>자료실</h4>
                     <div class="pro_txt">
-                        <img src="./img/web04_databank_1.png" alt="자료실목록" style="width: 900px; display: block; margin:0 auto;">
-                        <img src="./img/web04_databank.png" alt="자료실글등록" style="width: 900px; display: block; margin:0 auto;">
+                        <img src="./img/web04_databank_1.png" alt="자료실목록" style="width: 900px; display: block; margin:20px auto;">
+                        <img src="./img/web04_databank.png" alt="자료실글등록" style="width: 900px; display: block; margin:20px auto;">
                         <div class="bg">  
                             <div class="bg_box">
                                 <p></p>
                                 <span>1. 게시판 목록은 데이터베이스에서 데이터를 리스트로 받아 view에서 반복문으로 처리</span> 
-                                <span>2. 게시판 글 추가는 관리자로 로그인할 때만 가능하게 구현하고 작성일 기준 내림차순으로 정렬</span>
+                                <span>2. 게시판 글 추가는 관리자 아이디로 로그인할 때만 가능하게 구현하고 작성일 기준 내림차순으로 정렬</span>
                             </div>
                         </div>
                     </div>
                 </div> 
                 <div class="pro_wrap">
-                    <h4>관리자기능</h4>
+                    <h4>Q&A</h4>
                     <div class="pro_txt">
-                        <img src="./img/admin.png" alt="관리자기능" >
+                        <img src="./img/web04_qna_1.png" alt="자료실목록" style="width: 900px; display: block; margin:20px auto;">
                         <div class="bg">  
                             <div class="bg_box">
-                                <p>관리자 메뉴</p>
-                                <span>1. 관리자 아이디로 로그인 시 메뉴에 관리자 페이지 구현, Interceptor로 로그인처리되지 않은 경우 로그인페이지로 이동</span> 
-                            </div>
-                            <div class="bg_box">
-                                <p>상품</p>
-                                <span>1. 관리자 아이디로 로그인 후 관리자 페이지의 상품목록에서 상품을 등록하거나 수정, 삭제가 가능하게 구현</span> 
-                            </div>
-                            <div class="bg_box">
-                                <p>게시판, 공지사항</p>
-                                <span>1. 관리자 아이디로 로그인 후 관리자 페이지의 게시판, 공지사항 목록에서 글을 등록하거나 수정, 삭제가 가능하게 구현</span> 
-                                <span>2. DAO에서 글 상세페이지를 select할 때 조회수가 +1 update 되도록 Transactional처리</span> 
-                            </div>
-                            <div class="bg_box">
-                                <p>주문</p>
-                                <span>1. 주문 내역을 확인하고, 주문정보를 수정하거나 삭제가 가능하도록 구현 </span> 
-                                <span>2. 운송장정보와 배송상태를 수정할 수 있도록 구현</span> 
-                            </div>
-                            <div class="bg_box">
-                                <p>리뷰</p>
-                                <span>1. 상품의 리뷰목록을 확인하고 댓글을 작성, 수정, 삭제하는 기능 구현</span> 
+                                <p></p>
+                                <span>1. 목록에 문의글과 답변글을 리스트로 받아 view에서 반복문으로 처리</span> 
+                                <span>2. 답변은 관리자 아이디로 로그인할 때만 가능하게 구현하고 질문글 아래 정렬되게 처리, 질문을 삭제하면 답변까지 삭제되게 구현 </span>
                             </div>
                         </div>
                     </div>
-                </div>      
+                </div> 
+                <div class="pro_wrap">
+                    <h4>예약기능</h4>
+                    <div class="pro_txt">
+                        <img src="./img/web04_reserve_3.png" alt="예약페이지" style="width: 900px; display: block; margin:20px auto;">
+                        <img src="./img/web04_reserve_4.png" alt="예약확인1" style="width: 500px; display: inline-block; margin:20px auto;">
+                        <img src="./img/web04_reserve_1.png" alt="예약확인2" style="width: 500px; display: inline-block; margin:20px auto;">
+                        <img src="./img/web04_reserve_5.png" alt="예약페이지" style="width: 800px; display: block; margin: 20px auto;">
+                        <div class="bg">  
+                            <div class="bg_box">
+                                <p></p>
+                                <span>1. 예약목록은 관리자 마이페이지에서만 확인이 가능하며, Mapper의 update문으로 예약확정처리</span> 
+                                <span>2. 예약조회는 이름, 생년월일로 조회하거나 예약번호로 조회가증하도록 구현</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </section>
         <section class="coding">
@@ -269,11 +268,11 @@
                 <div class="pro_wrap">
                     <div class="mapper_box">
                         <h4>BoardMapper</h4>               
-                        <img src="./img/boardMapper.png" alt="BoardMapper" style="width: 500px; display: inline-block;">
+                        <img src="" alt="" style="width: 500px; display: inline-block;">
                     </div>
                     <div class="mapper_box">
                         <h4>CartMapper</h4>               
-                        <img src="./img/cartMapper.png" alt="CartMapper" style="width: 500px; display: inline-block;">
+                        <img src="" alt="" style="width: 500px; display: inline-block;">
                     </div>
                 </div>    
             </div>
