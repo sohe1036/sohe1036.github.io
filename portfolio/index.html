@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 검색(메타)정보 -->
+    <meta name="url" content="https://sohe1036.github.io">
+    <meta name="title" content="first portfolio">
+    <meta name="description" content="portfolio, 포트폴리오, backend">
+    <meta name="keywords" content="Java, portfolio, jsp, Servlet, project, 웹프로젝트, 자바, jsp, html5, css3,
+    spring, MVC, MVC2, JavaScript, jquery, Spring Legacy, Maven, Spring MVC Project, Spring Framework, Ajax">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="portfolio, 포트폴리오">
+    <meta property="og:image" href="Java, portfolio, jsp, Servlet, project, 웹프로젝트, 자바, jsp, html5, css3,
+    spring, MVC, MVC2, JavaScript, jquery, Spring Legacy, Maven, Spring MVC Project, Spring Framework, Ajax">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <style>
+           @font-face {
+        font-family: 'EliceDigitalBaeum-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+    </style>
+    <style>
+        *{margin: 0%; padding: 0%;}
+        body{font-family: 'EliceDigitalBaeum-Bd'; font-size: 24px; text-align: center;}
+        ul {list-style: none;}
+        li{ list-style-type: none;}
+        a {text-decoration: none; color: inherit;}
+        h1{font-weight: 300; font-size: 2.4rem;}
+        p{line-height: 1.5em; line-height: 1.5rem;}
+        [class^=col-]{width: 100%;}
+        .clearfix:after,section:after,footer:after{content: ''; display: block; clear: both;}
+
+        /* 섹션 여백 설정 */
+        #visual, #about, #portfolio, #skill ,#contact{ margin-bottom: 60px;}
+
+        #header {clear: both; position: relative; width: 100%; height: 140px;}
+        .container{width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; overflow: hidden;}
+        #main_gnb.fixed{position: fixed; width: 100%; height: 50px; line-height: 50px; background: #000;
+	        color: #fff; left: 0; bottom: 0; z-index: 99;}
+        #main_gnb{ margin-top: 30px; padding-bottom: 10px;}
+        #main_gnb li { display: inline-block;}
+        #main_gnb li > a{ padding: 0 30px; opacity: 0.8; transition: 0.2s;}
+        #main_gnb li > a:hover,
+        #main_gnb li > a:active{ opacity: 1;}    
+
+        /* 메인 비주얼 영역 */
+        #visual{ 
+            position: relative; max-width: 1920px; margin: 0 auto; height: calc(100vh - 140px); background: #000;
+            background-image: url(./img/bg-top_tri.png), url(./img/cv-background.jpg);
+            background-repeat: no-repeat; background-size: contain, cover; color: #fff;
+            background-position: center bottom, center; background-attachment: scroll, fixed; }
+        #visual > .visual_txt{ position: absolute; background: rgba(0,0,0,0.2); text-align: center; font-weight: 700;
+            padding: 60px 30px; left: -100%; top: 50%; transform: translate(-50%, -50%);
+            /* 애니메이션 설정 */
+            animation-name: visual_txt; /* 키프레임명 */
+            animation-duration: 1s; animation-fill-mode: forwards; animation-play-state: paused;}
+        /* 텍스트박스 키프레임 */
+        @keyframes visual_txt{
+            from{left: -200%; transform: rotate(-180deg);}
+	        to{left: 50%; transform: rotate(0deg) translate(-50%, -50%);}
+        }
+        #visual .cta{position: absolute; display: inline-block; bottom: 100px; left: 50%;
+	        transform: translate(-50%, 0); background: #333; padding: 10px 20px;}
+        #visual .cta:hover, #visual .cta:active{background: rgba(51,51,51, 0.8);}
+
+        /* 자기소개란 */
+        #about{padding-top: 40px;}
+        #about .col-3 > p{ margin-top: 40px;}
+        #about .fab{ font-size: 140px;}
+        #about .col-3{ margin-bottom: 40px;}
+
+        /* 스킬 */
+        #skill{background-image: url(''); background-size: cover; background-position: center 0;
+	        background-attachment: fixed; padding: 60px 0; margin-bottom: 0; color: #000;}
+        #skill > h1{margin-bottom: 40px;}
+        #skill .skill_list > li{position: relative; width: 90%; height: 5px;
+	        text-align: left; margin: 40px 0 70px 0; background: #ddd;}
+        #skill .skill_list span{position: absolute; left: 0; top: 0; display: block;
+	        background: #000; width: 0%; height: 100%;}
+        #skill .skill_list b{position: relative; font-weight: normal; top: -1.5em;}
+        
+
+        /* 작품소개 */
+        #portfolio{background: #efefef;}
+        #portfolio h1{color: #333; padding: 60px 0;}
+        #portfolio .portfolio_list > li{box-shadow: 1px 2px 4px rgba(100,100,100,0.3); margin: 40px auto;}
+        #portfolio .portfolio_list img{width: 100%; display: block;}
+        #portfolio ul a{display: block; position: relative;}
+        #portfolio .textbox{background: #000; position: absolute; left: 0;
+            bottom: 0; width: 100%; color: #fff; padding: 10px;}
+        #portfolio .textbox > p{font-size: small; margin-top: 8px;}
+
+        /* 중간크기 이상(컬럼이 형성) */
+        @media (min-width: 768px){	
+        /* 레이아웃 시스템 */
+        .col-1{width: 100%;}
+        .col-2{width: 50%; float: left; box-sizing: border-box;}
+        .col-3{width: 33.3%; float: left; box-sizing: border-box; font-size: 20px;}
+        .col-4{width: 25%; float: left;}
+        #about .col-3:first-child{padding-right: 40px;}
+        #about .col-3:last-child{padding-left: 40px;}
+        #about .col-3:nth-child(2){padding-left: 20px; padding-right: 20px;}
+        #portfolio .col-3{width: 32%; margin-right: 2%;}
+        #portfolio .col-3:nth-child(3n){margin-right: 0;}
+        #portfolio li img{ max-width: 100%; height: 450px;}
+        }
+        #skill .col-2:last-child{position: relative; border: 3px solid rgba(0,0,0,.2);}
+        #skill .col-2:last-child i{position: absolute; font-size: 6em; left: 50%; top: 50%;
+            transform: translate(-50%, -50%); z-index: 99; cursor: pointer;}
+        #skill iframe{opacity: 0;}
+        #portfolio .btn_all, #portfolio .btn_close, .btn{background: #333;
+	        color: #fff; display: inline-block; padding: 10px 30px; margin-bottom: 20px;}   
+        /* 아이콘 */     
+        .icons li {display: inline-block;}
+        .icons img {width: 120px; padding: 20px;}
+
+
+        /* contact */
+        .iframe_wrap{ cursor: pointer; padding-bottom: 30px;}
+        #iframe_wrap {display: none;}
+
+        /* 푸터 */
+        #footer > .copy{background: #3c3c3c; padding: 50px 0; padding-bottom: 100px; 
+            font-family: 'Raleway', '맑은 고딕', sans-serif;}
+        #footer{font-size: small; color: #999;}
+        #footer > .sns > a{display: inline-block; margin-right: 30px;}
+        #footer > #to_top{background: #ececec; padding: 20px 0;}
+        #footer > #to_top > a{display: inline-block;}
+        #to_top .fa-arrow-up{font-size: 24px;}
+        #footer > .sns{margin-bottom: 50px; font-family: 'Raleway', '맑은 고딕', sans-serif;}
+        #footer > .copy{background: #3c3c3c; padding: 50px 0; padding-bottom: 100px; }
+    </style>
+</head>
+<body>
+    <header id="header">
+		<div class="container">
+			<h1><a href="index.html">Portfolio</a></h1>
+			<nav id="main_gnb">
+				<ul>
+					<li><a href="#about">about</a></li>
+					<li><a href="#skill">skill</a></li>
+					<li><a href="#portfolio">portfolio</a></li>
+					<li><a href="#contact">contact</a></li>		
+				</ul>
+			</nav>
+		</div>
+	</header>
+    <section id="visual">
+		<div class="visual_txt">
+			<h1>포트폴리오</h1>
+		</div>
+		<a href="#portfolio" class="cta">작품보러가기 </a>
+	</section>
+    <section id="about">
+		<h1>About Me</h1>
+		<article class="container">
+			<div class="col-3">
+				<img src="./img/ch2.jpg" alt="character" width="50%">
+			</div>
+            <div class="col-3">
+				<p>이름 : 임소희</p>
+				<p>생년월일 : 1991.10.05</p>
+                <p>지원 분야 : backend 개발자</p>
+			</div>
+            <div class="col-3">
+				<p>교육 : 2022.03 - 2022.08</p>
+				<p>[과정평가형 정보처리산업기사] -<br> 응용SW개발전문과정</p>
+                <p></p>
+			</div>
+		</article>
+        <p>
+            <a href="intro.html" class="btn">상세보기</a>
+        </p>
+	</section>
+    <section id="skill">
+		<h1>My Skills</h1>
+		<article class="container">
+			<div class="col-2">
+				<ul class="skill_list">
+					<li><span class="bar"></span><b>Java</b></li>
+					<li><span class="bar"></span><b>JSP/Servlet</b></li>
+					<li><span class="bar"></span><b>DBMS</b></li>
+					<li><span class="bar"></span><b>Html5/CSS3</b></li>
+					<li><span class="bar"></span><b>JavaScript &amp jQuery</b></li>
+					<li><span class="bar"></span><b>Spring</b></li>
+				</ul>
+			</div>	
+            <div class="col-2">
+				<ul class="icons">
+                    <li><img src="./img/java.png" alt=""></li>
+                    <li><img src="./img/spring.png" alt=""></li>
+                    <li><img src="./img/jsp.png" alt=""></li>
+                    <li><img src="./img/oracle.png" alt=""></li>
+                    <li><img src="./img/mysql.png" alt=""></li>
+                    <li><img src="./img/mariadb.png" alt=""></li>
+                    <li><img src="./img/html5.png" alt=""></li>
+                    <li><img src="./img/css3.png" alt=""></li>
+                    <li><img src="./img/javascript.jpg" alt=""></li>
+                </ul>
+			</div>
+            <p>
+                <a href="skill.html" class="btn">상세보기</a>
+            </p>
+		</article>
+	</section>
+    <section id="portfolio">
+		<h1>My portfolio</h1>
+        <p>
+			<a href="#" class="btn_all">전체보기</a>
+		</p>
+		<ul class="portfolio_list container">
+			<li><a href="project1.html"><img src="./img/p1.png" alt="프로젝트1" class="pf_list"></a></li>
+            <li><a href=""><img src="./img/p2.png" alt="프로젝트2" class="pf_list"></a></li>
+            <li><a href=""><img src="./img/p3.png" alt="프로젝트3" class="pf_list"></a></li>	
+		</ul>	
+        <p>
+			<a href="#" class="btn_close">축소하기</a>
+		</p>
+	</section>
+    <section id="contact">
+		<h1 div class="iframe_wrap" onclick="open_ifram()">
+            contact
+            <i class="xi-caret-down" "></i>
+        </h1>
+        <div id="iframe_wrap">
+            <iframe src="http://cul1541.dothome.co.kr/bbs/write.php?bo_table=free" width="1200px" height="880px" scrolling="no"></iframe>
+        </div>
+	</section>
+    <script>
+        function open_ifram(){
+            if(document.getElementById("iframe_wrap").style.display=="block"){
+                document.getElementById("iframe_wrap").style.display= "none";
+            }else {
+                document.getElementById("iframe_wrap").style.display="block";
+            }
+        }
+    </script>
+    <footer id="footer">
+        <nav class="sns">
+			<a href="https://github.com/sohe1036/web03">프로젝트1 github</a>
+            <a href="https://github.com/sohe1036/web04">프로젝트2 github</a>
+            <a href="https://github.com/sohe1036/web05">프로젝트3 github</a>
+		</nav>
+        <div id="to_top">
+			<a href="#header">
+				<i class="fas fa-arrow-up faa-bounce animated"></i>
+			</a>
+		</div>
+		<div class="copy">
+			<p>Copyright&copy; 2022 임소희</p>
+		</div>
+    </footer>
+</body>
+</html>

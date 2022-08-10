@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 검색(메타)정보 -->
+    <meta name="url" content="https://sohe1036.github.io">
+    <meta name="title" content="first portfolio">
+    <meta name="description" content="portfolio, 포트폴리오, backend">
+    <meta name="keywords" content="Java, portfolio, jsp, Servlet, project, 웹프로젝트, 자바, jsp, html5, css3,
+    spring, MVC, MVC2, JavaScript, jquery, Spring Legacy, Maven, Spring MVC Project, Spring Framework, Ajax">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="portfolio, 포트폴리오">
+    <meta property="og:image" href="Java, portfolio, jsp, Servlet, project, 웹프로젝트, 자바, jsp, html5, css3,
+    spring, MVC, MVC2, JavaScript, jquery, Spring Legacy, Maven, Spring MVC Project, Spring Framework, Ajax">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <style>
+          @font-face {
+            font-family: 'EliceDigitalBaeum';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        *{margin: 0%; padding: 0%;}
+        body{font-family: 'EliceDigitalBaeum'; font-size: 24px; text-align: center;}
+        ul {list-style: none;}
+        li{ list-style-type: none;}
+        a {text-decoration: none; color: inherit;}
+        h1{font-weight: 300; font-size: 2.4rem;}
+        p{line-height: 1.5em; line-height: 1.5rem;}
+        [class^=col-]{width: 100%;}
+        .clearfix:after,section:after,footer:after{content: ''; display: block; clear: both;}
+
+        /* 섹션 여백 설정 */
+        #header,#content{ margin-bottom: 60px;}
+
+        #header {clear: both; position: relative; width: 100%; height: 140px;}
+        .container{width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; overflow: hidden; }
+        .container h1 {font-weight: bold;}
+        #main_gnb.fixed{position: fixed; width: 100%; height: 50px; line-height: 50px; background: #000;
+	        color: #fff; left: 0; bottom: 0; z-index: 99;}
+        #main_gnb{ margin-top: 30px; padding-bottom: 10px;}
+        #main_gnb li { display: inline-block;}
+        #main_gnb li > a{ padding: 0 30px; opacity: 0.8; transition: 0.2s; font-weight: bold;}
+        #main_gnb li > a:hover,
+        #main_gnb li > a:active{ opacity: 1;}   
+
+        /* content */
+        .project_wrap {clear: both; width: 100%; display: block; margin-top: 100px;}
+        .frame_wrap {clear: both; width: 100%; padding: 50px 0; }
+        .pj_inner {width: 1200px; margin: 30px auto;}
+        .sec_list { overflow: hidden; margin: 30px auto; width: 800px;}
+        .pro_txt {margin: 30px auto; width: 800px;}
+        .sec_tit, .pro_tit {text-align: left; margin-top: 20px;}
+        .sec_list > li {font-size: 16px; text-align: left; display: block; padding-bottom: 10px;}
+        .pro_txt > p {font-size: 16px; text-align: left; display: block; padding-bottom: 10px;}
+        .btn {background: #333; color: #fff; display: inline-block; padding: 10px 30px; margin-bottom: 20px; margin-right: 150px;}
+        video {border: 0.5px solid #ddd; box-shadow: 1px 2px 4px rgba(100,100,100,0.5);}
+
+         /* 푸터 */
+         #footer > .copy{background: #3c3c3c; padding: 50px 0; padding-bottom: 100px; 
+            font-family: 'Raleway', '맑은 고딕', sans-serif;}
+        #footer{font-size: small; color: #999;}
+        #footer > .sns > a{display: inline-block; margin-right: 30px;}
+        #footer > #to_top{background: #ececec; padding: 20px 0;}
+        #footer > #to_top > a{display: inline-block;}
+        #to_top .xi-arrow-up{font-size: 30px; font-weight: 600;}
+        #footer > .sns{margin-bottom: 50px; font-family: 'Raleway', '맑은 고딕', sans-serif;}
+        #footer > .copy{background: #3c3c3c; padding: 50px 0; padding-bottom: 100px;}
+    </style>    
+</head>
+<body>
+    <header id="header">
+		<div class="container">
+			<h1><a href="index.html">Portfolio</a></h1>
+			<nav id="main_gnb">
+				<ul>
+					<li><a href="index.html">home</a></li>
+                    <li><a href="#pj1">project1</a></li>
+					<li><a href="#pj2">project2</a></li>
+					<li><a href="#pj3">project3</a></li>		
+				</ul>
+			</nav>
+		</div>
+	</header>
+    <div id="content">
+        <div class="project_wrap">
+            <h2 class="pj_tit" id="pj1">프로젝트1</h2>
+            <h2 class="pj_txt">아메리칸 투어리스터</h2>
+            <div class="frame_wrap">
+                <video width="800" height="480" src="web03.mp4" controls="controls"></video>
+            </div>
+            <div class="pj_inner">
+                <div class="sec_wrap">
+                    <h3 class="sec_tit">Project Description</h3>
+                    <ul class="sec_list">
+                        <li class="item1">
+                            <p>개발 기간 : 2022.05.19 ~ 2022.06.07</p>
+                        </li>
+                        <li class="item2">
+                            <p>Language : Java, JSP, Servlet, Global Object, HTML, CSS, Javascript, jQuery, Junit, 다음 cacao 주소 API</p>
+                        </li>
+                        <li class="item3">
+                            <p>IDE : Eclipse 2021-09(4.21.0)</p>
+                        </li>
+                        <li class="item4">
+                            <p>RDBMS : Oracle XE 11g</p>
+                        </li>
+                        <li class="item5">
+                            <p>Server&WAS : tomcat 9.0</p>
+                        </li>
+                        <li class="item6">
+                            <p>Biz Model : MVC Level 2 </p>
+                        </li>
+                        <li class="item7">
+                            <p>Version Control : Git</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pro_desc">
+                    <h3 class="pro_tit">프로젝트 개요</h3>
+                    <div class="pro_txt">
+                        <p>Controller와 데이터베이스 접근 및 처리를 위한 Model과 DAO에서 통합하여 기능 구현, 필요한 데이터 처리 및 요청에 따라 서비스를 처리하게 하고 
+                            VO와 Controller, Model, DAO 등은 Java로 작성하고 View는 jsp의 표현식, 스크립트릿, EL, JSTL등을 활용하여 회원 기능, 게시판 기능, 장바구니 기능, 
+                            구매 및 상품 기능, 결제 기능을 구현
+                        </p>
+                        <p>Controller에서 view를 통하여 서비스를 요청받아 Model과 DAO에서 DB에 접근하여 요청정보를 받아 다시 Controller에서 View로 
+                            응답데이터를 처리하게 하는 방식으로 진행
+                        </p>
+                    </div>  
+                    <div class="button">
+                        <p>
+                            <a href="gal1.html" class="btn">Detail</a>
+                            <a href="https://github.com/sohe1036/web03" class="btn">Git-Backend</a>
+                        </p>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="project_wrap">
+            <h2 class="pj_tit" id="pj2">프로젝트2</h2>
+            <h2 class="pj_txt">아산 안과</h2>
+            <div class="frame_wrap">
+                <video width="800" height="480" src="web04.mp4" controls="controls"></video>
+            </div>
+            <div class="pj_inner">
+                <div class="sec_wrap">
+                    <h3 class="sec_tit">Project Description</h3>
+                    <ul class="sec_list">
+                        <li class="item1">
+                            <p>개발 기간 : 2022.06.14 ~ 2022.06.30</p>
+                        </li>
+                        <li class="item2">
+                            <p>참여 : Frontend (3명) / Backend (1명)</p>
+                        </li>
+                        <li class="item3">
+                            <p>Language : Java, JSP, Servlet, HTML, CSS, Javascript, jQuery, Junit, Ajax, MyBatis</p>
+                        </li>
+                        <li class="item4">
+                            <p>IDE : Spring Studio  Suite 3.9.12 Release</p>
+                        </li>
+                        <li class="item5">
+                            <p>RDBMS : Oracle XE 11g</p>
+                        </li>
+                        <li class="item6">
+                            <p>Server&WAS : tomcat 9.0</p>
+                        </li>
+                        <li class="item7">
+                            <p>Biz Model : Spring Maven MVC Pattern </p>
+                        </li>
+                        <li class="item8">
+                            <p>Version Control : Git</p>
+                        </li>
+                        <li class="item9">
+                            <p>Dependensies : lombok, jackson, spring-security</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pro_desc">
+                    <h3 class="pro_tit">프로젝트 개요</h3>
+                    <div class="pro_txt">
+                        <p>@Controller을 활용하여 Controller 만들고, 필요한 Service를 주입하여 각 @RequestMapping에서 요청을 파라미터와 Service에 전달하여 
+                            Repository 어노테이션으로 정의 된 DAO에서  파라미터로 받고, Mapper인 MyBatis에서 데이터베이스에 간접 접근하여 응답 정보를 받아 
+                            View에 전달하고 View 부분은 jsp의 EL, JSTL등을 활용하여 회원기능(로그인, 로그아웃, 비밀번호 암호화 등), 게시판 기능(게시판 등록, 수정, 삭제 등),
+                            예약기능을 구현
+                        </p>
+                        <p>구현 로직 : View -> Controller -> Service -> DAO -> MyBatis -> DB
+                        </p>
+                    </div>  
+                    <div class="button">
+                        <p>
+                            <a href="gal2.html" class="btn">Detail</a>
+                            <a href="https://github.com/sohe1036/web04" class="btn">Git-Backend</a>
+                            <a href="https://sohe1036.github.io/web4/" class="btn">Git-Frontend</a>
+                        </p>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="project_wrap">
+            <h2 class="pj_tit" id="pj3">프로젝트3</h2>
+            <h2 class="pj_txt">젠틀몬스터</h2>
+            <div class="frame_wrap">
+                <video width="800" height="480" src="web05.mp4" controls="controls"></video>
+            </div>
+            <div class="pj_inner">
+                <div class="sec_wrap">
+                    <h3 class="sec_tit">Project Description</h3>
+                    <ul class="sec_list">
+                        <li class="item1">
+                            <p>개발 기간 : 2022.07.05 ~ 2022.07.30</p>
+                        </li>
+                        <li class="item2">
+                            <p>Language : Java, JSP, Servlet, My batis, HTML, CSS, Javascript, jQuery, Junit, Ajax, 다음 cacao 주소 API</p>
+                        </li>
+                        <li class="item3">
+                            <p>IDE : Spring Studio  Suite 3.9.12 Release</p>
+                        </li>
+                        <li class="item4">
+                            <p>RDBMS : MySQL 8.0.9</p>
+                        </li>
+                        <li class="item5">
+                            <p>Server&WAS : tomcat 9.0</p>
+                        </li>
+                        <li class="item6">
+                            <p>Biz Model : MVC Level 2 </p>
+                        </li>
+                        <li class="item7">
+                            <p>Version Control : Git</p>
+                        </li>
+                        <li class="item9">
+                            <p>Dependensies : lombok, jackson, spring-security, spring-tx, commons-fileupload</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pro_desc">
+                    <h3 class="pro_tit">프로젝트 개요</h3>
+                    <div class="pro_txt">
+                        <p>@Controller을 활용하여 Controller 만들고, 필요한 Service를 주입하여 각 @RequestMapping에서 요청을 파라미터와 Service에 전달하여 
+                            Repository 어노테이션으로 정의 된 DAO에서  파라미터로 받고, Mapper인 MyBatis에서 데이터베이스에 간접 접근하여 응답 정보를 받아 
+                            View에 전달하고 View 부분은 jsp의 EL, JSTL등을 활용하여 관리자 기능, 회원기능(로그인, 로그아웃, 비밀번호 암호화 등), 게시판 기능(게시판 등록, 수정, 삭제 등),
+                            예약기능을 구현
+                        </p>
+                        <p>구현 로직 : View -> Controller -> Service -> DAO -> MyBatis -> DB
+                        </p>
+                    </div>  
+                    <div class="button">
+                        <p>
+                            <a href="gal3.html" class="btn">Detail</a>
+                            <a href="https://github.com/sohe1036/web05" class="btn">Git-Backend</a>
+                        </p>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <nav class="sns">
+			<a href="https://github.com/sohe1036/web03">프로젝트1 github</a>
+            <a href="https://github.com/sohe1036/web04">프로젝트2 github</a>
+            <a href="https://github.com/sohe1036/web05">프로젝트3 github</a>
+		</nav>
+        <div id="to_top">
+			<a href="#header">
+				<i class="xi-arrow-up"></i>
+			</a>
+		</div>
+		<div class="copy">
+			<p>Copyright&copy; 2022 임소희</p>
+		</div>
+    </footer>    
+</body>
+</html>

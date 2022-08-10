@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 검색(메타)정보 -->
+    <meta name="url" content="https://sohe1036.github.io">
+    <meta name="title" content="first portfolio">
+    <meta name="description" content="portfolio, 포트폴리오, backend">
+    <meta name="keywords" content="Java, portfolio, jsp, Servlet, project, 웹프로젝트, 자바, jsp, html5, css3,
+    spring, MVC, MVC2, JavaScript, jquery, Spring Legacy, Maven, Spring MVC Project, Spring Framework, Ajax">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="https://sohe1036.github.io">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="portfolio, 포트폴리오">
+    <meta property="og:image" href="Java, portfolio, jsp, Servlet, project, 웹프로젝트, 자바, jsp, html5, css3,
+    spring, MVC, MVC2, JavaScript, jquery, Spring Legacy, Maven, Spring MVC Project, Spring Framework, Ajax">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <style>
+          @font-face {
+            font-family: 'EliceDigitalBaeum';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        *{margin: 0%; padding: 0%;}
+        body{font-family: 'EliceDigitalBaeum'; font-size: 24px; text-align: center;}
+        ul {list-style: none;}
+        li{ list-style-type: none;}
+        a {text-decoration: none; color: inherit;}
+        h1{font-weight: 300; font-size: 2.4rem;}
+        p{line-height: 1.5em; line-height: 1.5rem;}
+        [class^=col-]{width: 100%;}
+        .clearfix:after,section:after,footer:after{content: ''; display: block; clear: both;}
+
+        /* 섹션 여백 설정 */
+        #header,#content{ margin-bottom: 60px;}
+
+        #header {clear: both; position: relative; width: 100%; height: 140px;}
+        .container{width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; overflow: hidden; }
+        .container h1 {font-weight: bold;}
+        #main_gnb.fixed{position: fixed; width: 100%; height: 50px; line-height: 50px; background: #000;
+	        color: #fff; left: 0; bottom: 0; z-index: 99;}
+        #main_gnb{ margin-top: 30px; padding-bottom: 10px;}
+        #main_gnb li { display: inline-block;}
+        #main_gnb li > a{ padding: 0 30px; opacity: 0.8; transition: 0.2s; font-weight: bold;}
+        #main_gnb li > a:hover,
+        #main_gnb li > a:active{ opacity: 1;}  
+
+        /* content */
+        #content {display: block; clear: both; width: 100%;}
+        section {clear: both; width: 100%;}
+        .inner {width: 1200px; margin: 20px auto;}
+        .inner h2,.pro_wrap {text-align: left; margin: 20px;}
+
+        /*plan*/
+        .pro_wrap {width: 85%; margin: 0 auto; margin-bottom: 30px;}
+        .pro_txt {width: 100%; }
+        .pro_txt ul {overflow: hidden; font-size: 16px; width: 80%; margin: 10px auto; padding-left: 50px; }
+        .item >ul {overflow: hidden;}
+        .item > p {font-size: 19px; font-weight: 700; padding: 10px;}
+        .item_txt { margin-bottom: 10px;}
+        .bg_box > p {font-size: 19px; font-weight: 700; padding: 10px;}
+
+        /* design */
+        .pro_txt img {width: 100%;}
+        .bg_box {padding: 15px 30px;} 
+        .bg_box span {display: block; padding: 10px; font-size: 16px;}
+        .bg{background-color: #ececec;}
+
+        /*sql*/
+        .mapper_box {float: left;}
+        .mapper_box> h4 {padding-bottom: 15px;}
+
+         /* 푸터 */
+         #footer > .copy{background: #3c3c3c; padding: 50px 0; padding-bottom: 100px; 
+            font-family: 'Raleway', '맑은 고딕', sans-serif;}
+        #footer{font-size: small; color: #999;}
+        #footer > .sns > a{display: inline-block; margin-right: 30px;}
+        #footer > #to_top{background: #ececec; padding: 20px 0;}
+        #footer > #to_top > a{display: inline-block;}
+        #to_top .xi-arrow-up{font-size: 30px; font-weight: 600;}
+        #footer > .sns{margin-bottom: 50px; font-family: 'Raleway', '맑은 고딕', sans-serif;}
+        #footer > .copy{background: #3c3c3c; padding: 50px 0; padding-bottom: 100px;}
+
+    </style>    
+</head>
+<body>
+    <header id="header">
+		<div class="container">
+			<h1><a href="index.html">Portfolio</a></h1>
+			<nav id="main_gnb">
+				<ul>
+					<li><a href="index.html">home</a></li>
+                    <li><a href="intro.html">intro</a></li>
+					<li><a href="skill.html">skill</a></li>
+					<li><a href="portflio.html">portflio</a></li>		
+				</ul>
+			</nav>
+		</div>
+	</header>
+    <div id="content">
+        <section class="plan">
+            <div class="inner">
+                <h2>Project Plan</h2>
+                <div class="pro_wrap">
+                    <h4>프로젝트 설명</h4>
+                    <div class="pro_txt">
+                        <ul class="item_box">
+                            <li class="item">프로젝트 2 
+                                <ul>
+                                    <li class="item_txt">아산안과 병원 홈페이지</li>
+                                </ul>
+                            </li>
+                            <li class="item">개발기간
+                                <ul>
+                                    <li class="item_txt">2022.06.14 ~ 2022.06.30</li>
+                                </ul>
+                            </li>
+                            <li class="item">참여인원
+                                <ul>
+                                    <li class="item_txt">Frontend (3명) / Backend (1명)</li>
+                                </ul>
+                            </li>
+                            <li class="item">사용기술
+                                <ul>
+                                    <li class="item_txt">
+                                        Spring Studio  Suite 3.9.12 Release, Apache Tomcat 9.0, Oracle XE 11g
+                                    </li>
+                                    <li class="item_txt">
+                                        Java, JSP, Servlet, Global Object, HTML, CSS, Javascript, jQuery, Ajax, Junit
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pro_wrap">
+                    <h4>설계</h4>
+                    <div class="pro_txt">
+                        <ul class="item_box">
+                            <li class="item">
+                                <p>테이블설계</p>
+                                <div class="img_box">
+                                    <img src="./img/web04_table.png" alt="web04테이블설계" width="810px">
+                                </div>
+                            </li>                        
+                        </ul>
+                        <ul class="item_box">
+                            <li class="item">
+                                <p>흐름도</p>
+                                <div class="img_box">
+                                    <img src="./img/web04_1.jpg" alt="web04흐름도" width="810px">
+                                </div>
+                            </li>                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="design">
+            <div class="inner">
+                <h2>Views</h2>
+                <div class="pro_wrap">
+                    <h4>메인</h4>
+                    <div class="pro_txt">
+                        <img src="./img/web04_main.png" alt="메인화면">
+                    </div>
+                </div>
+                <div class="pro_wrap">
+                    <h4>회원기능</h4>
+                    <div class="pro_txt">
+                        <img src="./img/web04_join.png" alt="회원가입" style="width: 900px; display: block; margin:0 auto;">
+                        <div class="bg">  
+                            <div class="bg_box">
+                                <p>회원가입</p>
+                                <span>1. 중복확인 버튼을 누르면 데이터베이스에서 같은 아이디기 있는지 select 하여 리턴값이 있을 경우에는 controller에서 ck의 값을 null처리하고, '사용중인 아이디' 메세지를 전달, 
+                                    리턴되는 값이 없을 경우에는 ck의 값을 yes로 전달하고 '사용 가능한 아이디' 메세지를 전달하여 ck값이 있을 때만 회원가입 처리
+                                </span> 
+                                <span>2. 자바스크립트로 비밀번호와 비밀번호 확인 값이 동일하면 회원가입처리</span>
+                                <span>3. controller에서 BCryptPasswordEncoder를 Inject하여 입력한 비밀번호 값을 인코딩하여 데이터베이스에 전달</span>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro_txt">
+                        <img src="./img/web04_login.png" alt="로그인" style="width: 900px; display: block; margin:0 auto;">
+                        <div class="bg">  
+                            <div class="bg_box">
+                                <p>로그인</p>
+                                <span>1. Service에서 입력받은 아이디, 비밀번호를 파라미터로 받고 받은 아이디로 select했을 때 값이 있으면 비밀번호를 인코딩 하여 데이터베이스의 비밀번호와 matches 후 
+                                    두 비밀번호 값이 같으면 세션에 아이디 저장
+                                </span>                         
+                            </div>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="pro_wrap">
+                    <h4>게시판</h4>
+                    <div class="pro_txt">
+                        <img src="./img/web04_board_1.png" alt="게시판목록" style="width: 900px; display: block; margin:0 auto;">
+                        <img src="./img/web04_board_2.png" alt="게시판글등록" style="width: 900px; display: block; margin:0 auto;">
+                        <div class="bg">  
+                            <div class="bg_box">
+                                <p></p>
+                                <span>1. 게시판 목록은 데이터베이스에서 데이터를 리스트로 받아 view에서 반복문으로 처리</span> 
+                                <span>2. 게시판 글 추가는 관리자로 로그인할 때만 가능하게 구현하고 작성일 기준 내림차순으로 정렬</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pro_wrap">
+                    <h4>자료실</h4>
+                    <div class="pro_txt">
+                        <img src="./img/web04_databank_1.png" alt="자료실목록" style="width: 900px; display: block; margin:0 auto;">
+                        <img src="./img/web04_databank.png" alt="자료실글등록" style="width: 900px; display: block; margin:0 auto;">
+                        <div class="bg">  
+                            <div class="bg_box">
+                                <p></p>
+                                <span>1. 게시판 목록은 데이터베이스에서 데이터를 리스트로 받아 view에서 반복문으로 처리</span> 
+                                <span>2. 게시판 글 추가는 관리자로 로그인할 때만 가능하게 구현하고 작성일 기준 내림차순으로 정렬</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pro_wrap">
+                    <h4>관리자기능</h4>
+                    <div class="pro_txt">
+                        <img src="./img/admin.png" alt="관리자기능" >
+                        <div class="bg">  
+                            <div class="bg_box">
+                                <p>관리자 메뉴</p>
+                                <span>1. 관리자 아이디로 로그인 시 메뉴에 관리자 페이지 구현, Interceptor로 로그인처리되지 않은 경우 로그인페이지로 이동</span> 
+                            </div>
+                            <div class="bg_box">
+                                <p>상품</p>
+                                <span>1. 관리자 아이디로 로그인 후 관리자 페이지의 상품목록에서 상품을 등록하거나 수정, 삭제가 가능하게 구현</span> 
+                            </div>
+                            <div class="bg_box">
+                                <p>게시판, 공지사항</p>
+                                <span>1. 관리자 아이디로 로그인 후 관리자 페이지의 게시판, 공지사항 목록에서 글을 등록하거나 수정, 삭제가 가능하게 구현</span> 
+                                <span>2. DAO에서 글 상세페이지를 select할 때 조회수가 +1 update 되도록 Transactional처리</span> 
+                            </div>
+                            <div class="bg_box">
+                                <p>주문</p>
+                                <span>1. 주문 내역을 확인하고, 주문정보를 수정하거나 삭제가 가능하도록 구현 </span> 
+                                <span>2. 운송장정보와 배송상태를 수정할 수 있도록 구현</span> 
+                            </div>
+                            <div class="bg_box">
+                                <p>리뷰</p>
+                                <span>1. 상품의 리뷰목록을 확인하고 댓글을 작성, 수정, 삭제하는 기능 구현</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </section>
+        <section class="coding">
+            <div class="inner">
+                <h2>SQL</h2>
+                <div class="pro_wrap">
+                    <div class="mapper_box">
+                        <h4>BoardMapper</h4>               
+                        <img src="./img/boardMapper.png" alt="BoardMapper" style="width: 500px; display: inline-block;">
+                    </div>
+                    <div class="mapper_box">
+                        <h4>CartMapper</h4>               
+                        <img src="./img/cartMapper.png" alt="CartMapper" style="width: 500px; display: inline-block;">
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <nav class="sns">
+			<a href="https://github.com/sohe1036/web03">프로젝트1 github</a>
+            <a href="https://github.com/sohe1036/web04">프로젝트2 github</a>
+            <a href="https://github.com/sohe1036/web05">프로젝트3 github</a>
+		</nav>
+        <div id="to_top">
+			<a href="#header">
+				<i class="xi-arrow-up"></i>
+			</a>
+		</div>
+		<div class="copy">
+			<p>Copyright&copy; 2022 임소희</p>
+		</div>
+    </footer>    
+</body>
+</html>
